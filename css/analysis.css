@@ -1,0 +1,173 @@
+/* ChalkBuster 2026 - Analysis Card Overlay Styles */
+
+.analysis-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.analysis-overlay.visible {
+  display: flex;
+}
+
+.analysis-panel {
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  max-width: 720px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  color: #eee;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.analysis-close {
+  background: none;
+  border: none;
+  color: #eee;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.card-round {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.card-flags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.card-teams {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-col { }
+
+.team-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.team-col .seed-badge {
+  background: #333;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.metric .label { color: #aaa; }
+.metric .value { font-weight: bold; }
+
+.pros, .cons {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.pros li::before { content: "+ "; color: #4caf50; font-weight: bold; }
+.cons li::before { content: "- "; color: #f44336; font-weight: bold; }
+
+.card-recommendation {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.confidence-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.confidence--high   { background: #1a7a1a; color: #fff; }
+.confidence--medium { background: #7a5a1a; color: #fff; }
+.confidence--low    { background: #5a1a1a; color: #fff; }
+
+.rec-pick {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.reasoning {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.flag--upset      { background: #c00; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+.flag--contrarian { background: #a04000; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+
+.card-placeholder {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Info button on each matchup card */
+.analysis-trigger {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  background: #2a2a3e;
+  color: #aaa;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.analysis-trigger:hover {
+  background: #3a3a5e;
+  color: #fff;
+}
