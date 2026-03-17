@@ -1,0 +1,53 @@
+{
+  "schema_version": "v1",
+  "first_four": {
+    "FF_UMBC_HOWARD": {
+      "id": "FF_UMBC_HOWARD",
+      "region": "Midwest",
+      "seed": 16,
+      "feeds_game": "M1",
+      "feeds_position": "bot",
+      "team_top": "UMBC",
+      "team_bot": "HOWARD",
+      "resolved": false,
+      "winner": null,
+      "date": "2026-03-17"
+    },
+    "FF_TEXAS_NCSTATE": {
+      "id": "FF_TEXAS_NCSTATE",
+      "region": "West",
+      "seed": 11,
+      "feeds_game": "W5",
+      "feeds_position": "bot",
+      "team_top": "TEXAS",
+      "team_bot": "NCSTATE",
+      "resolved": false,
+      "winner": null,
+      "date": "2026-03-17"
+    },
+    "FF_PV_LEHIGH": {
+      "id": "FF_PV_LEHIGH",
+      "region": "South",
+      "seed": 16,
+      "feeds_game": "S1",
+      "feeds_position": "bot",
+      "team_top": "PVAMU",
+      "team_bot": "LEHIGH",
+      "resolved": false,
+      "winner": null,
+      "date": "2026-03-18"
+    },
+    "FF_MIAMI_SMU": {
+      "id": "FF_MIAMI_SMU",
+      "region": "Midwest",
+      "seed": 11,
+      "feeds_game": "M5",
+      "feeds_position": "bot",
+      "team_top": "MIAMIOH",
+      "team_bot": "SMU",
+      "resolved": false,
+      "winner": null,
+      "date": "2026-03-18"
+    }
+  }
+}
