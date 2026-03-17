@@ -1,8 +1,9 @@
 // js/bracket.js
 // Bracket renderer and click-to-pick handlers.
-// Imports from state.js only. NEVER imports from app.js (prevents circular deps).
+// Imports from state.js and analysis.js. NEVER imports from app.js (prevents circular deps).
 
 import { state, setPick } from "./state.js";
+import { openAnalysisCard } from "./analysis.js";
 
 // Round display order and labels per region
 const REGION_ROUNDS = ["R64", "R32", "S16", "E8"];
@@ -118,6 +119,13 @@ function buildMatchupCard(slot) {
 
   card.appendChild(buildTeamSlotEl(slot.id, "top", topTeam, slot.top));
   card.appendChild(buildTeamSlotEl(slot.id, "bot", botTeam, slot.bot));
+
+  const infoBtn = document.createElement("button");
+  infoBtn.className = "analysis-trigger";
+  infoBtn.dataset.game = slot.id;
+  infoBtn.setAttribute("aria-label", "View matchup analysis");
+  infoBtn.textContent = "i";
+  card.appendChild(infoBtn);
 
   return card;
 }
@@ -315,6 +323,14 @@ export function updateSlotAndDownstream(gameId) {
 export function initBracketHandlers() {
   const container = document.getElementById("bracket-container");
   if (!container) return;
+
+  // Analysis trigger handler -- must come BEFORE pick handler to allow stopPropagation
+  container.addEventListener("click", (event) => {
+    const trigger = event.target.closest(".analysis-trigger");
+    if (!trigger) return;
+    event.stopPropagation();
+    openAnalysisCard(trigger.dataset.game);
+  });
 
   container.addEventListener("click", (event) => {
     // Find the clicked team-slot

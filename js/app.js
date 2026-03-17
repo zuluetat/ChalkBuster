@@ -6,6 +6,7 @@ import { state, loadPicksFromStorage } from "./state.js";
 import { renderBracket, initBracketHandlers } from "./bracket.js";
 import { renderRegionTabs } from "./regions.js";
 import { renderFirstFour } from "./firstFour.js";
+import { loadMatchups, initAnalysisHandlers } from "./analysis.js";
 
 async function init() {
   try {
@@ -28,6 +29,8 @@ async function init() {
     renderBracket();
     renderFirstFour();
     initBracketHandlers();
+    await loadMatchups();
+    initAnalysisHandlers();
   } catch (err) {
     console.error("[ChalkBuster] init failed:", err);
     document.getElementById("app").textContent =

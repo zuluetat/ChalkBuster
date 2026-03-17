@@ -38,6 +38,7 @@
 
 /* Matchup card */
 .matchup-card {
+  position: relative;
   min-width: 180px;
   border: 1px solid var(--color-border);
   border-radius: 4px;
