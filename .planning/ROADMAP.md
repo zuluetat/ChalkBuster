@@ -13,7 +13,7 @@ ChalkBuster ships in 4 phases ordered by dependency: lock the data schema and br
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Data Foundation and Bracket Core** - Lock JSON schema and build working click-to-pick bracket with region tabs (completed 2026-03-17)
-- [ ] **Phase 2: Analysis Layer** - Generate all 63-game matchup data and render analysis cards
+- [x] **Phase 2: Analysis Layer** - Generate all 63-game matchup data and render analysis cards (completed 2026-03-17)
 - [ ] **Phase 3: Persistence and Sharing** - Save/load picks via Supabase and generate shareable read-only links
 - [ ] **Phase 4: Polish and Export** - Apply ESPN aesthetic and optional PDF/image export
 
@@ -89,6 +89,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Foundation and Bracket Core | 3/3 | Complete   | 2026-03-17 |
-| 2. Analysis Layer | 1/2 | In Progress|  |
+| 2. Analysis Layer | 2/2 | Complete   | 2026-03-17 |
 | 3. Persistence and Sharing | 0/2 | Not started | - |
 | 4. Polish and Export | 0/2 | Not started | - |

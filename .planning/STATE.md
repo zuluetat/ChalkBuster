@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-stopped_at: "Completed 02-01-PLAN.md — teams.json populated, first_four.json resolved, matchups.json generated with 63-game pre-baked analysis"
-last_updated: "2026-03-17T19:32:36Z"
-last_activity: "2026-03-17 — Completed Plan 02-01: all 68 teams populated, 4 First Four games resolved, matchups.json with 32 R64 analyses generated"
+status: completed
+stopped_at: Completed 02-02-PLAN.md - analysis card overlay UI, info buttons on all matchup cards, analysis.js + analysis.css complete
+last_updated: "2026-03-17T19:39:16.522Z"
+last_activity: "2026-03-17 — Completed Plan 02-01: teams.json populated, First Four resolved, matchups.json generated"
 progress:
   total_phases: 4
-  completed_phases: 1
-  total_plans: 4
-  completed_plans: 4
+  completed_phases: 2
+  total_plans: 5
+  completed_plans: 5
   percent: 40
 ---
 
@@ -53,6 +53,7 @@ Progress: [████░░░░░░] 40% (4 of 10 total plans)
 | Phase 01-data-foundation-and-bracket-core P01 | 3 | 3 tasks | 4 files |
 | Phase 01-data-foundation-and-bracket-core P03 | 15 | 3 tasks | 2 files |
 | Phase 02-analysis-layer P01 | 7 | 2 tasks | 3 files |
+| Phase 02-analysis-layer P02 | 2min | 3 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,9 @@ Recent decisions affecting current work:
 - [Phase 02-analysis-layer P01]: 16 upset alerts and 4 contrarian flags in matchups.json — threshold intentionally broad to surface all live upset threats
 - [Phase 02-analysis-layer P01]: matchups.json metrics snapshot is single source of truth for card display — do not re-read teams.json at render time
 - [Phase 02-analysis-layer P01]: All team stats are Claude estimates from training data; Tim should verify against kenpom.com before bracket submission
+- [Phase 02-analysis-layer]: Imported openAnalysisCard statically in bracket.js (not dynamic import) for simplicity and predictability
+- [Phase 02-analysis-layer]: Analysis trigger handler registered in initBracketHandlers() before pick handler to allow stopPropagation without affecting picks
+- [Phase 02-analysis-layer]: .matchup-card needed position: relative added to bracket.css for absolute-positioned info button
 
 ### Pending Todos
 
@@ -92,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T19:32:36Z
-Stopped at: Completed 02-01-PLAN.md — teams.json populated, first_four.json resolved, matchups.json generated with 63-game pre-baked analysis
+Last session: 2026-03-17T19:39:16.519Z
+Stopped at: Completed 02-02-PLAN.md - analysis card overlay UI, info buttons on all matchup cards, analysis.js + analysis.css complete
 Resume file: None
