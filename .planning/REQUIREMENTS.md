@@ -19,8 +19,8 @@
 - [x] **BRKT-02**: Region-by-region view with tabs (East, South, Midwest, West, Final Four)
 - [x] **BRKT-03**: Visual feedback for selected winners (color/highlight)
 - [x] **BRKT-04**: Undo/change picks by clicking a different team
-- [ ] **BRKT-05**: First Four view showing all 4 play-in matchups with pick-to-advance (pre-game) or results (post-game)
-- [ ] **BRKT-06**: Manual toggle to mark each First Four game as resolved and enter winner
+- [x] **BRKT-05**: First Four view showing all 4 play-in matchups with pick-to-advance (pre-game) or results (post-game)
+- [x] **BRKT-06**: Manual toggle to mark each First Four game as resolved and enter winner
 
 ### Analysis
 
@@ -86,8 +86,8 @@
 | BRKT-02 | Phase 1 | Complete |
 | BRKT-03 | Phase 1 | Complete |
 | BRKT-04 | Phase 1 | Complete |
-| BRKT-05 | Phase 1 | Pending |
-| BRKT-06 | Phase 1 | Pending |
+| BRKT-05 | Phase 1 | Complete |
+| BRKT-06 | Phase 1 | Complete |
 | ANAL-01 | Phase 2 | Pending |
 | ANAL-02 | Phase 2 | Pending |
 | ANAL-03 | Phase 2 | Pending |
