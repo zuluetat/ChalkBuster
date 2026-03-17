@@ -1,0 +1,95 @@
+/* ChalkBuster 2026 - Bracket Layout Styles */
+
+/* Region visibility */
+.bracket-region {
+  display: none;
+}
+
+.bracket-region.active {
+  display: grid;
+  grid-template-columns: 240px 200px 200px 200px;
+  column-gap: 24px;
+  padding: 16px 0;
+}
+
+/* Final Four / Championship region: 2 columns (F4 + CHM) */
+.bracket-region[data-region="FinalFour"],
+.bracket-region[data-region="Championship"] {
+  grid-template-columns: 240px 240px;
+}
+
+/* Round column */
+.round-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Round label */
+.round-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Matchup card */
+.matchup-card {
+  min-width: 180px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 4px;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.matchup-card:hover {
+  border-color: var(--color-accent);
+}
+
+/* Team slot */
+.team-slot {
+  padding: 6px 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.team-slot + .team-slot {
+  border-top: 1px solid var(--color-border);
+}
+
+.team-slot .seed-badge {
+  font-size: 11px;
+  color: var(--color-muted);
+  min-width: 18px;
+  flex-shrink: 0;
+}
+
+.team-slot.picked {
+  background: var(--color-accent);
+  color: var(--color-picked-text);
+  font-weight: 600;
+}
+
+.team-slot.picked .seed-badge {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* TBD slots: visually distinct, not clickable */
+.team-slot.tbd {
+  color: var(--color-muted);
+  pointer-events: none;
+  cursor: default;
+  font-style: italic;
+}
+
+.team-slot.tbd .seed-badge {
+  color: var(--color-muted);
+}
