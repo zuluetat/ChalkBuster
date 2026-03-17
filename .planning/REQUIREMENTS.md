@@ -7,11 +7,11 @@
 
 ### Data Foundation
 
-- [ ] **DATA-01**: All 68 teams pre-loaded with seed, region, record, KenPom metrics (AdjO, AdjD, AdjEM, tempo), SOS rank
-- [ ] **DATA-02**: Public pick % available for each team
-- [ ] **DATA-03**: Betting spread available for each matchup
-- [ ] **DATA-04**: First Four games tracked with resolution status (played/unplayed) and winner field
-- [ ] **DATA-05**: First Four winners automatically slot into main bracket when marked as resolved
+- [x] **DATA-01**: All 68 teams pre-loaded with seed, region, record, KenPom metrics (AdjO, AdjD, AdjEM, tempo), SOS rank
+- [x] **DATA-02**: Public pick % available for each team
+- [x] **DATA-03**: Betting spread available for each matchup
+- [x] **DATA-04**: First Four games tracked with resolution status (played/unplayed) and winner field
+- [x] **DATA-05**: First Four winners automatically slot into main bracket when marked as resolved
 
 ### Bracket UI
 
@@ -77,11 +77,11 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Phase 1 | Pending |
-| DATA-02 | Phase 1 | Pending |
-| DATA-03 | Phase 1 | Pending |
-| DATA-04 | Phase 1 | Pending |
-| DATA-05 | Phase 1 | Pending |
+| DATA-01 | Phase 1 | Complete |
+| DATA-02 | Phase 1 | Complete |
+| DATA-03 | Phase 1 | Complete |
+| DATA-04 | Phase 1 | Complete |
+| DATA-05 | Phase 1 | Complete |
 | BRKT-01 | Phase 1 | Pending |
 | BRKT-02 | Phase 1 | Pending |
 | BRKT-03 | Phase 1 | Pending |
