@@ -16,6 +16,28 @@ const ROUND_LABELS = {
 };
 
 /**
+ * Returns a display label for an unresolved First Four source, e.g. "UMBC/Howard".
+ * Returns "TBD" if the source is not a first_four type or data is missing.
+ */
+function ffLabel(source) {
+  if (!source || source.type !== "first_four") return "TBD";
+  const ff = state.firstFour[source.ff_id];
+  if (!ff) return "TBD";
+  const topName = state.teams[ff.team_top]?.name ?? ff.team_top;
+  const botName = state.teams[ff.team_bot]?.name ?? ff.team_bot;
+  return `${topName}/${botName}`;
+}
+
+/**
+ * Returns the seed badge text for an unresolved First Four source.
+ */
+function ffSeed(source) {
+  if (!source || source.type !== "first_four") return "";
+  const ff = state.firstFour[source.ff_id];
+  return ff ? String(ff.seed) : "";
+}
+
+/**
  * Resolves which team object occupies a slot source reference.
  * Returns the team object or null if unresolvable (TBD).
  * @param {object} source - { type: "seed"|"first_four"|"winner", ... }
@@ -25,14 +47,16 @@ function resolveTeam(source) {
   if (!source) return null;
 
   if (source.type === "seed") {
-    return Object.values(state.teams).find(
-      t => t.seed === source.seed && t.region === source.region
-    ) ?? null;
+    return (
+      Object.values(state.teams).find(
+        (t) => t.seed === source.seed && t.region === source.region,
+      ) ?? null
+    );
   }
 
   if (source.type === "first_four") {
     const ff = state.firstFour[source.ff_id];
-    if (!ff || !ff.resolved || !ff.winner) return null; // TBD
+    if (!ff || !ff.resolved || !ff.winner) return null; // TBD — use ffLabel() for display
     return state.teams[ff.winner] ?? null;
   }
 
@@ -53,7 +77,7 @@ function resolveTeam(source) {
  * @param {object|null} team - resolved team object or null for TBD
  * @returns {HTMLElement}
  */
-function buildTeamSlotEl(gameId, pos, team) {
+function buildTeamSlotEl(gameId, pos, team, source) {
   const div = document.createElement("div");
   div.className = "team-slot";
   div.dataset.pos = pos;
@@ -61,11 +85,11 @@ function buildTeamSlotEl(gameId, pos, team) {
 
   const seedBadge = document.createElement("span");
   seedBadge.className = "seed-badge";
-  seedBadge.textContent = team ? team.seed : "";
+  seedBadge.textContent = team ? team.seed : ffSeed(source);
 
   const nameSpan = document.createElement("span");
   nameSpan.className = "team-name";
-  nameSpan.textContent = team ? team.name : "TBD";
+  nameSpan.textContent = team ? team.name : ffLabel(source);
 
   div.appendChild(seedBadge);
   div.appendChild(nameSpan);
@@ -92,8 +116,8 @@ function buildMatchupCard(slot) {
   const topTeam = resolveTeam(slot.top);
   const botTeam = resolveTeam(slot.bot);
 
-  card.appendChild(buildTeamSlotEl(slot.id, "top", topTeam));
-  card.appendChild(buildTeamSlotEl(slot.id, "bot", botTeam));
+  card.appendChild(buildTeamSlotEl(slot.id, "top", topTeam, slot.top));
+  card.appendChild(buildTeamSlotEl(slot.id, "bot", botTeam, slot.bot));
 
   return card;
 }
@@ -110,7 +134,7 @@ export function renderBracket() {
 
   // Render the 4 main regions
   const regions = ["East", "South", "Midwest", "West"];
-  regions.forEach(region => {
+  regions.forEach((region) => {
     const regionEl = buildRegionEl(region, REGION_ROUNDS);
     if (region === state.activeRegion) {
       regionEl.classList.add("active");
@@ -146,11 +170,13 @@ function buildRegionEl(region, rounds) {
   regionEl.dataset.region = region;
 
   // Get all slots for this region, sorted by round then position
-  const regionSlots = Object.values(state.slots).filter(s => s.region === region);
+  const regionSlots = Object.values(state.slots).filter(
+    (s) => s.region === region,
+  );
 
-  rounds.forEach(round => {
+  rounds.forEach((round) => {
     const roundSlots = regionSlots
-      .filter(s => s.round === round)
+      .filter((s) => s.round === round)
       .sort((a, b) => a.position - b.position);
 
     if (roundSlots.length === 0) return;
@@ -163,7 +189,7 @@ function buildRegionEl(region, rounds) {
     label.textContent = ROUND_LABELS[round] || round;
     col.appendChild(label);
 
-    roundSlots.forEach(slot => {
+    roundSlots.forEach((slot) => {
       col.appendChild(buildMatchupCard(slot));
     });
 
@@ -184,11 +210,13 @@ function buildSpecialRegionEl(regionName, rounds) {
   regionEl.className = "bracket-region";
   regionEl.dataset.region = regionName;
 
-  const regionSlots = Object.values(state.slots).filter(s => s.region === regionName);
+  const regionSlots = Object.values(state.slots).filter(
+    (s) => s.region === regionName,
+  );
 
-  rounds.forEach(round => {
+  rounds.forEach((round) => {
     const roundSlots = regionSlots
-      .filter(s => s.round === round)
+      .filter((s) => s.round === round)
       .sort((a, b) => a.position - b.position);
 
     if (roundSlots.length === 0) return;
@@ -201,7 +229,7 @@ function buildSpecialRegionEl(regionName, rounds) {
     label.textContent = ROUND_LABELS[round] || round;
     col.appendChild(label);
 
-    roundSlots.forEach(slot => {
+    roundSlots.forEach((slot) => {
       col.appendChild(buildMatchupCard(slot));
     });
 
@@ -231,8 +259,12 @@ function updateSlotDOM(gameId) {
   const topEl = card.querySelector("[data-pos='top']");
   if (topEl) {
     topEl.dataset.team = topTeam ? topTeam.id : "";
-    topEl.querySelector(".seed-badge").textContent = topTeam ? topTeam.seed : "";
-    topEl.querySelector(".team-name").textContent = topTeam ? topTeam.name : "TBD";
+    topEl.querySelector(".seed-badge").textContent = topTeam
+      ? topTeam.seed
+      : ffSeed(slot.top);
+    topEl.querySelector(".team-name").textContent = topTeam
+      ? topTeam.name
+      : ffLabel(slot.top);
     topEl.classList.remove("picked", "tbd");
     if (!topTeam) {
       topEl.classList.add("tbd");
@@ -245,8 +277,12 @@ function updateSlotDOM(gameId) {
   const botEl = card.querySelector("[data-pos='bot']");
   if (botEl) {
     botEl.dataset.team = botTeam ? botTeam.id : "";
-    botEl.querySelector(".seed-badge").textContent = botTeam ? botTeam.seed : "";
-    botEl.querySelector(".team-name").textContent = botTeam ? botTeam.name : "TBD";
+    botEl.querySelector(".seed-badge").textContent = botTeam
+      ? botTeam.seed
+      : ffSeed(slot.bot);
+    botEl.querySelector(".team-name").textContent = botTeam
+      ? botTeam.name
+      : ffLabel(slot.bot);
     botEl.classList.remove("picked", "tbd");
     if (!botTeam) {
       botEl.classList.add("tbd");
@@ -266,9 +302,9 @@ export function updateSlotAndDownstream(gameId) {
 
   // Find all downstream slots that source their team from this game's winner
   const downstream = Object.values(state.slots).filter(
-    s => s.top?.game === gameId || s.bot?.game === gameId
+    (s) => s.top?.game === gameId || s.bot?.game === gameId,
   );
-  downstream.forEach(s => updateSlotAndDownstream(s.id));
+  downstream.forEach((s) => updateSlotAndDownstream(s.id));
 }
 
 /**
