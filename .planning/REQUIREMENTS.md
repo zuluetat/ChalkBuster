@@ -77,12 +77,36 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (populated during roadmap creation) | | |
+| DATA-01 | Phase 1 | Pending |
+| DATA-02 | Phase 1 | Pending |
+| DATA-03 | Phase 1 | Pending |
+| DATA-04 | Phase 1 | Pending |
+| DATA-05 | Phase 1 | Pending |
+| BRKT-01 | Phase 1 | Pending |
+| BRKT-02 | Phase 1 | Pending |
+| BRKT-03 | Phase 1 | Pending |
+| BRKT-04 | Phase 1 | Pending |
+| BRKT-05 | Phase 1 | Pending |
+| BRKT-06 | Phase 1 | Pending |
+| ANAL-01 | Phase 2 | Pending |
+| ANAL-02 | Phase 2 | Pending |
+| ANAL-03 | Phase 2 | Pending |
+| ANAL-04 | Phase 2 | Pending |
+| ANAL-05 | Phase 2 | Pending |
+| ANAL-06 | Phase 2 | Pending |
+| PERS-01 | Phase 3 | Pending |
+| PERS-02 | Phase 3 | Pending |
+| PERS-03 | Phase 3 | Pending |
+| SHAR-01 | Phase 3 | Pending |
+| SHAR-02 | Phase 3 | Pending |
+| PLSH-01 | Phase 4 | Pending |
+| PLSH-02 | Phase 4 | Pending |
+| PLSH-03 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 22 total
-- Mapped to phases: 0
-- Unmapped: 22 ⚠️
+- Mapped to phases: 22
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-17*
