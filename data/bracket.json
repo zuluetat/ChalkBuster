@@ -1,0 +1,320 @@
+{
+  "schema_version": "v1",
+  "slots": {
+    "E1": {
+      "id": "E1", "region": "East", "round": "R64", "position": 1,
+      "top": { "type": "seed", "seed": 1, "region": "East" },
+      "bot": { "type": "seed", "seed": 16, "region": "East" }
+    },
+    "E2": {
+      "id": "E2", "region": "East", "round": "R64", "position": 2,
+      "top": { "type": "seed", "seed": 8, "region": "East" },
+      "bot": { "type": "seed", "seed": 9, "region": "East" }
+    },
+    "E3": {
+      "id": "E3", "region": "East", "round": "R64", "position": 3,
+      "top": { "type": "seed", "seed": 5, "region": "East" },
+      "bot": { "type": "seed", "seed": 12, "region": "East" }
+    },
+    "E4": {
+      "id": "E4", "region": "East", "round": "R64", "position": 4,
+      "top": { "type": "seed", "seed": 4, "region": "East" },
+      "bot": { "type": "seed", "seed": 13, "region": "East" }
+    },
+    "E5": {
+      "id": "E5", "region": "East", "round": "R64", "position": 5,
+      "top": { "type": "seed", "seed": 6, "region": "East" },
+      "bot": { "type": "seed", "seed": 11, "region": "East" }
+    },
+    "E6": {
+      "id": "E6", "region": "East", "round": "R64", "position": 6,
+      "top": { "type": "seed", "seed": 3, "region": "East" },
+      "bot": { "type": "seed", "seed": 14, "region": "East" }
+    },
+    "E7": {
+      "id": "E7", "region": "East", "round": "R64", "position": 7,
+      "top": { "type": "seed", "seed": 7, "region": "East" },
+      "bot": { "type": "seed", "seed": 10, "region": "East" }
+    },
+    "E8": {
+      "id": "E8", "region": "East", "round": "R64", "position": 8,
+      "top": { "type": "seed", "seed": 2, "region": "East" },
+      "bot": { "type": "seed", "seed": 15, "region": "East" }
+    },
+    "E9": {
+      "id": "E9", "region": "East", "round": "R32", "position": 1,
+      "top": { "type": "winner", "game": "E1" },
+      "bot": { "type": "winner", "game": "E2" }
+    },
+    "E10": {
+      "id": "E10", "region": "East", "round": "R32", "position": 2,
+      "top": { "type": "winner", "game": "E3" },
+      "bot": { "type": "winner", "game": "E4" }
+    },
+    "E11": {
+      "id": "E11", "region": "East", "round": "R32", "position": 3,
+      "top": { "type": "winner", "game": "E5" },
+      "bot": { "type": "winner", "game": "E6" }
+    },
+    "E12": {
+      "id": "E12", "region": "East", "round": "R32", "position": 4,
+      "top": { "type": "winner", "game": "E7" },
+      "bot": { "type": "winner", "game": "E8" }
+    },
+    "E13": {
+      "id": "E13", "region": "East", "round": "S16", "position": 1,
+      "top": { "type": "winner", "game": "E9" },
+      "bot": { "type": "winner", "game": "E10" }
+    },
+    "E14": {
+      "id": "E14", "region": "East", "round": "S16", "position": 2,
+      "top": { "type": "winner", "game": "E11" },
+      "bot": { "type": "winner", "game": "E12" }
+    },
+    "E15": {
+      "id": "E15", "region": "East", "round": "E8", "position": 1,
+      "top": { "type": "winner", "game": "E13" },
+      "bot": { "type": "winner", "game": "E14" }
+    },
+    "S1": {
+      "id": "S1", "region": "South", "round": "R64", "position": 1,
+      "top": { "type": "seed", "seed": 1, "region": "South" },
+      "bot": { "type": "first_four", "ff_id": "FF_PV_LEHIGH" }
+    },
+    "S2": {
+      "id": "S2", "region": "South", "round": "R64", "position": 2,
+      "top": { "type": "seed", "seed": 8, "region": "South" },
+      "bot": { "type": "seed", "seed": 9, "region": "South" }
+    },
+    "S3": {
+      "id": "S3", "region": "South", "round": "R64", "position": 3,
+      "top": { "type": "seed", "seed": 5, "region": "South" },
+      "bot": { "type": "seed", "seed": 12, "region": "South" }
+    },
+    "S4": {
+      "id": "S4", "region": "South", "round": "R64", "position": 4,
+      "top": { "type": "seed", "seed": 4, "region": "South" },
+      "bot": { "type": "seed", "seed": 13, "region": "South" }
+    },
+    "S5": {
+      "id": "S5", "region": "South", "round": "R64", "position": 5,
+      "top": { "type": "seed", "seed": 6, "region": "South" },
+      "bot": { "type": "seed", "seed": 11, "region": "South" }
+    },
+    "S6": {
+      "id": "S6", "region": "South", "round": "R64", "position": 6,
+      "top": { "type": "seed", "seed": 3, "region": "South" },
+      "bot": { "type": "seed", "seed": 14, "region": "South" }
+    },
+    "S7": {
+      "id": "S7", "region": "South", "round": "R64", "position": 7,
+      "top": { "type": "seed", "seed": 7, "region": "South" },
+      "bot": { "type": "seed", "seed": 10, "region": "South" }
+    },
+    "S8": {
+      "id": "S8", "region": "South", "round": "R64", "position": 8,
+      "top": { "type": "seed", "seed": 2, "region": "South" },
+      "bot": { "type": "seed", "seed": 15, "region": "South" }
+    },
+    "S9": {
+      "id": "S9", "region": "South", "round": "R32", "position": 1,
+      "top": { "type": "winner", "game": "S1" },
+      "bot": { "type": "winner", "game": "S2" }
+    },
+    "S10": {
+      "id": "S10", "region": "South", "round": "R32", "position": 2,
+      "top": { "type": "winner", "game": "S3" },
+      "bot": { "type": "winner", "game": "S4" }
+    },
+    "S11": {
+      "id": "S11", "region": "South", "round": "R32", "position": 3,
+      "top": { "type": "winner", "game": "S5" },
+      "bot": { "type": "winner", "game": "S6" }
+    },
+    "S12": {
+      "id": "S12", "region": "South", "round": "R32", "position": 4,
+      "top": { "type": "winner", "game": "S7" },
+      "bot": { "type": "winner", "game": "S8" }
+    },
+    "S13": {
+      "id": "S13", "region": "South", "round": "S16", "position": 1,
+      "top": { "type": "winner", "game": "S9" },
+      "bot": { "type": "winner", "game": "S10" }
+    },
+    "S14": {
+      "id": "S14", "region": "South", "round": "S16", "position": 2,
+      "top": { "type": "winner", "game": "S11" },
+      "bot": { "type": "winner", "game": "S12" }
+    },
+    "S15": {
+      "id": "S15", "region": "South", "round": "E8", "position": 1,
+      "top": { "type": "winner", "game": "S13" },
+      "bot": { "type": "winner", "game": "S14" }
+    },
+    "M1": {
+      "id": "M1", "region": "Midwest", "round": "R64", "position": 1,
+      "top": { "type": "seed", "seed": 1, "region": "Midwest" },
+      "bot": { "type": "first_four", "ff_id": "FF_UMBC_HOWARD" }
+    },
+    "M2": {
+      "id": "M2", "region": "Midwest", "round": "R64", "position": 2,
+      "top": { "type": "seed", "seed": 8, "region": "Midwest" },
+      "bot": { "type": "seed", "seed": 9, "region": "Midwest" }
+    },
+    "M3": {
+      "id": "M3", "region": "Midwest", "round": "R64", "position": 3,
+      "top": { "type": "seed", "seed": 5, "region": "Midwest" },
+      "bot": { "type": "seed", "seed": 12, "region": "Midwest" }
+    },
+    "M4": {
+      "id": "M4", "region": "Midwest", "round": "R64", "position": 4,
+      "top": { "type": "seed", "seed": 4, "region": "Midwest" },
+      "bot": { "type": "seed", "seed": 13, "region": "Midwest" }
+    },
+    "M5": {
+      "id": "M5", "region": "Midwest", "round": "R64", "position": 5,
+      "top": { "type": "seed", "seed": 6, "region": "Midwest" },
+      "bot": { "type": "first_four", "ff_id": "FF_MIAMI_SMU" }
+    },
+    "M6": {
+      "id": "M6", "region": "Midwest", "round": "R64", "position": 6,
+      "top": { "type": "seed", "seed": 3, "region": "Midwest" },
+      "bot": { "type": "seed", "seed": 14, "region": "Midwest" }
+    },
+    "M7": {
+      "id": "M7", "region": "Midwest", "round": "R64", "position": 7,
+      "top": { "type": "seed", "seed": 7, "region": "Midwest" },
+      "bot": { "type": "seed", "seed": 10, "region": "Midwest" }
+    },
+    "M8": {
+      "id": "M8", "region": "Midwest", "round": "R64", "position": 8,
+      "top": { "type": "seed", "seed": 2, "region": "Midwest" },
+      "bot": { "type": "seed", "seed": 15, "region": "Midwest" }
+    },
+    "M9": {
+      "id": "M9", "region": "Midwest", "round": "R32", "position": 1,
+      "top": { "type": "winner", "game": "M1" },
+      "bot": { "type": "winner", "game": "M2" }
+    },
+    "M10": {
+      "id": "M10", "region": "Midwest", "round": "R32", "position": 2,
+      "top": { "type": "winner", "game": "M3" },
+      "bot": { "type": "winner", "game": "M4" }
+    },
+    "M11": {
+      "id": "M11", "region": "Midwest", "round": "R32", "position": 3,
+      "top": { "type": "winner", "game": "M5" },
+      "bot": { "type": "winner", "game": "M6" }
+    },
+    "M12": {
+      "id": "M12", "region": "Midwest", "round": "R32", "position": 4,
+      "top": { "type": "winner", "game": "M7" },
+      "bot": { "type": "winner", "game": "M8" }
+    },
+    "M13": {
+      "id": "M13", "region": "Midwest", "round": "S16", "position": 1,
+      "top": { "type": "winner", "game": "M9" },
+      "bot": { "type": "winner", "game": "M10" }
+    },
+    "M14": {
+      "id": "M14", "region": "Midwest", "round": "S16", "position": 2,
+      "top": { "type": "winner", "game": "M11" },
+      "bot": { "type": "winner", "game": "M12" }
+    },
+    "M15": {
+      "id": "M15", "region": "Midwest", "round": "E8", "position": 1,
+      "top": { "type": "winner", "game": "M13" },
+      "bot": { "type": "winner", "game": "M14" }
+    },
+    "W1": {
+      "id": "W1", "region": "West", "round": "R64", "position": 1,
+      "top": { "type": "seed", "seed": 1, "region": "West" },
+      "bot": { "type": "seed", "seed": 16, "region": "West" }
+    },
+    "W2": {
+      "id": "W2", "region": "West", "round": "R64", "position": 2,
+      "top": { "type": "seed", "seed": 8, "region": "West" },
+      "bot": { "type": "seed", "seed": 9, "region": "West" }
+    },
+    "W3": {
+      "id": "W3", "region": "West", "round": "R64", "position": 3,
+      "top": { "type": "seed", "seed": 5, "region": "West" },
+      "bot": { "type": "seed", "seed": 12, "region": "West" }
+    },
+    "W4": {
+      "id": "W4", "region": "West", "round": "R64", "position": 4,
+      "top": { "type": "seed", "seed": 4, "region": "West" },
+      "bot": { "type": "seed", "seed": 13, "region": "West" }
+    },
+    "W5": {
+      "id": "W5", "region": "West", "round": "R64", "position": 5,
+      "top": { "type": "seed", "seed": 6, "region": "West" },
+      "bot": { "type": "first_four", "ff_id": "FF_TEXAS_NCSTATE" }
+    },
+    "W6": {
+      "id": "W6", "region": "West", "round": "R64", "position": 6,
+      "top": { "type": "seed", "seed": 3, "region": "West" },
+      "bot": { "type": "seed", "seed": 14, "region": "West" }
+    },
+    "W7": {
+      "id": "W7", "region": "West", "round": "R64", "position": 7,
+      "top": { "type": "seed", "seed": 7, "region": "West" },
+      "bot": { "type": "seed", "seed": 10, "region": "West" }
+    },
+    "W8": {
+      "id": "W8", "region": "West", "round": "R64", "position": 8,
+      "top": { "type": "seed", "seed": 2, "region": "West" },
+      "bot": { "type": "seed", "seed": 15, "region": "West" }
+    },
+    "W9": {
+      "id": "W9", "region": "West", "round": "R32", "position": 1,
+      "top": { "type": "winner", "game": "W1" },
+      "bot": { "type": "winner", "game": "W2" }
+    },
+    "W10": {
+      "id": "W10", "region": "West", "round": "R32", "position": 2,
+      "top": { "type": "winner", "game": "W3" },
+      "bot": { "type": "winner", "game": "W4" }
+    },
+    "W11": {
+      "id": "W11", "region": "West", "round": "R32", "position": 3,
+      "top": { "type": "winner", "game": "W5" },
+      "bot": { "type": "winner", "game": "W6" }
+    },
+    "W12": {
+      "id": "W12", "region": "West", "round": "R32", "position": 4,
+      "top": { "type": "winner", "game": "W7" },
+      "bot": { "type": "winner", "game": "W8" }
+    },
+    "W13": {
+      "id": "W13", "region": "West", "round": "S16", "position": 1,
+      "top": { "type": "winner", "game": "W9" },
+      "bot": { "type": "winner", "game": "W10" }
+    },
+    "W14": {
+      "id": "W14", "region": "West", "round": "S16", "position": 2,
+      "top": { "type": "winner", "game": "W11" },
+      "bot": { "type": "winner", "game": "W12" }
+    },
+    "W15": {
+      "id": "W15", "region": "West", "round": "E8", "position": 1,
+      "top": { "type": "winner", "game": "W13" },
+      "bot": { "type": "winner", "game": "W14" }
+    },
+    "FF1": {
+      "id": "FF1", "region": "FinalFour", "round": "F4", "position": 1,
+      "top": { "type": "winner", "game": "E15" },
+      "bot": { "type": "winner", "game": "W15" }
+    },
+    "FF2": {
+      "id": "FF2", "region": "FinalFour", "round": "F4", "position": 2,
+      "top": { "type": "winner", "game": "S15" },
+      "bot": { "type": "winner", "game": "M15" }
+    },
+    "CH1": {
+      "id": "CH1", "region": "Championship", "round": "CHM", "position": 1,
+      "top": { "type": "winner", "game": "FF1" },
+      "bot": { "type": "winner", "game": "FF2" }
+    }
+  }
+}
