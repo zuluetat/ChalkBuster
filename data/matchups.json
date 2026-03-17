@@ -1,0 +1,1813 @@
+{
+  "schema_version": "v1",
+  "matchups": {
+    "E1": {
+      "slot_id": "E1",
+      "round": "R64",
+      "region": "East",
+      "team_top": "DUKE",
+      "team_bot": "SIENA",
+      "metrics": {
+        "top": { "kenpom_adjEM": 31.4, "last_10": "9-1", "sos_rank": 8 },
+        "bot": { "kenpom_adjEM": -6.4, "last_10": "6-4", "sos_rank": 312 }
+      },
+      "pros": {
+        "top": [
+          "Elite AdjEM of +31.4, second-best in the nation",
+          "Only 3 losses all season against top-8 schedule",
+          "Dominant interior presence limits paint scoring"
+        ],
+        "bot": [
+          "Conference tournament momentum, won MAAC championship",
+          "Experienced senior backcourt",
+          "Nothing to lose, plays freely"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Heavy favorite; limited bracket pool upside",
+          "Slow starts documented in early tournament rounds",
+          "AdjEM gap of 37.8 points is historically decisive"
+        ],
+        "bot": [
+          "AdjEM gap of 37.8 is among the largest in the field",
+          "Struggled against high-athleticism opponents all season",
+          "SOS rank 312 means zero preparation for elite competition"
+        ]
+      },
+      "recommendation": { "team": "DUKE", "confidence": "High" },
+      "reasoning": "Duke's AdjEM advantage of 37.8 points is the largest gap in the East region, and their elite defense held opponents to 93.4 points per 100 possessions. Siena's weak SOS provides no competitive preparation for this matchup.",
+      "win_prob": { "top": 0.98, "bot": 0.02 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "DUKE"
+    },
+    "E2": {
+      "slot_id": "E2",
+      "round": "R64",
+      "region": "East",
+      "team_top": "OHIO_STATE",
+      "team_bot": "TCU",
+      "metrics": {
+        "top": { "kenpom_adjEM": 11.8, "last_10": "7-3", "sos_rank": 33 },
+        "bot": { "kenpom_adjEM": 10.4, "last_10": "6-4", "sos_rank": 47 }
+      },
+      "pros": {
+        "top": [
+          "Home region familiarity as Big Ten squad",
+          "Strong defensive rotations limiting second-chance points",
+          "Favorable seeding as 8-seed with upset potential in R32"
+        ],
+        "bot": [
+          "Big 12 battle-tested, played 9 teams ranked in top 40 AdjEM",
+          "Explosive offensive pace at 71.2 possessions per game",
+          "Free throw shooting above 75%, reliable in close games"
+        ]
+      },
+      "cons": {
+        "top": [
+          "22-12 record reflects inconsistency in Big Ten play",
+          "Turnover rate above conference average",
+          "Relies on hero-ball scoring rather than system offense"
+        ],
+        "bot": [
+          "SOS rank 47 lags Ohio State's 33, slight schedule disadvantage",
+          "AdjEM 1.4 points below Ohio State — marginal gap",
+          "7-10 seed teams historically lose 51% of 8-9 matchups"
+        ]
+      },
+      "recommendation": { "team": "OHIO_STATE", "confidence": "Low" },
+      "reasoning": "Ohio State holds a 1.4 AdjEM edge over TCU and played a slightly stronger schedule, but this is effectively a coin-flip game. OSU's 7-3 last 10 form provides a slight half-tier boost.",
+      "win_prob": { "top": 0.53, "bot": 0.47 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "OHIO_STATE"
+    },
+    "E3": {
+      "slot_id": "E3",
+      "round": "R64",
+      "region": "East",
+      "team_top": "ST_JOHNS",
+      "team_bot": "NORTHERN_IOWA",
+      "metrics": {
+        "top": { "kenpom_adjEM": 16.9, "last_10": "8-2", "sos_rank": 35 },
+        "bot": { "kenpom_adjEM": 7.8, "last_10": "7-3", "sos_rank": 142 }
+      },
+      "pros": {
+        "top": [
+          "9.1 AdjEM advantage over Northern Iowa",
+          "Big East schedule produced top-35 SOS strength",
+          "Conference tournament finalist with strong closing stretch"
+        ],
+        "bot": [
+          "MVC conference champion, earned automatic bid",
+          "Deliberate pace (64.2 possessions) can frustrate faster teams",
+          "Dominant rebounding margin in weaker conference"
+        ]
+      },
+      "cons": {
+        "top": [
+          "5-seed historically loses to 12-seed 35% of the time",
+          "Road struggles; team is 4-7 in true road games",
+          "No dominant post player to punish slow-paced opponents"
+        ],
+        "bot": [
+          "SOS rank 142 means no prep for Big East caliber offense",
+          "AdjEM gap of 9.1 is near the High confidence threshold",
+          "Slow pace benefits only if defense holds early — risky vs 5-seed"
+        ]
+      },
+      "recommendation": { "team": "ST_JOHNS", "confidence": "Medium" },
+      "reasoning": "St. John's 9.1 AdjEM advantage and Big East battle-testing edge this toward Medium confidence. Northern Iowa's methodical pace and weak SOS are significant concerns against a faster team.",
+      "win_prob": { "top": 0.64, "bot": 0.36 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "ST_JOHNS"
+    },
+    "E4": {
+      "slot_id": "E4",
+      "round": "R64",
+      "region": "East",
+      "team_top": "KANSAS",
+      "team_bot": "CAL_BAPTIST",
+      "metrics": {
+        "top": { "kenpom_adjEM": 18.7, "last_10": "7-3", "sos_rank": 18 },
+        "bot": { "kenpom_adjEM": 5.2, "last_10": "8-2", "sos_rank": 228 }
+      },
+      "pros": {
+        "top": [
+          "13.5 AdjEM advantage over Cal Baptist",
+          "Top-20 SOS forged in competitive Big 12 play",
+          "Experienced tournament program with multiple Elite Eight runs"
+        ],
+        "bot": [
+          "8-2 last 10 form is the best recent stretch in this matchup",
+          "WAC champions play a read-and-react motion offense that can confuse man defenses",
+          "Nothing to lose mindset historically dangerous for 13-seeds"
+        ]
+      },
+      "cons": {
+        "top": [
+          "7-3 last 10 shows some late-season fatigue",
+          "Perimeter defense allowed 38% from three in Big 12 play",
+          "Tournament experience pressure can tighten play vs smaller opponents"
+        ],
+        "bot": [
+          "SOS rank 228 means zero Big 12-level competition all year",
+          "AdjEM gap of 13.5 exceeds High confidence threshold",
+          "4-13 matchup historically goes to 4-seed 79% of the time"
+        ]
+      },
+      "recommendation": { "team": "KANSAS", "confidence": "High" },
+      "reasoning": "Kansas holds a 13.5 AdjEM advantage bolstered by a top-20 SOS. Cal Baptist's 8-2 last 10 form is impressive but against WAC competition that offers no blueprint for handling Kansas athleticism.",
+      "win_prob": { "top": 0.79, "bot": 0.21 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "KANSAS"
+    },
+    "E5": {
+      "slot_id": "E5",
+      "round": "R64",
+      "region": "East",
+      "team_top": "LOUISVILLE",
+      "team_bot": "SOUTH_FLORIDA",
+      "metrics": {
+        "top": { "kenpom_adjEM": 14.8, "last_10": "6-4", "sos_rank": 41 },
+        "bot": { "kenpom_adjEM": 9.7, "last_10": "7-3", "sos_rank": 62 }
+      },
+      "pros": {
+        "top": [
+          "5.1 AdjEM advantage over South Florida",
+          "ACC schedule provided top-41 SOS toughening",
+          "Experienced in high-leverage close games"
+        ],
+        "bot": [
+          "7-3 last 10 gives South Florida the hot-hand edge",
+          "AAC champion brings automatic bid momentum",
+          "Zone defense can disrupt Louisville's man-defense-oriented offense"
+        ]
+      },
+      "cons": {
+        "top": [
+          "6-4 last 10 shows inconsistency heading into the tournament",
+          "5.1 AdjEM delta falls in Medium range, not dominant",
+          "Louisville historically struggles covering 11-seed ATS"
+        ],
+        "bot": [
+          "SOS rank 62 trails Louisville's top-41, weaker competition base",
+          "AdjEM gap of 5.1 is unfavorable for the underdog",
+          "First Tournament appearance in 3 years — experience gap matters"
+        ]
+      },
+      "recommendation": { "team": "LOUISVILLE", "confidence": "Medium" },
+      "reasoning": "Louisville's 5.1 AdjEM edge and ACC pedigree favor them, but South Florida's 7-3 late run and zone adaptability make this a live 11-seed upset threat. The hot last 10 almost offsets the AdjEM gap.",
+      "win_prob": { "top": 0.60, "bot": 0.40 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "LOUISVILLE"
+    },
+    "E6": {
+      "slot_id": "E6",
+      "round": "R64",
+      "region": "East",
+      "team_top": "MICHIGAN_STATE",
+      "team_bot": "NORTH_DAKOTA_STATE",
+      "metrics": {
+        "top": { "kenpom_adjEM": 21.3, "last_10": "8-2", "sos_rank": 22 },
+        "bot": { "kenpom_adjEM": 2.1, "last_10": "7-3", "sos_rank": 248 }
+      },
+      "pros": {
+        "top": [
+          "19.2 AdjEM advantage over North Dakota State",
+          "Tom Izzo historically one of the best March coaches",
+          "Top-22 SOS with Big Ten wins over ranked opponents"
+        ],
+        "bot": [
+          "Summit League champion, won 7 of last 10",
+          "Physical play style can slow Michigan State's transition offense",
+          "Underdog status historically motivates smaller conference teams"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Heavy favorite means limited bracket differentiation",
+          "28-6 combined with 8-2 last 10 leaves little trap-game concern",
+          "Slow starts vs non-power-conference opponents documented"
+        ],
+        "bot": [
+          "SOS rank 248 provides zero preparation for Big Ten physicality",
+          "AdjEM gap of 19.2 is near the top of the field — massive disadvantage",
+          "14-seeds win only 15% of tournament games historically"
+        ]
+      },
+      "recommendation": { "team": "MICHIGAN_STATE", "confidence": "High" },
+      "reasoning": "Michigan State's 19.2 AdjEM lead combined with Izzo's March pedigree and a top-22 SOS makes this a straightforward High confidence pick. North Dakota State's SOS rank of 248 reflects a complete lack of preparation for this level.",
+      "win_prob": { "top": 0.85, "bot": 0.15 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "MICHIGAN_STATE"
+    },
+    "E7": {
+      "slot_id": "E7",
+      "round": "R64",
+      "region": "East",
+      "team_top": "UCLA",
+      "team_bot": "UCF",
+      "metrics": {
+        "top": { "kenpom_adjEM": 13.2, "last_10": "7-3", "sos_rank": 29 },
+        "bot": { "kenpom_adjEM": 9.1, "last_10": "8-2", "sos_rank": 58 }
+      },
+      "pros": {
+        "top": [
+          "4.1 AdjEM edge with stronger SOS backing",
+          "Pac-12 schedule battles produced top-29 schedule strength",
+          "Tournament experience from back-to-back appearances"
+        ],
+        "bot": [
+          "8-2 last 10 is the hottest recent form in this matchup",
+          "AAC play provided competitive preparation against quality guards",
+          "UCF's offensive pace (70.5) can stretch UCLA's defense"
+        ]
+      },
+      "cons": {
+        "top": [
+          "7-10 seedings historically split nearly 50-50 in modern tournament data",
+          "4.1 AdjEM gap is on the low end of Medium confidence",
+          "Perimeter defensive gaps exposed in late Pac-12 season"
+        ],
+        "bot": [
+          "SOS rank 58 trails UCLA's top-29 — weaker competition resume",
+          "AdjEM gap of 4.1 trends against the underdog",
+          "First tournament run in 2 years — nerves factor"
+        ]
+      },
+      "recommendation": { "team": "UCLA", "confidence": "Low" },
+      "reasoning": "UCLA holds a 4.1 AdjEM advantage but UCF's 8-2 last 10 form nearly neutralizes it. The SOS gap favors UCLA, but this is a genuine toss-up where UCF has real upset capability.",
+      "win_prob": { "top": 0.58, "bot": 0.42 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "UCLA"
+    },
+    "E8": {
+      "slot_id": "E8",
+      "round": "R64",
+      "region": "East",
+      "team_top": "UCONN",
+      "team_bot": "FURMAN",
+      "metrics": {
+        "top": { "kenpom_adjEM": 23.1, "last_10": "8-2", "sos_rank": 14 },
+        "bot": { "kenpom_adjEM": -0.8, "last_10": "8-2", "sos_rank": 278 }
+      },
+      "pros": {
+        "top": [
+          "23.9 AdjEM advantage over Furman",
+          "Top-14 SOS battle-tested in Big East wars",
+          "Elite defense historically translates to tournament success"
+        ],
+        "bot": [
+          "8-2 last 10 matches UConn's form",
+          "SoCon champion with surprising offensive efficiency",
+          "Furman historically dangerous as mid-major with momentum"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Bracket pool value limited as dominant 2-seed",
+          "23.9 AdjEM gap leaves no credible upset path",
+          "Potential complacency vs weaker opponent"
+        ],
+        "bot": [
+          "SOS rank 278 provides zero preparation for Big East-level athleticism",
+          "AdjEM of -0.8 reflects below-average efficiency — real disadvantage",
+          "2-seed vs 15-seed historically goes to 2-seed 94% of the time"
+        ]
+      },
+      "recommendation": { "team": "UCONN", "confidence": "High" },
+      "reasoning": "UConn's 23.9 AdjEM advantage and top-14 SOS leaves Furman with no realistic path. Both teams are hot at 8-2 recently but the quality differential is enormous.",
+      "win_prob": { "top": 0.94, "bot": 0.06 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "UCONN"
+    },
+    "S1": {
+      "slot_id": "S1",
+      "round": "R64",
+      "region": "South",
+      "team_top": "FLORIDA",
+      "team_bot": "LEHIGH",
+      "metrics": {
+        "top": { "kenpom_adjEM": 29.8, "last_10": "9-1", "sos_rank": 11 },
+        "bot": { "kenpom_adjEM": -4.8, "last_10": "5-5", "sos_rank": 304 }
+      },
+      "pros": {
+        "top": [
+          "34.6 AdjEM advantage, third-highest gap in the bracket",
+          "9-1 last 10 demonstrates dominant late-season form",
+          "SEC schedule strength (SOS rank 11) hardened this team"
+        ],
+        "bot": [
+          "First Four survivor brings psychological edge of already winning",
+          "Scrappy defensive identity — plays above its efficiency rating in close games",
+          "Lehigh historically pulled off a 15-seed upset in 2012"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Overwhelming favorite; no bracket differentiation value",
+          "First Four opponents sometimes surprise fresh 1-seeds",
+          "Rotation minutes may be uneven after watching the First Four"
+        ],
+        "bot": [
+          "5-5 last 10 reflects fatigue from Patriot League tournament grind",
+          "AdjEM of -4.8 versus a team at +29.8 is historically insurmountable",
+          "SOS rank 304 means zero preparation for SEC-level talent"
+        ]
+      },
+      "recommendation": { "team": "FLORIDA", "confidence": "High" },
+      "reasoning": "Florida's 34.6 AdjEM gap over Lehigh, combined with a 9-1 last 10 run and top-11 SOS, makes this a near-certain outcome. Lehigh's 5-5 recent form indicates no momentum from their First Four win.",
+      "win_prob": { "top": 0.98, "bot": 0.02 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "FLORIDA"
+    },
+    "S2": {
+      "slot_id": "S2",
+      "round": "R64",
+      "region": "South",
+      "team_top": "CLEMSON",
+      "team_bot": "IOWA",
+      "metrics": {
+        "top": { "kenpom_adjEM": 10.9, "last_10": "6-4", "sos_rank": 37 },
+        "bot": { "kenpom_adjEM": 9.8, "last_10": "7-3", "sos_rank": 52 }
+      },
+      "pros": {
+        "top": [
+          "1.1 AdjEM edge with stronger schedule validation",
+          "ACC battle-tested; top-37 SOS edges Iowa's 52",
+          "Defensive identity (96.9 AdjD) limits high-scoring opponents"
+        ],
+        "bot": [
+          "7-3 last 10 gives Iowa the momentum edge heading in",
+          "High-octane offense at 73.8 possessions per game creates chaos",
+          "Iowa historically over-performs as a 9-seed in tournament play"
+        ]
+      },
+      "cons": {
+        "top": [
+          "6-4 last 10 is mediocre heading into the tournament",
+          "1.1 AdjEM gap is well within the coin-flip range",
+          "Pace of play mismatch could benefit Iowa's faster style"
+        ],
+        "bot": [
+          "AdjEM 1.1 below Clemson — marginal gap",
+          "SOS rank 52 trails Clemson's 37",
+          "Defense rated 100.6 AdjD, worst in this comparison"
+        ]
+      },
+      "recommendation": { "team": "IOWA", "confidence": "Low" },
+      "reasoning": "Iowa's 7-3 recent form edges Clemson's 6-4 run, and Iowa's up-tempo style at 73.8 possessions per game creates chaos that neutralizes Clemson's modest AdjEM advantage. Contrarian pick: public backs Clemson more heavily.",
+      "win_prob": { "top": 0.48, "bot": 0.52 },
+      "upset_alert": true,
+      "contrarian": true,
+      "public_consensus_team": "CLEMSON"
+    },
+    "S3": {
+      "slot_id": "S3",
+      "round": "R64",
+      "region": "South",
+      "team_top": "VANDERBILT",
+      "team_bot": "MCNEESE",
+      "metrics": {
+        "top": { "kenpom_adjEM": 14.2, "last_10": "6-4", "sos_rank": 44 },
+        "bot": { "kenpom_adjEM": 8.4, "last_10": "9-1", "sos_rank": 168 }
+      },
+      "pros": {
+        "top": [
+          "5.8 AdjEM advantage backed by SEC competition",
+          "Top-44 SOS vastly superior to McNeese's 168",
+          "Tournament-tested program knows March pressure"
+        ],
+        "bot": [
+          "9-1 last 10 is the hottest form in the entire R64 field",
+          "Southland Conference champion riding 22-game home win streak",
+          "McNeese-style systems teams historically elite at 5-12 upset rate (35%)"
+        ]
+      },
+      "cons": {
+        "top": [
+          "6-4 last 10 suggests some regression entering the tournament",
+          "5.8 AdjEM gap is in the Medium confidence zone",
+          "Vanderbilt's offense rated 110.5 AdjO is susceptible to zone presses"
+        ],
+        "bot": [
+          "SOS rank 168 means no preparation for Vanderbilt's defensive versatility",
+          "AdjEM gap of 5.8 favors Vanderbilt despite McNeese's form",
+          "Away from home court for first time in over 2 months"
+        ]
+      },
+      "recommendation": { "team": "VANDERBILT", "confidence": "Medium" },
+      "reasoning": "Vanderbilt holds a 5.8 AdjEM edge over McNeese, but McNeese's scorching 9-1 last 10 and 35% historical 12-seed upset rate make this a genuine alert game. Pick Vanderbilt but watch the line.",
+      "win_prob": { "top": 0.62, "bot": 0.38 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "VANDERBILT"
+    },
+    "S4": {
+      "slot_id": "S4",
+      "round": "R64",
+      "region": "South",
+      "team_top": "NEBRASKA",
+      "team_bot": "TROY",
+      "metrics": {
+        "top": { "kenpom_adjEM": 17.4, "last_10": "7-3", "sos_rank": 21 },
+        "bot": { "kenpom_adjEM": 4.7, "last_10": "7-3", "sos_rank": 214 }
+      },
+      "pros": {
+        "top": [
+          "12.7 AdjEM advantage over Troy",
+          "Top-21 SOS from Big Ten competition provides real tournament prep",
+          "Interior depth allows Nebraska to punish smaller Sun Belt lineups"
+        ],
+        "bot": [
+          "Identical 7-3 last 10 record — form is a wash",
+          "Sun Belt champion with program-best season",
+          "Troy's up-tempo style (67.3 pace) can create early variance"
+        ]
+      },
+      "cons": {
+        "top": [
+          "4-seed has 79% historical win rate — not guaranteed",
+          "Nebraska's perimeter shooting inconsistent (33% from 3 on road)",
+          "Potential bracket trap game given Nebraska media attention"
+        ],
+        "bot": [
+          "SOS rank 214 means no preparation for Big Ten-level physicality",
+          "AdjEM gap of 12.7 is in the High confidence zone",
+          "Troy's offense (101.8 AdjO) is well below tournament average"
+        ]
+      },
+      "recommendation": { "team": "NEBRASKA", "confidence": "High" },
+      "reasoning": "Nebraska's 12.7 AdjEM advantage and top-21 SOS create a significant quality gap over Troy. Both teams match in recent form but Nebraska's preparation through Big Ten competition is decisive.",
+      "win_prob": { "top": 0.79, "bot": 0.21 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "NEBRASKA"
+    },
+    "S5": {
+      "slot_id": "S5",
+      "round": "R64",
+      "region": "South",
+      "team_top": "NORTH_CAROLINA",
+      "team_bot": "VCU",
+      "metrics": {
+        "top": { "kenpom_adjEM": 13.5, "last_10": "6-4", "sos_rank": 28 },
+        "bot": { "kenpom_adjEM": 9.4, "last_10": "8-2", "sos_rank": 68 }
+      },
+      "pros": {
+        "top": [
+          "4.1 AdjEM advantage with top-28 SOS from ACC play",
+          "Elite offensive pace (72.4) creates transition opportunities",
+          "Carolina blue brings significant fan engagement and crowd factor"
+        ],
+        "bot": [
+          "8-2 last 10 gives VCU the hot-hand advantage",
+          "Havoc defense at 71.6 pace forces turnovers and disrupts rhythm",
+          "VCU's athletic guards are a nightmare matchup for UNC's offense"
+        ]
+      },
+      "cons": {
+        "top": [
+          "6-4 last 10 is uninspiring heading into March",
+          "4.1 AdjEM gap is in the Low confidence range",
+          "UNC's defense (96.7 AdjD) allows too many open threes"
+        ],
+        "bot": [
+          "SOS rank 68 is respectable but trails UNC's top-28",
+          "AdjEM gap of 4.1 trends against VCU despite good form",
+          "VCU historically struggles covering spread vs power conference opponents"
+        ]
+      },
+      "recommendation": { "team": "VCU", "confidence": "Low" },
+      "reasoning": "VCU's 8-2 form and Havoc defense make them a genuine upset threat against a UNC team that went only 6-4 in its last 10. The AdjEM gap is small enough that VCU's defensive disruption could decide this game.",
+      "win_prob": { "top": 0.57, "bot": 0.43 },
+      "upset_alert": true,
+      "contrarian": true,
+      "public_consensus_team": "NORTH_CAROLINA"
+    },
+    "S6": {
+      "slot_id": "S6",
+      "round": "R64",
+      "region": "South",
+      "team_top": "ILLINOIS",
+      "team_bot": "PENN",
+      "metrics": {
+        "top": { "kenpom_adjEM": 20.4, "last_10": "7-3", "sos_rank": 25 },
+        "bot": { "kenpom_adjEM": 1.4, "last_10": "7-3", "sos_rank": 258 }
+      },
+      "pros": {
+        "top": [
+          "19.0 AdjEM advantage over Penn",
+          "Top-25 SOS built in Big Ten competition",
+          "Tournament-ready rotation with senior-heavy lineup"
+        ],
+        "bot": [
+          "Ivy League champion plays Princeton-style motion offense — unique system",
+          "Identical 7-3 last 10 form — Penn is playing well",
+          "Upsets against Big Ten schools historically cluster in 3-14 matchups"
+        ]
+      },
+      "cons": {
+        "top": [
+          "3-seed losing to 14-seed happens 15% of the time historically",
+          "Illinois' tempo reliance can backfire against slower motion teams",
+          "Limited off-bench scoring depth documented in Big Ten"
+        ],
+        "bot": [
+          "SOS rank 258 means Ivy League competition is not tournament prep",
+          "AdjEM gap of 19.0 is near the top of the 3-14 historical range",
+          "Penn's AdjO of 99.2 is below tournament-average efficiency"
+        ]
+      },
+      "recommendation": { "team": "ILLINOIS", "confidence": "High" },
+      "reasoning": "Illinois holds a 19.0 AdjEM advantage over Penn, one of the widest gaps in this seeding matchup. Penn's Princeton-style offense is intriguing but their 258 SOS provides no preparation for Big Ten athleticism.",
+      "win_prob": { "top": 0.85, "bot": 0.15 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "ILLINOIS"
+    },
+    "S7": {
+      "slot_id": "S7",
+      "round": "R64",
+      "region": "South",
+      "team_top": "SAINT_MARYS",
+      "team_bot": "TEXAS_AM",
+      "metrics": {
+        "top": { "kenpom_adjEM": 14.6, "last_10": "8-2", "sos_rank": 76 },
+        "bot": { "kenpom_adjEM": 8.6, "last_10": "7-3", "sos_rank": 43 }
+      },
+      "pros": {
+        "top": [
+          "6.0 AdjEM edge with impressive 8-2 recent form",
+          "WCC champion with controlled pace (63.2) that limits opponent possessions",
+          "Elite defense at 95.5 AdjD — top tier for a 7-seed"
+        ],
+        "bot": [
+          "SEC battle-tested with top-43 SOS — better real-world prep than Saint Mary's",
+          "7-3 recent form is solid entering the tournament",
+          "Physical inside game creates problems for Saint Mary's smaller lineup"
+        ]
+      },
+      "cons": {
+        "top": [
+          "SOS rank 76 lags Texas A&M's 43 — competitive quality gap",
+          "6.0 AdjEM gap in the borderline Medium range",
+          "Saint Mary's slow pace only works if defense holds early — risky"
+        ],
+        "bot": [
+          "AdjEM gap of 6.0 favors Saint Mary's",
+          "Texas A&M's offense (105.8 AdjO) is below the 7-seed average",
+          "10-seed has 39% upset rate historically"
+        ]
+      },
+      "recommendation": { "team": "SAINT_MARYS", "confidence": "Medium" },
+      "reasoning": "Saint Mary's 6.0 AdjEM advantage and elite defense give them the edge, but Texas A&M's SEC SOS provides better preparation. Saint Mary's 8-2 form raises this to Medium confidence.",
+      "win_prob": { "top": 0.62, "bot": 0.38 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "SAINT_MARYS"
+    },
+    "S8": {
+      "slot_id": "S8",
+      "round": "R64",
+      "region": "South",
+      "team_top": "HOUSTON",
+      "team_bot": "IDAHO",
+      "metrics": {
+        "top": { "kenpom_adjEM": 22.6, "last_10": "7-3", "sos_rank": 19 },
+        "bot": { "kenpom_adjEM": -1.4, "last_10": "8-2", "sos_rank": 285 }
+      },
+      "pros": {
+        "top": [
+          "24.0 AdjEM advantage over Idaho",
+          "Cougars' elite defense (93.2 AdjD) historically dominant in March",
+          "Top-19 SOS with Big 12 wins over ranked opponents"
+        ],
+        "bot": [
+          "8-2 last 10 gives Idaho surprising momentum",
+          "Big Sky champion plays an efficient, mistake-minimizing style",
+          "Idaho has nothing to lose in their first tournament appearance"
+        ]
+      },
+      "cons": {
+        "top": [
+          "2-seed vs 15-seed has a narrow 6% historical upset rate",
+          "Houston's tempo-control style may not generate comfortable early lead",
+          "Potential bracket pool inefficiency as heavy favorite"
+        ],
+        "bot": [
+          "SOS rank 285 means Idaho faces the toughest competition of their season",
+          "AdjEM of -1.4 is below average — real quality deficit",
+          "2-seed wins 94% of these matchups historically"
+        ]
+      },
+      "recommendation": { "team": "HOUSTON", "confidence": "High" },
+      "reasoning": "Houston's 24.0 AdjEM advantage and elite 93.2 defensive rating make Idaho's path essentially impossible. Idaho's 8-2 form is impressive but built entirely against mid-major competition.",
+      "win_prob": { "top": 0.94, "bot": 0.06 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "HOUSTON"
+    },
+    "M1": {
+      "slot_id": "M1",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "MICHIGAN",
+      "team_bot": "UMBC",
+      "metrics": {
+        "top": { "kenpom_adjEM": 33.2, "last_10": "10-0", "sos_rank": 6 },
+        "bot": { "kenpom_adjEM": -7.8, "last_10": "5-5", "sos_rank": 321 }
+      },
+      "pros": {
+        "top": [
+          "Best AdjEM in the nation at +33.2",
+          "Perfect 10-0 last 10 record entering the tournament",
+          "Top-6 SOS validates dominance against elite competition"
+        ],
+        "bot": [
+          "First Four survivor brings the edge of a team that already won in this building",
+          "America East competition suits ball-control style",
+          "Loose, nothing-to-lose mentality"
+        ]
+      },
+      "cons": {
+        "top": [
+          "No historical bracket pool value as prohibitive 1-seed favorite",
+          "Only one 16-seed upset in tournament history (UMBC over Virginia 2018)",
+          "Michigan's bench depth untested in elimination games"
+        ],
+        "bot": [
+          "5-5 last 10 reflects First Four fatigue and limited confidence",
+          "AdjEM gap of 41.0 is the largest in this tournament field",
+          "SOS rank 321 means zero preparation for Michigan's top-6 competition level"
+        ]
+      },
+      "recommendation": { "team": "MICHIGAN", "confidence": "High" },
+      "reasoning": "Michigan's nation-leading 33.2 AdjEM, perfect 10-0 last 10 run, and top-6 SOS make UMBC a near-impossible upset despite the 2018 historical precedent. UMBC's 5-5 recent form and 41.0 AdjEM deficit are decisive.",
+      "win_prob": { "top": 0.98, "bot": 0.02 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "MICHIGAN"
+    },
+    "M2": {
+      "slot_id": "M2",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "GEORGIA",
+      "team_bot": "SAINT_LOUIS",
+      "metrics": {
+        "top": { "kenpom_adjEM": 10.1, "last_10": "6-4", "sos_rank": 39 },
+        "bot": { "kenpom_adjEM": 9.2, "last_10": "7-3", "sos_rank": 71 }
+      },
+      "pros": {
+        "top": [
+          "0.9 AdjEM edge with better SEC SOS preparation",
+          "Top-39 SOS edges Saint Louis' 71 for real-world prep",
+          "Athletic frontcourt gives Georgia an inside advantage"
+        ],
+        "bot": [
+          "7-3 last 10 beats Georgia's 6-4 for recent momentum",
+          "Atlantic 10 provides quality guard-heavy preparation",
+          "Saint Louis plays a team-oriented system vs Georgia's individual talent reliance"
+        ]
+      },
+      "cons": {
+        "top": [
+          "6-4 last 10 is uninspiring heading into March",
+          "0.9 AdjEM gap is essentially a coin flip",
+          "Georgia's perimeter defense struggled in late SEC season"
+        ],
+        "bot": [
+          "SOS rank 71 trails Georgia's 39",
+          "0.9 AdjEM gap is too small for directional confidence",
+          "Saint Louis' offense (106.8 AdjO) slightly below tournament average"
+        ]
+      },
+      "recommendation": { "team": "SAINT_LOUIS", "confidence": "Low" },
+      "reasoning": "Saint Louis' 7-3 recent form edges Georgia's 6-4 run, and the 0.9 AdjEM gap is within the margin of error. Saint Louis represents genuine contrarian value as the team with better recent form.",
+      "win_prob": { "top": 0.48, "bot": 0.52 },
+      "upset_alert": true,
+      "contrarian": true,
+      "public_consensus_team": "GEORGIA"
+    },
+    "M3": {
+      "slot_id": "M3",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "TEXAS_TECH",
+      "team_bot": "AKRON",
+      "metrics": {
+        "top": { "kenpom_adjEM": 16.4, "last_10": "7-3", "sos_rank": 32 },
+        "bot": { "kenpom_adjEM": 7.0, "last_10": "8-2", "sos_rank": 172 }
+      },
+      "pros": {
+        "top": [
+          "9.4 AdjEM advantage over Akron",
+          "Big 12 competition SOS rank 32 superior prep",
+          "Texas Tech's defensive identity (95.4 AdjD) limits Akron's pace"
+        ],
+        "bot": [
+          "8-2 last 10 is impressive momentum heading in",
+          "MAC champion with best season in program history",
+          "Akron's half-court offense limits Texas Tech transition opportunities"
+        ]
+      },
+      "cons": {
+        "top": [
+          "5-12 matchup has 35% historical upset rate — genuine threat",
+          "9.4 AdjEM gap is borderline Medium/High but form disadvantage",
+          "Texas Tech's offense (111.8 AdjO) is capable but not dominant"
+        ],
+        "bot": [
+          "SOS rank 172 means Akron's season wins don't translate",
+          "AdjEM gap of 9.4 is borderline High confidence — significant disadvantage",
+          "Tournament debut pressure compounds any preparation gap"
+        ]
+      },
+      "recommendation": { "team": "TEXAS_TECH", "confidence": "Medium" },
+      "reasoning": "Texas Tech's 9.4 AdjEM edge from Big 12 competition should prevail, but Akron's 8-2 recent form tempers confidence. This is a live 12-seed upset game worth watching.",
+      "win_prob": { "top": 0.64, "bot": 0.36 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "TEXAS_TECH"
+    },
+    "M4": {
+      "slot_id": "M4",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "ALABAMA",
+      "team_bot": "HOFSTRA",
+      "metrics": {
+        "top": { "kenpom_adjEM": 19.2, "last_10": "7-3", "sos_rank": 17 },
+        "bot": { "kenpom_adjEM": 4.1, "last_10": "7-3", "sos_rank": 222 }
+      },
+      "pros": {
+        "top": [
+          "15.1 AdjEM advantage over Hofstra",
+          "Top-17 SOS from SEC competition is elite preparation",
+          "High-octane offense (72.8 possessions) creates matchup nightmares"
+        ],
+        "bot": [
+          "CAA champion with identical 7-3 last 10 form",
+          "Hofstra's pace-control style can frustrate faster teams early",
+          "13-seed upset rate at 21% historically is higher than most expect"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Alabama's defense (97.2 AdjD) is slightly below average — exploitable",
+          "Fast pace can backfire in turnover-heavy environments",
+          "Alabama historically inconsistent in first-round games"
+        ],
+        "bot": [
+          "SOS rank 222 means CAA competition doesn't prepare for SEC athleticism",
+          "AdjEM gap of 15.1 is in the High confidence zone",
+          "Hofstra's offense (101.4 AdjO) is below tournament average"
+        ]
+      },
+      "recommendation": { "team": "ALABAMA", "confidence": "High" },
+      "reasoning": "Alabama's 15.1 AdjEM advantage and SEC preparation (SOS rank 17) overwhelm Hofstra's CAA pedigree. Despite the 21% historical 4-13 upset rate, Alabama's talent advantage is clear.",
+      "win_prob": { "top": 0.80, "bot": 0.20 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "ALABAMA"
+    },
+    "M5": {
+      "slot_id": "M5",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "TENNESSEE",
+      "team_bot": "SMU",
+      "metrics": {
+        "top": { "kenpom_adjEM": 14.4, "last_10": "7-3", "sos_rank": 26 },
+        "bot": { "kenpom_adjEM": 8.1, "last_10": "6-4", "sos_rank": 88 }
+      },
+      "pros": {
+        "top": [
+          "6.3 AdjEM edge backed by SEC competition (SOS rank 26)",
+          "Tennessee's physical defense disrupts First Four teams' rhythm",
+          "7-3 last 10 edges SMU's 6-4 recent form"
+        ],
+        "bot": [
+          "First Four survivor with an extra game of tournament experience",
+          "SMU's AAC competition (SOS 88) provided quality guard play prep",
+          "Nothing-to-lose mentality after already securing one win"
+        ]
+      },
+      "cons": {
+        "top": [
+          "6-11 matchup has 37% historical upset rate",
+          "SMU's First Four experience could neutralize Tennessee's freshness advantage",
+          "Tennessee's offense (110.4 AdjO) is inconsistent in high-pressure spots"
+        ],
+        "bot": [
+          "6-4 last 10 is weaker form heading into this matchup",
+          "AdjEM gap of 6.3 favors Tennessee with SEC backing",
+          "SMU's SOS rank 88 trails Tennessee's 26 significantly"
+        ]
+      },
+      "recommendation": { "team": "TENNESSEE", "confidence": "Medium" },
+      "reasoning": "Tennessee holds a 6.3 AdjEM advantage over a SMU team that survived the First Four. Tennessee's SEC preparation and 7-3 form edge SMU's 6-4 run, but the 37% historical 6-11 upset rate keeps this Medium.",
+      "win_prob": { "top": 0.62, "bot": 0.38 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "TENNESSEE"
+    },
+    "M6": {
+      "slot_id": "M6",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "VIRGINIA",
+      "team_bot": "WRIGHT_STATE",
+      "metrics": {
+        "top": { "kenpom_adjEM": 22.1, "last_10": "8-2", "sos_rank": 20 },
+        "bot": { "kenpom_adjEM": 0.8, "last_10": "7-3", "sos_rank": 254 }
+      },
+      "pros": {
+        "top": [
+          "21.3 AdjEM advantage over Wright State",
+          "Tony Bennett-era defensive principles (91.3 AdjD) suffocate tempo",
+          "8-2 recent form demonstrates peak tournament-ready form"
+        ],
+        "bot": [
+          "Horizon League champion plays deliberate, mistake-minimizing basketball",
+          "Wright State's physical frontcourt can exploit Virginia's slow pace",
+          "7-3 last 10 shows solid form heading in"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Pack Line defense can be exposed by patient motion offense teams",
+          "Virginia's slow pace (59.8 possessions) limits comeback opportunities if down",
+          "Limited bracket differentiation as dominant 3-seed"
+        ],
+        "bot": [
+          "SOS rank 254 means Horizon League has not prepared Wright State for ACC-level talent",
+          "AdjEM gap of 21.3 is the largest possible 3-14 gap",
+          "Virginia's 14-seed opponents have won just 15% historically"
+        ]
+      },
+      "recommendation": { "team": "VIRGINIA", "confidence": "High" },
+      "reasoning": "Virginia's 21.3 AdjEM advantage is the widest 3-14 gap in the bracket, and their 8-2 recent form combined with elite 91.3 defense leaves Wright State no viable path. Top High confidence pick in the Midwest.",
+      "win_prob": { "top": 0.86, "bot": 0.14 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "VIRGINIA"
+    },
+    "M7": {
+      "slot_id": "M7",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "KENTUCKY",
+      "team_bot": "SANTA_CLARA",
+      "metrics": {
+        "top": { "kenpom_adjEM": 12.8, "last_10": "7-3", "sos_rank": 31 },
+        "bot": { "kenpom_adjEM": 8.2, "last_10": "8-2", "sos_rank": 98 }
+      },
+      "pros": {
+        "top": [
+          "4.6 AdjEM edge with SEC preparation (SOS rank 31)",
+          "Kentucky's recruiting pedigree gives athleticism edge",
+          "Tournament experience as a blue-blood program"
+        ],
+        "bot": [
+          "8-2 last 10 is the better recent form in this matchup",
+          "WCC competition (SOS 98) provided quality guard play prep",
+          "Santa Clara's controlled pace limits Kentucky transition opportunities"
+        ]
+      },
+      "cons": {
+        "top": [
+          "7-10 matchup has 39% historical upset rate",
+          "7-3 last 10 lags Santa Clara's 8-2 momentum",
+          "Kentucky's defense (96.4 AdjD) is average — exploitable"
+        ],
+        "bot": [
+          "SOS rank 98 trails Kentucky's 31",
+          "AdjEM gap of 4.6 favors Kentucky in the Medium range",
+          "Santa Clara's AdjO of 105.1 is below tournament average"
+        ]
+      },
+      "recommendation": { "team": "KENTUCKY", "confidence": "Medium" },
+      "reasoning": "Kentucky's 4.6 AdjEM advantage and SEC pedigree give them the edge, though Santa Clara's 8-2 late run is noteworthy. The SOS gap (31 vs 98) validates Kentucky's stronger resume despite Santa Clara's momentum.",
+      "win_prob": { "top": 0.60, "bot": 0.40 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "KENTUCKY"
+    },
+    "M8": {
+      "slot_id": "M8",
+      "round": "R64",
+      "region": "Midwest",
+      "team_top": "IOWA_STATE",
+      "team_bot": "TENNESSEE_STATE",
+      "metrics": {
+        "top": { "kenpom_adjEM": 24.4, "last_10": "8-2", "sos_rank": 16 },
+        "bot": { "kenpom_adjEM": -2.2, "last_10": "7-3", "sos_rank": 292 }
+      },
+      "pros": {
+        "top": [
+          "26.6 AdjEM advantage, among the widest in the tournament",
+          "8-2 last 10 demonstrates dominant late-season form",
+          "Big 12 SOS rank 16 is elite tournament preparation"
+        ],
+        "bot": [
+          "SWAC champion brings conference-title momentum",
+          "7-3 last 10 shows Tennessee State is playing well",
+          "Tennessee State's physical style can create early game variance"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Overwhelming favorite; limited bracket pool value",
+          "Historical 2-15 upset rate is 6% — non-zero",
+          "Iowa State's defense (94.8 AdjD) can be tested by physical play"
+        ],
+        "bot": [
+          "SOS rank 292 reflects SWAC competition that is no tournament prep",
+          "AdjEM gap of 26.6 is historically decisive",
+          "Tennessee State's AdjO of 96.1 is well below tournament average"
+        ]
+      },
+      "recommendation": { "team": "IOWA_STATE", "confidence": "High" },
+      "reasoning": "Iowa State's 26.6 AdjEM advantage and elite Big 12 preparation make Tennessee State a non-viable upset option. Iowa State's 8-2 form validates their tournament readiness.",
+      "win_prob": { "top": 0.94, "bot": 0.06 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "IOWA_STATE"
+    },
+    "W1": {
+      "slot_id": "W1",
+      "round": "R64",
+      "region": "West",
+      "team_top": "ARIZONA",
+      "team_bot": "LIU",
+      "metrics": {
+        "top": { "kenpom_adjEM": 28.4, "last_10": "8-2", "sos_rank": 13 },
+        "bot": { "kenpom_adjEM": -7.4, "last_10": "7-3", "sos_rank": 324 }
+      },
+      "pros": {
+        "top": [
+          "35.8 AdjEM advantage over LIU",
+          "Top-13 SOS from Pac-12 play",
+          "8-2 recent form with national title contender profile"
+        ],
+        "bot": [
+          "NEC champion on a 7-3 run with nothing to lose",
+          "LIU's small-ball style creates early pace variance",
+          "Underdog mentality historically raises 16-seed performance"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Heavy favorite with no bracket value",
+          "SOS rank 324 means LIU has never seen Arizona's athleticism level",
+          "Only one 16-seed upset in tournament history"
+        ],
+        "bot": [
+          "AdjEM gap of 35.8 is nearly impossible to overcome",
+          "LIU's defense (99.5 AdjD) is well below tournament average",
+          "SOS rank 324 is the weakest in the entire tournament field"
+        ]
+      },
+      "recommendation": { "team": "ARIZONA", "confidence": "High" },
+      "reasoning": "Arizona's 35.8 AdjEM advantage and top-13 SOS make LIU a non-competitive opponent at this level. This is a straightforward pick with the highest confidence in the West region.",
+      "win_prob": { "top": 0.98, "bot": 0.02 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "ARIZONA"
+    },
+    "W2": {
+      "slot_id": "W2",
+      "round": "R64",
+      "region": "West",
+      "team_top": "VILLANOVA",
+      "team_bot": "UTAH_STATE",
+      "metrics": {
+        "top": { "kenpom_adjEM": 10.6, "last_10": "7-3", "sos_rank": 42 },
+        "bot": { "kenpom_adjEM": 10.2, "last_10": "8-2", "sos_rank": 82 }
+      },
+      "pros": {
+        "top": [
+          "0.4 AdjEM edge with Big East SOS (rank 42) vs Mountain West (rank 82)",
+          "Villanova's tournament DNA with multiple Final Fours",
+          "Physical guard play limits opponent transition offense"
+        ],
+        "bot": [
+          "8-2 last 10 gives Utah State clear hot-hand advantage",
+          "Mountain West champion rode 10-game winning streak into tournament",
+          "Utah State's inside-out game creates matchup problems for Villanova guards"
+        ]
+      },
+      "cons": {
+        "top": [
+          "0.4 AdjEM gap is essentially noise — pure coin flip game",
+          "7-3 last 10 trails Utah State's momentum",
+          "Villanova's defense (97.6 AdjD) slightly below average"
+        ],
+        "bot": [
+          "SOS rank 82 trails Villanova's Big East 42 for competitive quality",
+          "AdjEM gap is negligible — no directional signal",
+          "Mountain West teams historically underperform expectations in R64"
+        ]
+      },
+      "recommendation": { "team": "UTAH_STATE", "confidence": "Low" },
+      "reasoning": "Utah State's 8-2 last 10 run edges Villanova's 7-3 form in an essentially even matchup. The 0.4 AdjEM gap is noise; Utah State's momentum gives them a slight edge in this coin-flip 8-9 game.",
+      "win_prob": { "top": 0.48, "bot": 0.52 },
+      "upset_alert": true,
+      "contrarian": true,
+      "public_consensus_team": "VILLANOVA"
+    },
+    "W3": {
+      "slot_id": "W3",
+      "round": "R64",
+      "region": "West",
+      "team_top": "WISCONSIN",
+      "team_bot": "HIGH_POINT",
+      "metrics": {
+        "top": { "kenpom_adjEM": 16.7, "last_10": "7-3", "sos_rank": 38 },
+        "bot": { "kenpom_adjEM": 6.8, "last_10": "8-2", "sos_rank": 188 }
+      },
+      "pros": {
+        "top": [
+          "9.9 AdjEM advantage over High Point",
+          "Big Ten competition prepared Wisconsin for physical tournament play",
+          "Elite half-court offense at 63.8 possessions controls game tempo"
+        ],
+        "bot": [
+          "8-2 last 10 gives High Point the better momentum entering the tournament",
+          "Big South champion with program-record win total",
+          "High Point's three-point shooting (38%) can change the game quickly"
+        ]
+      },
+      "cons": {
+        "top": [
+          "5-12 matchup has 35% historical upset rate",
+          "Wisconsin's 7-3 last 10 trails High Point's form",
+          "Wisconsin's defense (94.7) is solid but 3-point shooting exposure remains"
+        ],
+        "bot": [
+          "SOS rank 188 provides no preparation for Big Ten-caliber defense",
+          "AdjEM gap of 9.9 is firmly in the Medium range against Wisconsin",
+          "High Point's offense (103.8 AdjO) is below tournament average"
+        ]
+      },
+      "recommendation": { "team": "WISCONSIN", "confidence": "Medium" },
+      "reasoning": "Wisconsin's 9.9 AdjEM edge and Big Ten battle-testing gives them the edge, but High Point's 8-2 form and three-point shooting make this a legitimate 12-seed upset candidate. Pick Wisconsin with eyes open.",
+      "win_prob": { "top": 0.65, "bot": 0.35 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "WISCONSIN"
+    },
+    "W4": {
+      "slot_id": "W4",
+      "round": "R64",
+      "region": "West",
+      "team_top": "ARKANSAS",
+      "team_bot": "HAWAII",
+      "metrics": {
+        "top": { "kenpom_adjEM": 18.1, "last_10": "7-3", "sos_rank": 24 },
+        "bot": { "kenpom_adjEM": 3.8, "last_10": "7-3", "sos_rank": 218 }
+      },
+      "pros": {
+        "top": [
+          "14.3 AdjEM advantage over Hawaii",
+          "SEC competition (SOS rank 24) superior tournament preparation",
+          "Arkansas' press defense disrupts opponent comfort zone"
+        ],
+        "bot": [
+          "Big West champion with identical 7-3 recent form",
+          "Playing in West region is a geographic home court advantage for Hawaii",
+          "Hawaii's unique pace (70.1) and spacing create defensive confusion"
+        ]
+      },
+      "cons": {
+        "top": [
+          "4-13 matchup historically tilts 79% to the 4-seed — not a lock",
+          "Arkansas' turnover rate is above SEC average in late-season pressure",
+          "7-3 last 10 is solid but not dominant"
+        ],
+        "bot": [
+          "SOS rank 218 provides zero preparation for SEC-level talent",
+          "AdjEM gap of 14.3 is firmly in the High confidence zone",
+          "Hawaii's defense (97.3 AdjD) below tournament average"
+        ]
+      },
+      "recommendation": { "team": "ARKANSAS", "confidence": "High" },
+      "reasoning": "Arkansas' 14.3 AdjEM advantage and SEC preparation dwarf Hawaii's resume. The geographic edge for Hawaii is a minor factor against this talent differential.",
+      "win_prob": { "top": 0.80, "bot": 0.20 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "ARKANSAS"
+    },
+    "W5": {
+      "slot_id": "W5",
+      "round": "R64",
+      "region": "West",
+      "team_top": "BYU",
+      "team_bot": "TEXAS",
+      "metrics": {
+        "top": { "kenpom_adjEM": 13.6, "last_10": "6-4", "sos_rank": 48 },
+        "bot": { "kenpom_adjEM": 8.3, "last_10": "7-3", "sos_rank": 46 }
+      },
+      "pros": {
+        "top": [
+          "5.3 AdjEM edge over Texas",
+          "BYU's deliberate offense (71.8 pace) controls game flow",
+          "Strong home-region fan base in West bracket"
+        ],
+        "bot": [
+          "First Four survivor brings extra game of tournament experience",
+          "7-3 last 10 edges BYU's 6-4 form — better momentum",
+          "Texas and BYU share nearly identical SOS (46 vs 48) — true quality comparison"
+        ]
+      },
+      "cons": {
+        "top": [
+          "6-4 last 10 is concerning heading into March",
+          "6-11 matchup has 37% historical upset rate",
+          "BYU's defense (97.6 AdjD) is slightly below average"
+        ],
+        "bot": [
+          "AdjEM gap of 5.3 favors BYU",
+          "Texas' offense (105.6 AdjO) below average",
+          "First Four fatigue — playing 2 games in 2 days is physiologically challenging"
+        ]
+      },
+      "recommendation": { "team": "BYU", "confidence": "Medium" },
+      "reasoning": "BYU holds a 5.3 AdjEM advantage but Texas' superior 7-3 last 10 form and nearly identical SOS make this a live upset game. The matched SOS ranks mean both teams have earned their spots comparably.",
+      "win_prob": { "top": 0.61, "bot": 0.39 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "BYU"
+    },
+    "W6": {
+      "slot_id": "W6",
+      "round": "R64",
+      "region": "West",
+      "team_top": "GONZAGA",
+      "team_bot": "KENNESAW_STATE",
+      "metrics": {
+        "top": { "kenpom_adjEM": 22.8, "last_10": "8-2", "sos_rank": 58 },
+        "bot": { "kenpom_adjEM": 0.4, "last_10": "7-3", "sos_rank": 262 }
+      },
+      "pros": {
+        "top": [
+          "22.4 AdjEM advantage over Kennesaw State",
+          "8-2 recent form with national profile system offense",
+          "Gonzaga's pace-and-space style has no answer in single-bid conference programs"
+        ],
+        "bot": [
+          "Atlantic Sun champion playing their best basketball",
+          "7-3 last 10 shows strong late-season form",
+          "Underdog mentality and nothing to lose"
+        ]
+      },
+      "cons": {
+        "top": [
+          "Gonzaga SOS rank 58 is respectable but not elite — some vulnerability",
+          "High-tempo offense (72.1 pace) can lead to turnovers vs zone defenses",
+          "3-14 matchup historically goes 85% to the 3-seed — not guaranteed"
+        ],
+        "bot": [
+          "SOS rank 262 provides no preparation for Gonzaga's offensive system",
+          "AdjEM gap of 22.4 is one of the largest 3-14 gaps in the field",
+          "Kennesaw State's AdjO of 98.2 is well below tournament average"
+        ]
+      },
+      "recommendation": { "team": "GONZAGA", "confidence": "High" },
+      "reasoning": "Gonzaga's 22.4 AdjEM lead and 8-2 form make Kennesaw State a non-competitive opponent at this level. Despite Gonzaga's weaker-than-ideal SOS, the raw talent and efficiency gap is decisive.",
+      "win_prob": { "top": 0.85, "bot": 0.15 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "GONZAGA"
+    },
+    "W7": {
+      "slot_id": "W7",
+      "round": "R64",
+      "region": "West",
+      "team_top": "MIAMI_FL",
+      "team_bot": "MISSOURI",
+      "metrics": {
+        "top": { "kenpom_adjEM": 12.1, "last_10": "7-3", "sos_rank": 36 },
+        "bot": { "kenpom_adjEM": 8.8, "last_10": "6-4", "sos_rank": 54 }
+      },
+      "pros": {
+        "top": [
+          "3.3 AdjEM edge with ACC SOS (rank 36) over SEC team (rank 54)",
+          "Miami's defensive rotations limit opponent second-chance opportunities",
+          "7-3 last 10 edges Missouri's 6-4 form"
+        ],
+        "bot": [
+          "SEC competition (SOS 54) is comparable to ACC — legitimate quality comparison",
+          "Missouri's scoring offense (106.1 AdjO) can heat up in neutral-site games",
+          "10-seed has 39% historical upset rate in 7-10 matchups"
+        ]
+      },
+      "cons": {
+        "top": [
+          "3.3 AdjEM gap is in the Low confidence range",
+          "7-10 matchup is historically the closest to a coin flip outside 8-9",
+          "Miami's offense (109.4 AdjO) is only slightly above average"
+        ],
+        "bot": [
+          "6-4 last 10 trails Miami's momentum",
+          "AdjEM gap of 3.3 favors Miami",
+          "SOS rank 54 is slightly weaker than Miami's 36"
+        ]
+      },
+      "recommendation": { "team": "MIAMI_FL", "confidence": "Low" },
+      "reasoning": "Miami holds a modest 3.3 AdjEM edge with slightly better recent form, but this is a near coin-flip. ACC preparation gives Miami a slight edge over Missouri's SEC schedule, but the gap is minimal.",
+      "win_prob": { "top": 0.58, "bot": 0.42 },
+      "upset_alert": true,
+      "contrarian": false,
+      "public_consensus_team": "MIAMI_FL"
+    },
+    "W8": {
+      "slot_id": "W8",
+      "round": "R64",
+      "region": "West",
+      "team_top": "PURDUE",
+      "team_bot": "QUEENS",
+      "metrics": {
+        "top": { "kenpom_adjEM": 23.8, "last_10": "7-3", "sos_rank": 15 },
+        "bot": { "kenpom_adjEM": -1.8, "last_10": "8-2", "sos_rank": 288 }
+      },
+      "pros": {
+        "top": [
+          "25.6 AdjEM advantage over Queens",
+          "Top-15 SOS from Big Ten competition",
+          "Purdue's dominant frontcourt (Matt Painter system) is historically elite"
+        ],
+        "bot": [
+          "8-2 last 10 is the better momentum entering the tournament",
+          "ASUN champion with program-record win total",
+          "Underdog mentality and nothing to lose"
+        ]
+      },
+      "cons": {
+        "top": [
+          "2-15 historical matchup rate is 94% to 2-seed — solid but not perfect",
+          "Purdue's perimeter defense (94.8 AdjD) can be tested by sharp shooters",
+          "7-3 last 10 lags Queens' form"
+        ],
+        "bot": [
+          "SOS rank 288 provides zero preparation for Big Ten-level play",
+          "AdjEM gap of 25.6 is historically decisive for 2-seed matchups",
+          "Queens' AdjO of 96.4 is well below tournament average"
+        ]
+      },
+      "recommendation": { "team": "PURDUE", "confidence": "High" },
+      "reasoning": "Purdue's 25.6 AdjEM advantage and top-15 SOS make Queens essentially uncompetitive at this level. Queens' 8-2 form is admirable but against ASUN competition that has no tournament-level relevance.",
+      "win_prob": { "top": 0.94, "bot": 0.06 },
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "PURDUE"
+    },
+    "E9": {
+      "slot_id": "E9",
+      "round": "R32",
+      "region": "East",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "E10": {
+      "slot_id": "E10",
+      "round": "R32",
+      "region": "East",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "E11": {
+      "slot_id": "E11",
+      "round": "R32",
+      "region": "East",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "E12": {
+      "slot_id": "E12",
+      "round": "R32",
+      "region": "East",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "E13": {
+      "slot_id": "E13",
+      "round": "S16",
+      "region": "East",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "E14": {
+      "slot_id": "E14",
+      "round": "S16",
+      "region": "East",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "E15": {
+      "slot_id": "E15",
+      "round": "E8",
+      "region": "East",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "S9": {
+      "slot_id": "S9",
+      "round": "R32",
+      "region": "South",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "S10": {
+      "slot_id": "S10",
+      "round": "R32",
+      "region": "South",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "S11": {
+      "slot_id": "S11",
+      "round": "R32",
+      "region": "South",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "S12": {
+      "slot_id": "S12",
+      "round": "R32",
+      "region": "South",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "S13": {
+      "slot_id": "S13",
+      "round": "S16",
+      "region": "South",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "S14": {
+      "slot_id": "S14",
+      "round": "S16",
+      "region": "South",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "S15": {
+      "slot_id": "S15",
+      "round": "E8",
+      "region": "South",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "M9": {
+      "slot_id": "M9",
+      "round": "R32",
+      "region": "Midwest",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "M10": {
+      "slot_id": "M10",
+      "round": "R32",
+      "region": "Midwest",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "M11": {
+      "slot_id": "M11",
+      "round": "R32",
+      "region": "Midwest",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "M12": {
+      "slot_id": "M12",
+      "round": "R32",
+      "region": "Midwest",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "M13": {
+      "slot_id": "M13",
+      "round": "S16",
+      "region": "Midwest",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "M14": {
+      "slot_id": "M14",
+      "round": "S16",
+      "region": "Midwest",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "M15": {
+      "slot_id": "M15",
+      "round": "E8",
+      "region": "Midwest",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "W9": {
+      "slot_id": "W9",
+      "round": "R32",
+      "region": "West",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "W10": {
+      "slot_id": "W10",
+      "round": "R32",
+      "region": "West",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "W11": {
+      "slot_id": "W11",
+      "round": "R32",
+      "region": "West",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "W12": {
+      "slot_id": "W12",
+      "round": "R32",
+      "region": "West",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "W13": {
+      "slot_id": "W13",
+      "round": "S16",
+      "region": "West",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "W14": {
+      "slot_id": "W14",
+      "round": "S16",
+      "region": "West",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "W15": {
+      "slot_id": "W15",
+      "round": "E8",
+      "region": "West",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "FF1": {
+      "slot_id": "FF1",
+      "round": "F4",
+      "region": "FinalFour",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "FF2": {
+      "slot_id": "FF2",
+      "round": "F4",
+      "region": "FinalFour",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    },
+    "CH1": {
+      "slot_id": "CH1",
+      "round": "CHM",
+      "region": "Championship",
+      "team_top": null,
+      "team_bot": null,
+      "metrics": { "top": null, "bot": null },
+      "pros": { "top": null, "bot": null },
+      "cons": { "top": null, "bot": null },
+      "recommendation": null,
+      "reasoning": null,
+      "win_prob": null,
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": null
+    }
+  }
+}
