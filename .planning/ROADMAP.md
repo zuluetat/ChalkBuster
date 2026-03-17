@@ -29,12 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. All 4 region tabs (East, South, Midwest, West) switch the visible bracket section
   4. First Four results are shown as resolved and the correct winners appear in Round of 64 slots
   5. All 68 teams appear with seed, record, KenPom AdjEM, SOS rank, spread, and public pick %
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Define and lock JSON schema (teams, matchups, bracket slots with explicit 63-game slot structure)
-- [ ] 01-02: Build bracket renderer with click-to-pick progression logic and region tabs
-- [ ] 01-03: Implement First Four view with resolve/toggle and winner-slot propagation
+- [ ] 01-01-PLAN.md — Create teams.json, bracket.json, first_four.json data schemas + browser console validator
+- [ ] 01-02-PLAN.md — Build index.html, CSS, state.js, bracket.js, regions.js, app.js (click-to-pick + tabs)
+- [ ] 01-03-PLAN.md — Build firstFour.js with resolve toggle and winner propagation to bracket
 
 ### Phase 2: Analysis Layer
 **Goal**: Every matchup shows a side-by-side analysis card with stats, confidence tier, pros/cons, upset alerts, and contrarian flags
