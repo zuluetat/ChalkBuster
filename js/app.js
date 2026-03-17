@@ -5,13 +5,14 @@
 import { state, loadPicksFromStorage } from "./state.js";
 import { renderBracket, initBracketHandlers } from "./bracket.js";
 import { renderRegionTabs } from "./regions.js";
+import { renderFirstFour } from "./firstFour.js";
 
 async function init() {
   try {
     const [teamsData, bracketData, ffData] = await Promise.all([
-      fetch("./data/teams.json").then(r => r.json()),
-      fetch("./data/bracket.json").then(r => r.json()),
-      fetch("./data/first_four.json").then(r => r.json()),
+      fetch("./data/teams.json").then((r) => r.json()),
+      fetch("./data/bracket.json").then((r) => r.json()),
+      fetch("./data/first_four.json").then((r) => r.json()),
     ]);
 
     // Hydrate state from loaded JSON
@@ -25,8 +26,8 @@ async function init() {
     // Render UI
     renderRegionTabs();
     renderBracket();
+    renderFirstFour();
     initBracketHandlers();
-
   } catch (err) {
     console.error("[ChalkBuster] init failed:", err);
     document.getElementById("app").textContent =
@@ -35,5 +36,3 @@ async function init() {
 }
 
 init();
-
-// Note: app.js never imports firstFour.js here — that module is wired in Plan 01-03.
