@@ -24,12 +24,12 @@
 
 ### Analysis
 
-- [ ] **ANAL-01**: Side-by-side matchup cards with 3 standard metrics (KenPom AdjEM, Last 10, SOS rank)
-- [ ] **ANAL-02**: 3 pros / 3 cons for each team per matchup
-- [ ] **ANAL-03**: Pick recommendation with confidence tier (High/Medium/Low) per matchup
-- [ ] **ANAL-04**: 1-2 sentence reasoning explanation per recommendation
-- [ ] **ANAL-05**: Upset alerts flagged when lower seed has >30% win probability
-- [ ] **ANAL-06**: Contrarian opportunity flags when model disagrees with public consensus
+- [x] **ANAL-01**: Side-by-side matchup cards with 3 standard metrics (KenPom AdjEM, Last 10, SOS rank)
+- [x] **ANAL-02**: 3 pros / 3 cons for each team per matchup
+- [x] **ANAL-03**: Pick recommendation with confidence tier (High/Medium/Low) per matchup
+- [x] **ANAL-04**: 1-2 sentence reasoning explanation per recommendation
+- [x] **ANAL-05**: Upset alerts flagged when lower seed has >30% win probability
+- [x] **ANAL-06**: Contrarian opportunity flags when model disagrees with public consensus
 
 ### Persistence
 
@@ -88,12 +88,12 @@
 | BRKT-04 | Phase 1 | Complete |
 | BRKT-05 | Phase 1 | Complete |
 | BRKT-06 | Phase 1 | Complete |
-| ANAL-01 | Phase 2 | Pending |
-| ANAL-02 | Phase 2 | Pending |
-| ANAL-03 | Phase 2 | Pending |
-| ANAL-04 | Phase 2 | Pending |
-| ANAL-05 | Phase 2 | Pending |
-| ANAL-06 | Phase 2 | Pending |
+| ANAL-01 | Phase 2 | Complete |
+| ANAL-02 | Phase 2 | Complete |
+| ANAL-03 | Phase 2 | Complete |
+| ANAL-04 | Phase 2 | Complete |
+| ANAL-05 | Phase 2 | Complete |
+| ANAL-06 | Phase 2 | Complete |
 | PERS-01 | Phase 3 | Pending |
 | PERS-02 | Phase 3 | Pending |
 | PERS-03 | Phase 3 | Pending |

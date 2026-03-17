@@ -89,6 +89,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Data Foundation and Bracket Core | 3/3 | Complete   | 2026-03-17 |
-| 2. Analysis Layer | 0/2 | Not started | - |
+| 2. Analysis Layer | 1/2 | In Progress|  |
 | 3. Persistence and Sharing | 0/2 | Not started | - |
 | 4. Polish and Export | 0/2 | Not started | - |

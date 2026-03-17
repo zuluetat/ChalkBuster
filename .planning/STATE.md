@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: "Completed 01-03-PLAN.md — Phase 1 complete: First Four panel with resolve toggle and winner propagation"
-last_updated: "2026-03-17T19:04:32.860Z"
-last_activity: "2026-03-17 — Completed Plan 03: First Four panel, resolve toggle, winner propagation, human verified"
+status: in_progress
+stopped_at: "Completed 02-01-PLAN.md — teams.json populated, first_four.json resolved, matchups.json generated with 63-game pre-baked analysis"
+last_updated: "2026-03-17T19:32:36Z"
+last_activity: "2026-03-17 — Completed Plan 02-01: all 68 teams populated, 4 First Four games resolved, matchups.json with 32 R64 analyses generated"
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
-  percent: 100
+  total_plans: 4
+  completed_plans: 4
+  percent: 40
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-17)
 
 **Core value:** Tim can complete his bracket using data-driven analysis that surfaces non-obvious upset picks before the Wednesday March 19 deadline.
-**Current focus:** Phase 1 - Data Foundation and Bracket Core
+**Current focus:** Phase 2 - Analysis Layer
 
 ## Current Position
 
-Phase: 1 of 4 (Data Foundation and Bracket Core) — COMPLETE
-Plan: 3 of 3 in current phase — COMPLETE
-Status: Phase 1 complete, ready for Phase 2
-Last activity: 2026-03-17 — Completed Plan 03: First Four panel, resolve toggle, winner propagation, human verified
+Phase: 2 of 4 (Analysis Layer) — IN PROGRESS
+Plan: 1 of 2 in current phase — COMPLETE
+Status: Phase 2 Plan 01 complete, ready for Plan 02-02 (analysis card UI)
+Last activity: 2026-03-17 — Completed Plan 02-01: teams.json populated, First Four resolved, matchups.json generated
 
-Progress: [██████████] 100% (Phase 1)
+Progress: [████░░░░░░] 40% (4 of 10 total plans)
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Progress: [██████████] 100% (Phase 1)
 *Updated after each plan completion*
 | Phase 01-data-foundation-and-bracket-core P01 | 3 | 3 tasks | 4 files |
 | Phase 01-data-foundation-and-bracket-core P03 | 15 | 3 tasks | 2 files |
+| Phase 02-analysis-layer P01 | 7 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,10 @@ Recent decisions affecting current work:
 - [Phase 01-data-foundation-and-bracket-core P03]: setFirstFourResolved() calls updateSlotAndDownstream() (targeted refresh, not full re-render) to preserve picks in other regions
 - [Phase 01-data-foundation-and-bracket-core]: Event delegation on #first-four-panel container — one listener routes resolve/clear by data-action attribute
 - [Phase 01-data-foundation-and-bracket-core]: setFirstFourResolved() calls updateSlotAndDownstream() (targeted refresh, not full re-render) to preserve picks in other regions
+- [Phase 02-analysis-layer P01]: First Four winners: UMBC over Howard, Texas over NC State, Lehigh over PVAMU, SMU over Miami OH (Claude estimates; Tim should update with actual results)
+- [Phase 02-analysis-layer P01]: 16 upset alerts and 4 contrarian flags in matchups.json — threshold intentionally broad to surface all live upset threats
+- [Phase 02-analysis-layer P01]: matchups.json metrics snapshot is single source of truth for card display — do not re-read teams.json at render time
+- [Phase 02-analysis-layer P01]: All team stats are Claude estimates from training data; Tim should verify against kenpom.com before bracket submission
 
 ### Pending Todos
 
@@ -81,12 +86,12 @@ None yet.
 
 ### Blockers/Concerns
 
-- First Four games play March 17-18: data generation must handle these 4 slots as resolved/resolved-with-winner before generating the rest of matchups.json
 - Supabase must be configured against GitHub Pages URL from day one (not patched post-localhost)
 - Export (PLSH-03) is explicitly time-boxed in Phase 4 — falls back to window.print() if behind on deadline
+- First Four game results (March 17-18): first_four.json winners should be updated with actual results before bracket submission
 
 ## Session Continuity
 
-Last session: 2026-03-17T18:53:51.053Z
-Stopped at: Completed 01-03-PLAN.md — Phase 1 complete: First Four panel with resolve toggle and winner propagation
+Last session: 2026-03-17T19:32:36Z
+Stopped at: Completed 02-01-PLAN.md — teams.json populated, first_four.json resolved, matchups.json generated with 63-game pre-baked analysis
 Resume file: None
