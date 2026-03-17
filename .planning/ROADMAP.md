@@ -46,11 +46,11 @@ Plans:
   3. Every matchup card shows 3 pros and 3 cons for each team
   4. Matchups where the lower seed has >30% win probability are visually flagged as upset alerts
   5. Matchups where the model recommendation diverges from public consensus are flagged as contrarian opportunities
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Generate complete teams.json and matchups.json (all 63 games, signal hierarchy enforced before generation)
-- [ ] 02-02: Build matchup card component and wire to bracket click interaction
+- [ ] 02-01-PLAN.md — Populate teams.json stats, resolve First Four, generate matchups.json (63 games)
+- [ ] 02-02-PLAN.md — Build analysis card overlay UI and wire to bracket info buttons
 
 ### Phase 3: Persistence and Sharing
 **Goal**: Tim's picks persist across browser sessions and he can send a read-only link to friends
