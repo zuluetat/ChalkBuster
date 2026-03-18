@@ -10,6 +10,12 @@
   grid-template-columns: 240px 200px 200px 200px;
   column-gap: 24px;
   padding: 16px 0;
+  animation: fadeInRegion 0.3s ease;
+}
+
+@keyframes fadeInRegion {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Final Four / Championship region: 2 columns (F4 + CHM) */
@@ -23,17 +29,37 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+}
+
+/* Connecting lines between rounds */
+.round-column:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -13px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg,
+    transparent 5%,
+    var(--color-border) 20%,
+    var(--color-border) 80%,
+    transparent 95%
+  );
+  opacity: 0.5;
 }
 
 /* Round label */
 .round-label {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--color-accent);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
   text-align: center;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(233, 69, 96, 0.25);
 }
 
 /* Matchup card */
@@ -41,46 +67,71 @@
   position: relative;
   min-width: 180px;
   border: 1px solid var(--color-border);
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   user-select: none;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   background: var(--color-surface);
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .matchup-card:hover {
   border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 16px rgba(233, 69, 96, 0.2),
+    0 0 0 1px rgba(233, 69, 96, 0.15);
 }
 
 /* Team slot */
 .team-slot {
-  padding: 6px 10px;
-  font-size: 13px;
+  padding: 7px 10px;
+  font-size: 14px;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  letter-spacing: 0.01em;
+  transition: background 0.2s ease;
 }
 
 .team-slot + .team-slot {
   border-top: 1px solid var(--color-border);
 }
 
-.team-slot .seed-badge {
-  font-size: 11px;
-  color: var(--color-muted);
-  min-width: 18px;
+.team-slot .team-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
+.team-slot .seed-badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
+  min-width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
 .team-slot.picked {
-  background: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #c73652 100%);
   color: var(--color-picked-text);
-  font-weight: 600;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .team-slot.picked .seed-badge {
-  color: rgba(255, 255, 255, 0.75);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* TBD slots: visually distinct, not clickable */
@@ -89,8 +140,56 @@
   pointer-events: none;
   cursor: default;
   font-style: italic;
+  font-weight: 400;
 }
 
 .team-slot.tbd .seed-badge {
   color: var(--color-muted);
+  background: transparent;
+}
+
+/* ============================================
+   RESPONSIVE: Tablet (768px - 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .bracket-region.active {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 24px;
+    overflow-x: visible;
+  }
+
+  .bracket-region[data-region="FinalFour"],
+  .bracket-region[data-region="Championship"] {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .round-column:not(:last-child)::after {
+    display: none;
+  }
+
+  .matchup-card {
+    min-width: unset;
+  }
+}
+
+/* ============================================
+   RESPONSIVE: Mobile (< 768px)
+   ============================================ */
+@media (max-width: 767px) {
+  .bracket-region.active {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .bracket-region[data-region="FinalFour"],
+  .bracket-region[data-region="Championship"] {
+    grid-template-columns: 1fr;
+  }
+
+  .team-slot {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
 }

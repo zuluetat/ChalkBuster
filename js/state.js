@@ -4,36 +4,49 @@
 // All state mutations route through the exported functions below.
 
 export const state = {
-  teams: {},       // keyed by team id, loaded from data/teams.json
-  slots: {},       // keyed by slot id, loaded from data/bracket.json
-  firstFour: {},   // keyed by ff game id, loaded from data/first_four.json
-  picks: {},       // { [gameId]: teamId }
+  teams: {}, // keyed by team id, loaded from data/teams.json
+  slots: {}, // keyed by slot id, loaded from data/bracket.json
+  firstFour: {}, // keyed by ff game id, loaded from data/first_four.json
+  picks: {}, // { [gameId]: teamId }
   activeRegion: "East",
+  readOnly: false, // true when viewing a shared bracket
+  bracketName: "", // user's bracket name
 };
+
+/** Callback for Supabase save — set by app.js after supabase.js is loaded */
+let onPicksChanged = null;
+export function setOnPicksChanged(fn) {
+  onPicksChanged = fn;
+}
+
+/** Debounce timer for Supabase saves */
+let saveTimer = null;
+function debouncedSave() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    savePicksToStorage();
+    if (onPicksChanged) onPicksChanged(state.picks);
+  }, 500);
+}
 
 /**
  * Record a pick for a game and clear all downstream picks that are now invalid.
- * @param {string} gameId - slot id (e.g. "E1")
- * @param {string} teamId - team id (e.g. "DUKE")
  */
 export function setPick(gameId, teamId) {
+  if (state.readOnly) return; // block edits in shared view
   state.picks[gameId] = teamId;
   clearDownstream(gameId);
-  savePicksToStorage();
+  debouncedSave();
 }
 
 /**
  * Clear all picks that depend on the result of gameId.
- * Finds all downstream slots referencing gameId as a winner source, deletes
- * their picks, and recurses so the entire chain is cleared.
- * @param {string} gameId
  */
 export function clearDownstream(gameId) {
-  // Find all slots whose top or bot source references gameId as a winner
-  const downstream = Object.values(state.slots).filter(slot =>
-    slot.top?.game === gameId || slot.bot?.game === gameId
+  const downstream = Object.values(state.slots).filter(
+    (slot) => slot.top?.game === gameId || slot.bot?.game === gameId,
   );
-  downstream.forEach(slot => {
+  downstream.forEach((slot) => {
     if (state.picks[slot.id]) {
       delete state.picks[slot.id];
       clearDownstream(slot.id);
@@ -43,7 +56,6 @@ export function clearDownstream(gameId) {
 
 /**
  * Persist current picks to localStorage.
- * Silently swallows storage errors (private mode, quota exceeded).
  */
 export function savePicksToStorage() {
   try {
@@ -55,7 +67,6 @@ export function savePicksToStorage() {
 
 /**
  * Restore picks from localStorage on page load.
- * Silently resets to empty on parse error.
  */
 export function loadPicksFromStorage() {
   try {
@@ -69,4 +80,34 @@ export function loadPicksFromStorage() {
   }
 }
 
-// state.js imports nothing -- enforced to prevent circular dependencies
+/**
+ * Reset all picks and clear storage.
+ */
+export function resetAllPicks() {
+  state.picks = {};
+  savePicksToStorage();
+}
+
+/**
+ * Reset picks for a single region.
+ */
+export function resetRegionPicks(region) {
+  // Find all slots in this region and clear their picks
+  const regionSlots = Object.values(state.slots).filter(
+    (s) => s.region === region,
+  );
+  regionSlots.forEach((s) => {
+    delete state.picks[s.id];
+  });
+  // Also clear Final Four / Championship slots that sourced from this region
+  const ffSlots = Object.values(state.slots).filter(
+    (s) => s.region === "FinalFour" || s.region === "Championship",
+  );
+  ffSlots.forEach((s) => {
+    // Check if any upstream dependency leads to this region
+    if (state.picks[s.id]) {
+      delete state.picks[s.id];
+    }
+  });
+  debouncedSave();
+}

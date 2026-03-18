@@ -19,15 +19,18 @@ export function renderFirstFour() {
 
   const heading = document.createElement("h2");
   heading.textContent = "First Four";
-  heading.style.cssText = "padding: 0 0 12px 0; margin-bottom: 4px; font-size: 18px;";
+  heading.style.cssText =
+    "padding: 0 0 12px 0; margin-bottom: 4px; font-size: 18px;";
   panel.appendChild(heading);
 
   const subtext = document.createElement("p");
-  subtext.textContent = "Play-in games (Mar 17-18). Mark winners after games end to fill R64 slots.";
-  subtext.style.cssText = "font-size: 13px; color: var(--color-muted); margin-bottom: 16px;";
+  subtext.textContent =
+    "Play-in games (Mar 17-18). Mark winners after games end to fill R64 slots.";
+  subtext.style.cssText =
+    "font-size: 13px; color: var(--color-muted); margin-bottom: 16px;";
   panel.appendChild(subtext);
 
-  Object.values(state.firstFour).forEach(game => {
+  Object.values(state.firstFour).forEach((game) => {
     const card = buildGameCard(game);
     panel.appendChild(card);
   });
@@ -48,7 +51,7 @@ export function setFirstFourResolved(ffId, winner) {
 
   // Find the R64 slot that sources from this First Four game
   const affectedSlot = Object.values(state.slots).find(
-    s => s.top?.ff_id === ffId || s.bot?.ff_id === ffId
+    (s) => s.top?.ff_id === ffId || s.bot?.ff_id === ffId,
   );
 
   if (affectedSlot) {
@@ -70,7 +73,7 @@ export function clearFirstFourResolution(ffId) {
 
   // Find the R64 slot that sources from this First Four game
   const affectedSlot = Object.values(state.slots).find(
-    s => s.top?.ff_id === ffId || s.bot?.ff_id === ffId
+    (s) => s.top?.ff_id === ffId || s.bot?.ff_id === ffId,
   );
 
   if (affectedSlot) {
@@ -97,10 +100,10 @@ function rerenderPanel() {
   if (!panel) return;
 
   // Remove existing game cards
-  panel.querySelectorAll(".ff-game-card").forEach(el => el.remove());
+  panel.querySelectorAll(".ff-game-card").forEach((el) => el.remove());
 
   // Re-add updated cards
-  Object.values(state.firstFour).forEach(game => {
+  Object.values(state.firstFour).forEach((game) => {
     const card = buildGameCard(game);
     panel.appendChild(card);
   });
@@ -212,8 +215,21 @@ function formatDate(dateStr) {
   if (!dateStr) return "";
   try {
     const [, month, day] = dateStr.split("-");
-    const months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const months = [
+      "",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
     return `${months[parseInt(month, 10)]} ${parseInt(day, 10)}`;
   } catch {
     return dateStr;
@@ -231,9 +247,9 @@ function injectStyles() {
   style.id = "ff-styles";
   style.textContent = `
     #first-four-panel {
+      display: none;
       padding: 16px;
-      border-top: 1px solid var(--color-border);
-      margin-top: 24px;
+      margin-top: 0;
     }
 
     .ff-game-card {

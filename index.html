@@ -10,14 +10,63 @@
 </head>
 <body>
   <div id="app">
+    <header class="hero">
+      <div class="hero-logo">
+        <span class="hero-icon">🏀</span>
+        <div class="hero-text">
+          <h1 class="hero-title">TZ's <span class="hero-highlight">CHALK</span>BUSTER</h1>
+          <p class="hero-subtitle">March Madness 2026 Bracket Analysis Tool</p>
+        </div>
+      </div>
+      <div class="hero-tagline">Bust the chalk. Back the data.</div>
+    </header>
     <nav id="region-tabs"></nav>
+    <div id="instructions-panel" class="instructions-panel" style="display:none">
+      <h2>How to Use ChalkBuster</h2>
+      <div class="instructions-grid">
+        <div class="instruction-card">
+          <div class="instruction-num">1</div>
+          <h3>Pick Winners</h3>
+          <p>Click a team name in any matchup to pick them as the winner. Your pick advances to the next round automatically.</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-num">2</div>
+          <h3>Read the Analysis</h3>
+          <p>Tap the <strong>i</strong> button on any matchup to see side-by-side stats, the Trapezoid of Excellence, pros/cons, and a confidence rating. You can also pick from inside the analysis card.</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-num">3</div>
+          <h3>Navigate Matchups</h3>
+          <p>Use the <strong>&larr; Prev</strong> / <strong>Next &rarr;</strong> buttons (or arrow keys) to flip through all matchups in a round without closing the card.</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-num">4</div>
+          <h3>Understand the Stats</h3>
+          <p>Tap the <strong>?</strong> next to any metric for a plain-English definition and why it matters for your bracket. All stats are real Sports Reference data.</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-num">5</div>
+          <h3>Trapezoid of Excellence</h3>
+          <p>The green zone on the chart shows where championship contenders live — teams with elite efficiency at a versatile pace. If both teams are inside it, expect a dogfight.</p>
+        </div>
+        <div class="instruction-card">
+          <div class="instruction-num">6</div>
+          <h3>Share Your Bracket</h3>
+          <p>Click <strong>Share</strong> to copy a link. Anyone who opens it sees your picks in read-only mode. Your picks auto-save — just come back anytime.</p>
+        </div>
+      </div>
+      <div class="instructions-legend">
+        <h3>What the Flags Mean</h3>
+        <p><span class="flag flag--upset">UPSET ALERT</span> The lower seed has a real shot (30%+ win probability). Don't auto-chalk this one.</p>
+        <p><span class="flag flag--contrarian">CONTRARIAN</span> The data pick differs from public consensus. Going with the data here could separate your bracket from the pack.</p>
+      </div>
+    </div>
     <main id="bracket-container"></main>
     <aside id="first-four-panel"></aside>
     <div id="analysis-overlay" class="analysis-overlay">
       <div id="analysis-panel" class="analysis-panel"></div>
     </div>
   </div>
-  <!-- Phase 1: no CDN scripts -- all native -->
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>

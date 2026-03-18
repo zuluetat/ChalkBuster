@@ -84,6 +84,19 @@ function buildTeamSlotEl(gameId, pos, team, source) {
   div.dataset.pos = pos;
   div.dataset.team = team ? team.id : "";
 
+  // Team logo
+  if (team && team.espn_id) {
+    const logo = document.createElement("img");
+    logo.className = "team-logo";
+    logo.src = `https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${team.espn_id}.png&h=40&w=40`;
+    logo.alt = "";
+    logo.loading = "lazy";
+    logo.onerror = function () {
+      this.style.display = "none";
+    };
+    div.appendChild(logo);
+  }
+
   const seedBadge = document.createElement("span");
   seedBadge.className = "seed-badge";
   seedBadge.textContent = team ? team.seed : ffSeed(source);
@@ -323,6 +336,11 @@ export function updateSlotAndDownstream(gameId) {
 export function initBracketHandlers() {
   const container = document.getElementById("bracket-container");
   if (!container) return;
+
+  // Listen for picks made from the analysis card overlay
+  document.addEventListener("chalkbuster:pick", (e) => {
+    updateSlotAndDownstream(e.detail.gameId);
+  });
 
   // Analysis trigger handler -- must come BEFORE pick handler to allow stopPropagation
   container.addEventListener("click", (event) => {

@@ -16,7 +16,8 @@
       "public_pick_pct": 94.2,
       "spread": -19.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 150
     },
     "UCONN": {
       "id": "UCONN",
@@ -33,7 +34,8 @@
       "public_pick_pct": 91.8,
       "spread": -12.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 41
     },
     "MICHIGAN_STATE": {
       "id": "MICHIGAN_STATE",
@@ -50,7 +52,8 @@
       "public_pick_pct": 84.6,
       "spread": -8.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 127
     },
     "KANSAS": {
       "id": "KANSAS",
@@ -67,7 +70,8 @@
       "public_pick_pct": 78.4,
       "spread": -7.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2305
     },
     "ST_JOHNS": {
       "id": "ST_JOHNS",
@@ -84,7 +88,8 @@
       "public_pick_pct": 65.2,
       "spread": -5.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2599
     },
     "LOUISVILLE": {
       "id": "LOUISVILLE",
@@ -101,7 +106,8 @@
       "public_pick_pct": 59.3,
       "spread": -4.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 97
     },
     "UCLA": {
       "id": "UCLA",
@@ -118,7 +124,8 @@
       "public_pick_pct": 52.1,
       "spread": -2.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 26
     },
     "OHIO_STATE": {
       "id": "OHIO_STATE",
@@ -135,7 +142,8 @@
       "public_pick_pct": 48.7,
       "spread": -2.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 194
     },
     "TCU": {
       "id": "TCU",
@@ -152,7 +160,8 @@
       "public_pick_pct": 51.3,
       "spread": 2.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2628
     },
     "UCF": {
       "id": "UCF",
@@ -169,7 +178,8 @@
       "public_pick_pct": 44.5,
       "spread": 3.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2116
     },
     "SOUTH_FLORIDA": {
       "id": "SOUTH_FLORIDA",
@@ -186,7 +196,8 @@
       "public_pick_pct": 38.4,
       "spread": 4.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 58
     },
     "NORTHERN_IOWA": {
       "id": "NORTHERN_IOWA",
@@ -203,7 +214,8 @@
       "public_pick_pct": 33.5,
       "spread": 5.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2460
     },
     "CAL_BAPTIST": {
       "id": "CAL_BAPTIST",
@@ -220,7 +232,8 @@
       "public_pick_pct": 19.4,
       "spread": 7.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2856
     },
     "NORTH_DAKOTA_STATE": {
       "id": "NORTH_DAKOTA_STATE",
@@ -237,7 +250,8 @@
       "public_pick_pct": 13.8,
       "spread": 8.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2449
     },
     "FURMAN": {
       "id": "FURMAN",
@@ -254,7 +268,8 @@
       "public_pick_pct": 7.2,
       "spread": 12.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 231
     },
     "SIENA": {
       "id": "SIENA",
@@ -271,7 +286,8 @@
       "public_pick_pct": 2.1,
       "spread": 19.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2547
     },
     "FLORIDA": {
       "id": "FLORIDA",
@@ -288,7 +304,8 @@
       "public_pick_pct": 88.6,
       "spread": -18.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 57
     },
     "HOUSTON": {
       "id": "HOUSTON",
@@ -305,7 +322,8 @@
       "public_pick_pct": 92.4,
       "spread": -13.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 248
     },
     "ILLINOIS": {
       "id": "ILLINOIS",
@@ -322,7 +340,8 @@
       "public_pick_pct": 82.1,
       "spread": -7.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 356
     },
     "NEBRASKA": {
       "id": "NEBRASKA",
@@ -339,7 +358,8 @@
       "public_pick_pct": 72.8,
       "spread": -6.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 158
     },
     "VANDERBILT": {
       "id": "VANDERBILT",
@@ -356,7 +376,8 @@
       "public_pick_pct": 57.8,
       "spread": -3.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 238
     },
     "NORTH_CAROLINA": {
       "id": "NORTH_CAROLINA",
@@ -373,7 +394,8 @@
       "public_pick_pct": 62.4,
       "spread": -3.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 153
     },
     "SAINT_MARYS": {
       "id": "SAINT_MARYS",
@@ -390,7 +412,8 @@
       "public_pick_pct": 55.3,
       "spread": -2.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2608
     },
     "CLEMSON": {
       "id": "CLEMSON",
@@ -407,7 +430,8 @@
       "public_pick_pct": 45.2,
       "spread": -1.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 228
     },
     "IOWA": {
       "id": "IOWA",
@@ -424,7 +448,8 @@
       "public_pick_pct": 54.8,
       "spread": 1.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2294
     },
     "TEXAS_AM": {
       "id": "TEXAS_AM",
@@ -441,7 +466,8 @@
       "public_pick_pct": 40.2,
       "spread": 3.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 245
     },
     "VCU": {
       "id": "VCU",
@@ -458,7 +484,8 @@
       "public_pick_pct": 36.8,
       "spread": 4.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2670
     },
     "MCNEESE": {
       "id": "MCNEESE",
@@ -475,7 +502,8 @@
       "public_pick_pct": 34.8,
       "spread": 5.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2377
     },
     "TROY": {
       "id": "TROY",
@@ -492,7 +520,8 @@
       "public_pick_pct": 21.8,
       "spread": 8.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2653
     },
     "PENN": {
       "id": "PENN",
@@ -509,7 +538,8 @@
       "public_pick_pct": 11.6,
       "spread": 9.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 219
     },
     "IDAHO": {
       "id": "IDAHO",
@@ -526,7 +556,8 @@
       "public_pick_pct": 5.8,
       "spread": 13.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 70
     },
     "PVAMU": {
       "id": "PVAMU",
@@ -543,7 +574,8 @@
       "public_pick_pct": 1.4,
       "spread": 18.0,
       "first_four": true,
-      "ff_game": "FF_PV_LEHIGH"
+      "ff_game": "FF_PV_LEHIGH",
+      "espn_id": 2504
     },
     "LEHIGH": {
       "id": "LEHIGH",
@@ -560,7 +592,8 @@
       "public_pick_pct": 1.8,
       "spread": 18.0,
       "first_four": true,
-      "ff_game": "FF_PV_LEHIGH"
+      "ff_game": "FF_PV_LEHIGH",
+      "espn_id": 2374
     },
     "MICHIGAN": {
       "id": "MICHIGAN",
@@ -577,7 +610,8 @@
       "public_pick_pct": 96.4,
       "spread": -21.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 130
     },
     "IOWA_STATE": {
       "id": "IOWA_STATE",
@@ -594,7 +628,8 @@
       "public_pick_pct": 90.2,
       "spread": -13.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 66
     },
     "VIRGINIA": {
       "id": "VIRGINIA",
@@ -611,7 +646,8 @@
       "public_pick_pct": 86.8,
       "spread": -9.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 258
     },
     "ALABAMA": {
       "id": "ALABAMA",
@@ -628,7 +664,8 @@
       "public_pick_pct": 76.4,
       "spread": -7.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 333
     },
     "TEXAS_TECH": {
       "id": "TEXAS_TECH",
@@ -645,7 +682,8 @@
       "public_pick_pct": 63.1,
       "spread": -4.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2641
     },
     "TENNESSEE": {
       "id": "TENNESSEE",
@@ -662,7 +700,8 @@
       "public_pick_pct": 60.8,
       "spread": -3.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2633
     },
     "KENTUCKY": {
       "id": "KENTUCKY",
@@ -679,7 +718,8 @@
       "public_pick_pct": 50.4,
       "spread": -2.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 96
     },
     "GEORGIA": {
       "id": "GEORGIA",
@@ -696,7 +736,8 @@
       "public_pick_pct": 42.4,
       "spread": -1.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 61
     },
     "SAINT_LOUIS": {
       "id": "SAINT_LOUIS",
@@ -713,7 +754,8 @@
       "public_pick_pct": 57.6,
       "spread": 1.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 139
     },
     "SANTA_CLARA": {
       "id": "SANTA_CLARA",
@@ -730,7 +772,8 @@
       "public_pick_pct": 43.8,
       "spread": 2.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2541
     },
     "MIAMIOH": {
       "id": "MIAMIOH",
@@ -747,7 +790,8 @@
       "public_pick_pct": 30.4,
       "spread": 5.5,
       "first_four": true,
-      "ff_game": "FF_MIAMI_SMU"
+      "ff_game": "FF_MIAMI_SMU",
+      "espn_id": 193
     },
     "SMU": {
       "id": "SMU",
@@ -764,7 +808,8 @@
       "public_pick_pct": 35.2,
       "spread": 5.5,
       "first_four": true,
-      "ff_game": "FF_MIAMI_SMU"
+      "ff_game": "FF_MIAMI_SMU",
+      "espn_id": 2567
     },
     "AKRON": {
       "id": "AKRON",
@@ -781,7 +826,8 @@
       "public_pick_pct": 27.4,
       "spread": 6.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2006
     },
     "HOFSTRA": {
       "id": "HOFSTRA",
@@ -798,7 +844,8 @@
       "public_pick_pct": 18.2,
       "spread": 8.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2275
     },
     "WRIGHT_STATE": {
       "id": "WRIGHT_STATE",
@@ -815,7 +862,8 @@
       "public_pick_pct": 10.4,
       "spread": 9.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2750
     },
     "TENNESSEE_STATE": {
       "id": "TENNESSEE_STATE",
@@ -832,7 +880,8 @@
       "public_pick_pct": 4.8,
       "spread": 13.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2634
     },
     "UMBC": {
       "id": "UMBC",
@@ -849,7 +898,8 @@
       "public_pick_pct": 1.6,
       "spread": 21.0,
       "first_four": true,
-      "ff_game": "FF_UMBC_HOWARD"
+      "ff_game": "FF_UMBC_HOWARD",
+      "espn_id": 2378
     },
     "HOWARD": {
       "id": "HOWARD",
@@ -866,7 +916,8 @@
       "public_pick_pct": 1.2,
       "spread": 21.0,
       "first_four": true,
-      "ff_game": "FF_UMBC_HOWARD"
+      "ff_game": "FF_UMBC_HOWARD",
+      "espn_id": 47
     },
     "ARIZONA": {
       "id": "ARIZONA",
@@ -883,7 +934,8 @@
       "public_pick_pct": 87.4,
       "spread": -17.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 12
     },
     "PURDUE": {
       "id": "PURDUE",
@@ -900,7 +952,8 @@
       "public_pick_pct": 90.8,
       "spread": -12.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2509
     },
     "GONZAGA": {
       "id": "GONZAGA",
@@ -917,7 +970,8 @@
       "public_pick_pct": 85.4,
       "spread": -9.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2250
     },
     "ARKANSAS": {
       "id": "ARKANSAS",
@@ -934,7 +988,8 @@
       "public_pick_pct": 74.6,
       "spread": -6.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 8
     },
     "WISCONSIN": {
       "id": "WISCONSIN",
@@ -951,7 +1006,8 @@
       "public_pick_pct": 62.4,
       "spread": -4.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 275
     },
     "BYU": {
       "id": "BYU",
@@ -968,7 +1024,8 @@
       "public_pick_pct": 58.6,
       "spread": -3.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 252
     },
     "MIAMI_FL": {
       "id": "MIAMI_FL",
@@ -985,7 +1042,8 @@
       "public_pick_pct": 48.2,
       "spread": -1.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2390
     },
     "VILLANOVA": {
       "id": "VILLANOVA",
@@ -1002,7 +1060,8 @@
       "public_pick_pct": 44.8,
       "spread": -1.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 222
     },
     "UTAH_STATE": {
       "id": "UTAH_STATE",
@@ -1019,7 +1078,8 @@
       "public_pick_pct": 55.2,
       "spread": 1.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 328
     },
     "MISSOURI": {
       "id": "MISSOURI",
@@ -1036,7 +1096,8 @@
       "public_pick_pct": 41.4,
       "spread": 3.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 142
     },
     "TEXAS": {
       "id": "TEXAS",
@@ -1053,7 +1114,8 @@
       "public_pick_pct": 34.6,
       "spread": 5.5,
       "first_four": true,
-      "ff_game": "FF_TEXAS_NCSTATE"
+      "ff_game": "FF_TEXAS_NCSTATE",
+      "espn_id": 251
     },
     "NCSTATE": {
       "id": "NCSTATE",
@@ -1070,7 +1132,8 @@
       "public_pick_pct": 33.8,
       "spread": 5.5,
       "first_four": true,
-      "ff_game": "FF_TEXAS_NCSTATE"
+      "ff_game": "FF_TEXAS_NCSTATE",
+      "espn_id": 152
     },
     "HIGH_POINT": {
       "id": "HIGH_POINT",
@@ -1087,7 +1150,8 @@
       "public_pick_pct": 26.4,
       "spread": 6.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2314
     },
     "HAWAII": {
       "id": "HAWAII",
@@ -1104,7 +1168,8 @@
       "public_pick_pct": 17.4,
       "spread": 8.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 62
     },
     "KENNESAW_STATE": {
       "id": "KENNESAW_STATE",
@@ -1121,7 +1186,8 @@
       "public_pick_pct": 9.8,
       "spread": 9.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2320
     },
     "QUEENS": {
       "id": "QUEENS",
@@ -1138,7 +1204,8 @@
       "public_pick_pct": 5.2,
       "spread": 12.5,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 3101
     },
     "LIU": {
       "id": "LIU",
@@ -1155,7 +1222,8 @@
       "public_pick_pct": 1.8,
       "spread": 17.0,
       "first_four": false,
-      "ff_game": null
+      "ff_game": null,
+      "espn_id": 2344
     }
   }
 }
