@@ -151,7 +151,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: relative;
 }
 
 /* Connecting lines between rounds */
@@ -171,18 +170,25 @@
   opacity: 0.5;
 }
 
-/* Round label — flex-shrink: 0 so it stays at top, doesn't participate in space-around */
+/* Round label — absolutely positioned so it doesn't affect flex space-around alignment */
+.round-column {
+  position: relative;
+  padding-top: 28px; /* reserve space for the label */
+}
+
 .round-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   font-size: 12px;
   font-weight: 800;
   color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  margin-bottom: 10px;
   text-align: center;
   padding-bottom: 6px;
   border-bottom: 2px solid rgba(233, 69, 96, 0.25);
-  flex-shrink: 0;
 }
 
 /* Matchup card */
