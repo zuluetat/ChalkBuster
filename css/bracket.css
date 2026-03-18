@@ -153,21 +153,20 @@
   justify-content: space-around;
 }
 
-/* Connecting lines between rounds */
-.round-column:not(:last-child)::after {
+/* Bracket connector lines -- horizontal stubs from each matchup card */
+.matchup-card::after {
   content: '';
   position: absolute;
-  top: 0;
+  top: 50%;
   right: -13px;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg,
-    transparent 5%,
-    var(--color-border) 20%,
-    var(--color-border) 80%,
-    transparent 95%
-  );
-  opacity: 0.5;
+  width: 13px;
+  border-top: 2px solid var(--color-connector, rgba(233, 69, 96, 0.25));
+  pointer-events: none;
+}
+
+/* Last round column (E8 / Final Four link) -- no connector out */
+.round-column:last-child .matchup-card::after {
+  display: none;
 }
 
 /* Round label — absolutely positioned so it doesn't affect flex space-around alignment */
@@ -399,7 +398,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .round-column:not(:last-child)::after {
+  .matchup-card::after {
     display: none;
   }
 
@@ -421,6 +420,10 @@
   .bracket-region[data-region="FinalFour"],
   .bracket-region[data-region="Championship"] {
     grid-template-columns: 1fr;
+  }
+
+  .matchup-card::after {
+    display: none;
   }
 
   .team-slot {
