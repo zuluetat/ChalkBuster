@@ -7,7 +7,7 @@
 
 .bracket-region.active {
   display: grid;
-  grid-template-columns: 240px 200px 200px 200px;
+  grid-template-columns: 240px 200px 200px 200px auto;
   column-gap: 24px;
   padding: 16px 0;
   animation: fadeInRegion 0.3s ease;
@@ -146,6 +146,45 @@
 .team-slot.tbd .seed-badge {
   color: var(--color-muted);
   background: transparent;
+}
+
+/* Final Four callout after E8 */
+.final-four-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 12px;
+  transition: transform 0.2s;
+}
+
+.final-four-link:hover {
+  transform: translateX(4px);
+}
+
+.ff4-arrow {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.ff4-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  writing-mode: horizontal-tb;
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  padding: 8px 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.final-four-link:hover .ff4-text {
+  background: var(--color-accent);
+  color: #fff;
 }
 
 /* ============================================

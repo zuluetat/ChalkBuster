@@ -217,6 +217,16 @@ function buildRegionEl(region, rounds) {
     regionEl.appendChild(col);
   });
 
+  // Add "→ Final Four" callout after the E8 column
+  const ff4Link = document.createElement("div");
+  ff4Link.className = "final-four-link";
+  ff4Link.innerHTML = `<span class="ff4-arrow">&rarr;</span><span class="ff4-text">Final Four</span>`;
+  ff4Link.addEventListener("click", () => {
+    const tabBtn = document.querySelector('[data-region="Final Four"]');
+    if (tabBtn) tabBtn.click();
+  });
+  regionEl.appendChild(ff4Link);
+
   return regionEl;
 }
 
