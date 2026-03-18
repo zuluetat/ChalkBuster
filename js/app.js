@@ -6,6 +6,7 @@ import {
   loadPicksFromStorage,
   setOnPicksChanged,
   resetAllPicks,
+  resetRegionPicks,
 } from "./state.js";
 import { renderBracket, initBracketHandlers } from "./bracket.js";
 import { renderRegionTabs } from "./regions.js";
@@ -207,8 +208,11 @@ function renderToolbar() {
     return;
   }
 
+  const showRegionReset =
+    state.activeRegion && state.activeRegion !== "FinalFour";
   toolbar.innerHTML = `
     <button id="btn-export" class="toolbar-btn">Export</button>
+    ${showRegionReset ? `<button id="btn-reset-region" class="toolbar-btn toolbar-btn--secondary">Reset ${state.activeRegion}</button>` : ""}
     <button id="btn-share" class="toolbar-btn toolbar-btn--primary">Share</button>
     <button id="btn-reset" class="toolbar-btn toolbar-btn--danger">Reset All</button>
   `;
@@ -248,6 +252,16 @@ function renderToolbar() {
     renderFirstFour();
     showToast("Bracket reset");
   });
+
+  const regionResetBtn = document.getElementById("btn-reset-region");
+  if (regionResetBtn) {
+    regionResetBtn.addEventListener("click", () => {
+      if (!confirm(`Reset all ${state.activeRegion} picks?`)) return;
+      resetRegionPicks(state.activeRegion);
+      renderBracket();
+      showToast(`${state.activeRegion} picks reset`);
+    });
+  }
 }
 
 /**

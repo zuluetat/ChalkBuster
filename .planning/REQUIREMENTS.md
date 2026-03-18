@@ -31,6 +31,22 @@
 - [x] **ANAL-05**: Upset alerts flagged when lower seed has >30% win probability
 - [x] **ANAL-06**: Contrarian opportunity flags when model disagrees with public consensus
 
+### Data Integrity
+
+- [x] **DINT-01**: Data fields are classified into two trust tiers:
+  - **Verified/Reproducible (SR-sourced):** `srs`, `pace`, `ortg`, `efg_pct`, `tov_pct`, `orb_pct`, `ftr`, `sos`, `records` — sourced from Sports Reference CSV, independently verifiable by any AI against the same SR data.
+  - **Unverified/Non-reproducible (LLM-generated):**
+    - KenPom values (`kenpom_adjEM`, `kenpom_adjO`, `kenpom_adjD`) — carried from original fabricated file, never sourced from KenPom
+    - Win probabilities (`win_prob`) — no documented model
+    - Spreads (`spreads`) — no sportsbook source
+    - Public pick percentages (`public_pick_pct`) — no source (ESPN Tournament Challenge was not scraped)
+    - Last-10 records (`last_10`) — marked "UNVERIFIED", no game-by-game data used
+    - Matchup reasoning prose — written against pre-correction metrics, not regenerated after data fix
+- [x] **DINT-02**: The UI must use verified SR-sourced fields (`srs`, `pace`, `ortg`, `efg_pct`, `tov_pct`, `orb_pct`, `ftr`, `sos`) as the primary display metrics in matchup cards and team comparisons
+- [ ] **DINT-03**: Unverified fields (`kenpom_adjEM`, `kenpom_adjO`, `kenpom_adjD`, `win_prob`, `spreads`, `public_pick_pct`, `last_10`) must either be clearly labeled as "Estimate" or "Unverified" in the UI, or replaced with verified alternatives where possible
+- [x] **DINT-04**: The trapezoid/radar visualization must use SRS (verified) rather than `kenpom_adjEM` (unverified) as its efficiency metric — already implemented in code
+- [ ] **DINT-05**: Any future data pipeline must trace every numeric claim to a source URL and fetch date, ensuring full reproducibility
+
 ### Persistence
 
 - [ ] **PERS-01**: Save bracket picks to Supabase
@@ -94,6 +110,11 @@
 | ANAL-04 | Phase 2 | Complete |
 | ANAL-05 | Phase 2 | Complete |
 | ANAL-06 | Phase 2 | Complete |
+| DINT-01 | Phase 2 | Complete |
+| DINT-02 | Phase 2 | Complete |
+| DINT-03 | Phase 3 | Pending |
+| DINT-04 | Phase 2 | Complete |
+| DINT-05 | Future | Pending |
 | PERS-01 | Phase 3 | Pending |
 | PERS-02 | Phase 3 | Pending |
 | PERS-03 | Phase 3 | Pending |
@@ -104,10 +125,10 @@
 | PLSH-03 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 22 total
-- Mapped to phases: 22
+- v1 requirements: 27 total
+- Mapped to phases: 27
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-17*
-*Last updated: 2026-03-17 after initial definition*
+*Last updated: 2026-03-18 after adding DINT (Data Integrity) requirements*

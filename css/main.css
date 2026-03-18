@@ -188,6 +188,16 @@ body {
   color: #fff;
 }
 
+.toolbar-btn--secondary {
+  color: #fbbf24;
+  border-color: #78350f;
+}
+
+.toolbar-btn--secondary:hover {
+  background: #78350f;
+  color: #fff;
+}
+
 /* Toast notification */
 .toast {
   position: fixed;
