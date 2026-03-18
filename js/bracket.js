@@ -163,20 +163,12 @@ export function renderBracket() {
     container.appendChild(regionEl);
   });
 
-  // Render Final Four (F4 round only)
-  const ff4El = buildSpecialRegionEl("FinalFour", ["F4"]);
+  // Render combined Final Four + Championship as pyramid
+  const ff4El = buildFinalFourRegion();
   if (state.activeRegion === "Final Four") {
     ff4El.classList.add("active");
   }
   container.appendChild(ff4El);
-
-  // Render Championship (CHM round only, same region element as FinalFour for simplicity)
-  // Championship is displayed alongside Final Four when "Final Four" tab is active
-  const chmEl = buildSpecialRegionEl("Championship", ["CHM"]);
-  if (state.activeRegion === "Final Four") {
-    chmEl.classList.add("active");
-  }
-  container.appendChild(chmEl);
 }
 
 /**
@@ -226,6 +218,157 @@ function buildRegionEl(region, rounds) {
     if (tabBtn) tabBtn.click();
   });
   regionEl.appendChild(ff4Link);
+
+  return regionEl;
+}
+
+/**
+ * Predicts a final score based on team stats.
+ * Uses ORtg, DRtg, and Pace to estimate points.
+ */
+function predictScore(teamA, teamB) {
+  if (!teamA || !teamB) return null;
+  // Look up metrics from matchups data (stored in state after loadMatchups)
+  // Fall back to teams.json data
+  const aORtg = teamA.kenpom_adjO || 110;
+  const aDRtg = teamA.kenpom_adjD || 100;
+  const bORtg = teamB.kenpom_adjO || 110;
+  const bDRtg = teamB.kenpom_adjD || 100;
+  const avgPace = ((teamA.kenpom_tempo || 68) + (teamB.kenpom_tempo || 68)) / 2;
+  const avgORtg = 107; // D1 average
+
+  // Log5-style: adjust each team's offense by opponent defense
+  const aAdj = (aORtg * bDRtg) / avgORtg;
+  const bAdj = (bORtg * aDRtg) / avgORtg;
+
+  const aScore = Math.round((avgPace * aAdj) / 100);
+  const bScore = Math.round((avgPace * bAdj) / 100);
+
+  return { a: aScore, b: bScore };
+}
+
+/**
+ * Builds the combined Final Four + Championship region as a pyramid.
+ * F4 matchups on the left, Championship in the middle, predicted score on the right.
+ */
+function buildFinalFourRegion() {
+  const regionEl = document.createElement("div");
+  regionEl.className = "bracket-region bracket-region--ff";
+  regionEl.dataset.region = "FinalFour";
+
+  const regionSources = {
+    FF1: { top: "East", bot: "West" },
+    FF2: { top: "South", bot: "Midwest" },
+    CH1: { top: "FF1 Winner", bot: "FF2 Winner" },
+  };
+
+  function buildColumn(regionName, round, label) {
+    const slots = Object.values(state.slots)
+      .filter((s) => s.region === regionName && s.round === round)
+      .sort((a, b) => a.position - b.position);
+
+    const col = document.createElement("div");
+    col.className = "round-column";
+
+    const roundLabel = document.createElement("div");
+    roundLabel.className = "round-label";
+    roundLabel.textContent = label;
+    col.appendChild(roundLabel);
+
+    slots.forEach((slot) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "ff-matchup-wrapper";
+
+      const src = regionSources[slot.id];
+      if (src) {
+        const topLabel = document.createElement("div");
+        topLabel.className = "ff-region-tag ff-region-tag--top";
+        topLabel.innerHTML = `<span class="ff-region-link" data-region="${src.top}">&larr; ${src.top}</span>`;
+        wrapper.appendChild(topLabel);
+      }
+
+      wrapper.appendChild(buildMatchupCard(slot));
+
+      if (src) {
+        const botLabel = document.createElement("div");
+        botLabel.className = "ff-region-tag ff-region-tag--bot";
+        botLabel.innerHTML = `<span class="ff-region-link" data-region="${src.bot}">&larr; ${src.bot}</span>`;
+        wrapper.appendChild(botLabel);
+      }
+
+      wrapper.querySelectorAll(".ff-region-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const region = link.dataset.region;
+          const tabBtn = document.querySelector(`[data-region="${region}"]`);
+          if (tabBtn) tabBtn.click();
+        });
+      });
+
+      col.appendChild(wrapper);
+    });
+
+    return col;
+  }
+
+  // F4 column (2 matchups)
+  regionEl.appendChild(buildColumn("FinalFour", "F4", "Final Four"));
+
+  // Championship column (1 matchup)
+  const chmCol = buildColumn("Championship", "CHM", "Championship");
+
+  // Add predicted score below championship
+  const chSlot = Object.values(state.slots).find(
+    (s) => s.region === "Championship" && s.round === "CHM",
+  );
+  if (chSlot) {
+    const topTeam = resolveTeam(chSlot.top);
+    const botTeam = resolveTeam(chSlot.bot);
+    if (topTeam && botTeam) {
+      const score = predictScore(
+        state.teams[topTeam.id],
+        state.teams[botTeam.id],
+      );
+      if (score) {
+        const scoreEl = document.createElement("div");
+        scoreEl.className = "predicted-score";
+        scoreEl.innerHTML = `
+          <div class="predicted-label">Predicted Score</div>
+          <div class="predicted-teams">
+            <span class="predicted-team">${topTeam.name} <strong>${score.a}</strong></span>
+            <span class="predicted-vs">-</span>
+            <span class="predicted-team"><strong>${score.b}</strong> ${botTeam.name}</span>
+          </div>
+        `;
+        chmCol.appendChild(scoreEl);
+      }
+    }
+  }
+
+  regionEl.appendChild(chmCol);
+
+  // Champion display column
+  const champCol = document.createElement("div");
+  champCol.className = "round-column champ-column";
+  const champLabel = document.createElement("div");
+  champLabel.className = "round-label";
+  champLabel.textContent = "Champion";
+  champCol.appendChild(champLabel);
+
+  const champDisplay = document.createElement("div");
+  champDisplay.className = "champ-display";
+  const champPick = state.picks["CH1"];
+  if (champPick && state.teams[champPick]) {
+    const champ = state.teams[champPick];
+    const logo = champ.espn_id
+      ? `<img class="champ-logo" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/${champ.espn_id}.png&h=80&w=80" alt="">`
+      : "";
+    champDisplay.innerHTML = `${logo}<div class="champ-name">${champ.name}</div><div class="champ-seed">${champ.seed} seed</div>`;
+  } else {
+    champDisplay.innerHTML = `<div class="champ-name champ-tbd">TBD</div>`;
+  }
+  champCol.appendChild(champDisplay);
+  regionEl.appendChild(champCol);
 
   return regionEl;
 }

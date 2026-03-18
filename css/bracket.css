@@ -18,10 +18,90 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Final Four / Championship region: 2 columns (F4 + CHM) */
-.bracket-region[data-region="FinalFour"],
-.bracket-region[data-region="Championship"] {
-  grid-template-columns: 240px 240px;
+/* Final Four pyramid: F4 (2 matchups) → Championship (1) → Champion display */
+.bracket-region--ff.active {
+  grid-template-columns: 280px 280px 200px;
+  align-items: center;
+}
+
+/* Predicted score */
+.predicted-score {
+  margin-top: 16px;
+  text-align: center;
+  padding: 12px;
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+  background: rgba(233, 69, 96, 0.05);
+}
+
+.predicted-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+
+.predicted-teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.predicted-team strong {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+.predicted-vs {
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+/* Champion display */
+.champ-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.champ-display {
+  text-align: center;
+  padding: 20px;
+}
+
+.champ-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 12px rgba(233, 69, 96, 0.4));
+}
+
+.champ-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.champ-name.champ-tbd {
+  color: var(--color-muted);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.champ-seed {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 4px;
 }
 
 /* Round column */
