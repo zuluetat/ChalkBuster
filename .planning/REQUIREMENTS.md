@@ -60,8 +60,8 @@
 
 ### Polish
 
-- [ ] **PLSH-01**: ESPN-style sports broadcast aesthetic (dark theme, bold colors)
-- [ ] **PLSH-02**: Desktop-first, iPad/tablet compatible layout
+- [x] **PLSH-01**: ESPN-style sports broadcast aesthetic (dark theme, bold colors)
+- [x] **PLSH-02**: Desktop-first, iPad/tablet compatible layout
 - [ ] **PLSH-03**: Export bracket to PDF or image
 
 ## v2 Requirements
@@ -120,8 +120,8 @@
 | PERS-03 | Phase 3 | Complete |
 | SHAR-01 | Phase 3 | Complete |
 | SHAR-02 | Phase 3 | Complete |
-| PLSH-01 | Phase 4 | Pending |
-| PLSH-02 | Phase 4 | Pending |
+| PLSH-01 | Phase 4 | Complete |
+| PLSH-02 | Phase 4 | Complete |
 | PLSH-03 | Phase 4 | Pending |
 
 **Coverage:**
