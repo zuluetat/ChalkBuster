@@ -618,13 +618,15 @@ body {
     border-top: 1px solid #aaa;
   }
 
-  /* === RIGHT SIDE connectors (lines go left ←) === */
+  /* === RIGHT SIDE connectors (lines go right → toward R64 outermost) === */
+  /* Right side rounds are reversed: E8(0), S16(1), R32(2), R64(3)
+     Connectors go RIGHT from E8→S16→R32, R64 (last) has none */
 
   [data-side="right"] .pb-pair:not(.pb-pair--last) .pb-matchup::after {
     content: '';
     position: absolute;
     top: 50%;
-    left: -10px;
+    right: -10px;
     width: 10px;
     border-top: 1px solid #aaa;
   }
@@ -632,16 +634,16 @@ body {
   [data-side="right"] .pb-pair:not(.pb-pair--last)::after {
     content: '';
     position: absolute;
-    left: -10px;
+    right: -10px;
     top: 25%;
     height: 50%;
-    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
   }
 
   [data-side="right"] .pb-pair:not(.pb-pair--last)::before {
     content: '';
     position: absolute;
-    left: -20px;
+    right: -20px;
     top: 50%;
     width: 10px;
     border-top: 1px solid #aaa;
