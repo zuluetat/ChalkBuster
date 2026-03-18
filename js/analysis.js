@@ -10,9 +10,9 @@ let roundSlotIds = [];
 
 /** Metric definitions: name, description, why it matters */
 const METRIC_DEFS = {
-  kenpom_adjEM: {
+  srs: {
     label: "SRS",
-    def: "Simple Rating System — margin of victory adjusted for strength of schedule. Equivalent to KenPom's AdjEM.",
+    def: "Simple Rating System — margin of victory adjusted for strength of schedule (Sports Reference verified).",
     why: "The single best number for overall team quality. A +30 team is elite; a negative team is weak.",
   },
   last_10: {
@@ -20,20 +20,15 @@ const METRIC_DEFS = {
     def: "Win-loss record over the team's last 10 games entering the tournament.",
     why: "Shows recent momentum. A team peaking at the right time (8-2 or better) is dangerous regardless of seed.",
   },
-  sos_rank: {
+  sos_sr: {
     label: "SOS",
-    def: "Strength of Schedule — average opponent quality. Higher = tougher schedule.",
+    def: "Strength of Schedule — average opponent quality (Sports Reference). Higher = tougher schedule.",
     why: "Context for the record. A 25-6 team with a +12 SOS faced real competition; a team with -5 SOS did not.",
   },
-  adjO: {
+  ortg: {
     label: "ORtg",
-    def: "Offensive Rating — points scored per 100 possessions.",
+    def: "Offensive Rating — points scored per 100 possessions (raw, not opponent-adjusted).",
     why: "Measures pure offensive firepower. Elite offenses (120+) can outscore anyone on a good night.",
-  },
-  adjD: {
-    label: "DRtg",
-    def: "Defensive Rating — points allowed per 100 possessions. Lower is better.",
-    why: "Defense wins tournaments. Teams under 90 can suffocate opponents and survive cold shooting nights.",
   },
   pace: {
     label: "Pace",
@@ -45,12 +40,12 @@ const METRIC_DEFS = {
     def: "Effective Field Goal % — adjusts FG% to account for 3-pointers being worth 50% more than 2s.",
     why: "The #1 Four Factor. Shot quality matters more than volume — this tells you if a team makes good shots.",
   },
-  to_pct: {
+  tov_pct: {
     label: "TO%",
     def: "Turnover Rate — turnovers committed per 100 possessions. Lower is better.",
     why: "You can't score if you give it away. High TO% teams (20%+) are vulnerable to pressure defense.",
   },
-  or_pct: {
+  orb_pct: {
     label: "OR%",
     def: "Offensive Rebound % — percentage of missed shots the team rebounds on offense.",
     why: "Second chances extend possessions. Elite rebounding teams (35%+) get extra shots others don't.",
@@ -64,17 +59,18 @@ const METRIC_DEFS = {
 
 /** Format a metric value for display */
 function fmtMetric(key, value) {
-  if (value == null) return "—";
+  if (value == null || value === "UNVERIFIED") return "—";
   switch (key) {
     case "efg_pct":
       return (value * 100).toFixed(1) + "%";
     case "ftr":
       return value.toFixed(3);
-    case "kenpom_adjEM":
+    case "srs":
       return (value >= 0 ? "+" : "") + value.toFixed(1);
-    case "sos_rank":
+    case "sos_sr":
       return (value >= 0 ? "+" : "") + value.toFixed(1);
     case "pace":
+    case "ortg":
       return value.toFixed(1);
     default:
       return String(value);
@@ -190,15 +186,16 @@ function drawTrapezoid(canvasId, topMetrics, botMetrics, topName, botName) {
     ctx.fillText("SRS (Net Efficiency)", 0, 0);
     ctx.restore();
 
-    // Draw the Trapezoid of Excellence zone
-    // Open at the top — elite teams qualify at any pace.
-    // Sides angle inward toward the bottom: lower-rated teams need moderate tempo.
+    // Draw the Trapezoid of Excellence zone (v3 model)
+    // Calibrated to Hammer's 2026 data: ~8 teams inside, floor at SRS +25.
+    // AdjEM is primary gate; tempo is secondary (wider at top, narrower at bottom).
     const trapTop = emMax + 2;
+    const trapFloor = 25; // v3: Gonzaga (25.11) is lowest confirmed inside team
     ctx.beginPath();
-    ctx.moveTo(xPos(61), yPos(trapTop));
-    ctx.lineTo(xPos(77), yPos(trapTop));
-    ctx.lineTo(xPos(73), yPos(20));
-    ctx.lineTo(xPos(65), yPos(20));
+    ctx.moveTo(xPos(60), yPos(trapTop));
+    ctx.lineTo(xPos(78), yPos(trapTop));
+    ctx.lineTo(xPos(73), yPos(trapFloor));
+    ctx.lineTo(xPos(65), yPos(trapFloor));
     ctx.closePath();
     ctx.fillStyle = "rgba(34, 197, 94, 0.08)";
     ctx.fill();
@@ -207,16 +204,16 @@ function drawTrapezoid(canvasId, topMetrics, botMetrics, topName, botName) {
     ctx.lineWidth = 1.5;
     ctx.setLineDash([4, 3]);
     ctx.beginPath();
-    ctx.moveTo(xPos(65), yPos(20));
-    ctx.lineTo(xPos(61), yPos(trapTop));
+    ctx.moveTo(xPos(65), yPos(trapFloor));
+    ctx.lineTo(xPos(60), yPos(trapTop));
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(xPos(73), yPos(20));
-    ctx.lineTo(xPos(77), yPos(trapTop));
+    ctx.moveTo(xPos(73), yPos(trapFloor));
+    ctx.lineTo(xPos(78), yPos(trapTop));
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(xPos(65), yPos(20));
-    ctx.lineTo(xPos(73), yPos(20));
+    ctx.moveTo(xPos(65), yPos(trapFloor));
+    ctx.lineTo(xPos(73), yPos(trapFloor));
     ctx.stroke();
     ctx.setLineDash([]);
 
@@ -224,16 +221,16 @@ function drawTrapezoid(canvasId, topMetrics, botMetrics, topName, botName) {
     ctx.fillStyle = "rgba(34, 197, 94, 0.5)";
     ctx.font = "9px system-ui, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("TRAPEZOID OF EXCELLENCE", xPos(69), yPos(21.5));
+    ctx.fillText("TRAPEZOID OF EXCELLENCE", xPos(69), yPos(trapFloor + 1.5));
 
     // Plot all 64 tournament teams as gray dots
     for (const [sid, m] of Object.entries(matchups)) {
       if (m.round !== "R64") continue;
       for (const pos of ["top", "bot"]) {
         const met = m.metrics[pos];
-        if (!met || met.pace == null || met.kenpom_adjEM == null) continue;
+        if (!met || met.pace == null || met.srs == null) continue;
         const px = xPos(met.pace);
-        const py = yPos(met.kenpom_adjEM);
+        const py = yPos(met.srs);
         if (px < margin.left || px > W - margin.right) continue;
         if (py < margin.top || py > H - margin.bottom) continue;
         ctx.beginPath();
@@ -245,15 +242,14 @@ function drawTrapezoid(canvasId, topMetrics, botMetrics, topName, botName) {
 
     // Highlight the two matchup teams
     function plotTeam(metrics, name, color) {
-      if (!metrics || metrics.pace == null || metrics.kenpom_adjEM == null)
-        return;
+      if (!metrics || metrics.pace == null || metrics.srs == null) return;
       const px = Math.max(
         margin.left,
         Math.min(W - margin.right, xPos(metrics.pace)),
       );
       const py = Math.max(
         margin.top,
-        Math.min(H - margin.bottom, yPos(metrics.kenpom_adjEM)),
+        Math.min(H - margin.bottom, yPos(metrics.srs)),
       );
 
       // Glow
@@ -322,18 +318,17 @@ function buildCardHTML(matchup, topTeam, botTeam, slotId) {
           <span class="team-name">${topTeam.name}</span>
         </div>
         <div class="metrics">
-          ${metricRow("kenpom_adjEM", tm.kenpom_adjEM)}
-          ${metricRow("adjO", tm.adjO)}
-          ${metricRow("adjD", tm.adjD)}
+          ${metricRow("srs", tm.srs)}
+          ${metricRow("ortg", tm.ortg)}
           ${metricRow("pace", tm.pace)}
           ${metricRow("last_10", tm.last_10)}
-          ${metricRow("sos_rank", tm.sos_rank)}
+          ${metricRow("sos_sr", tm.sos_sr)}
         </div>
         <div class="four-factors-label">Four Factors</div>
         <div class="metrics">
           ${metricRow("efg_pct", tm.efg_pct)}
-          ${metricRow("to_pct", tm.to_pct)}
-          ${metricRow("or_pct", tm.or_pct)}
+          ${metricRow("tov_pct", tm.tov_pct)}
+          ${metricRow("orb_pct", tm.orb_pct)}
           ${metricRow("ftr", tm.ftr)}
         </div>
         <ul class="pros">${matchup.pros.top.map((p) => `<li>${p}</li>`).join("")}</ul>
@@ -345,18 +340,17 @@ function buildCardHTML(matchup, topTeam, botTeam, slotId) {
           <span class="team-name">${botTeam.name}</span>
         </div>
         <div class="metrics">
-          ${metricRow("kenpom_adjEM", bm.kenpom_adjEM)}
-          ${metricRow("adjO", bm.adjO)}
-          ${metricRow("adjD", bm.adjD)}
+          ${metricRow("srs", bm.srs)}
+          ${metricRow("ortg", bm.ortg)}
           ${metricRow("pace", bm.pace)}
           ${metricRow("last_10", bm.last_10)}
-          ${metricRow("sos_rank", bm.sos_rank)}
+          ${metricRow("sos_sr", bm.sos_sr)}
         </div>
         <div class="four-factors-label">Four Factors</div>
         <div class="metrics">
           ${metricRow("efg_pct", bm.efg_pct)}
-          ${metricRow("to_pct", bm.to_pct)}
-          ${metricRow("or_pct", bm.or_pct)}
+          ${metricRow("tov_pct", bm.tov_pct)}
+          ${metricRow("orb_pct", bm.orb_pct)}
           ${metricRow("ftr", bm.ftr)}
         </div>
         <ul class="pros">${matchup.pros.bot.map((p) => `<li>${p}</li>`).join("")}</ul>
@@ -379,6 +373,9 @@ function buildCardHTML(matchup, topTeam, botTeam, slotId) {
       <button class="card-pick-btn${botActive}" data-team="${botTeam.id}" data-game="${slotId}">
         Pick ${botTeam.name}
       </button>
+    </div>
+    <div class="data-disclaimer">
+      <p>* Upset alerts and contrarian flags are based on model-estimated win probabilities, not official sportsbook lines. Last-10 records are unverified estimates.</p>
     </div>
     <div class="card-nav">
       <button class="card-nav-btn" data-dir="prev" data-target="${prevId}"${prevDisabled}>&larr; Prev</button>

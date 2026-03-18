@@ -398,3 +398,16 @@
     gap: 0.5rem;
   }
 }
+
+.data-disclaimer {
+  padding: 8px 16px;
+  border-top: 1px solid #333;
+}
+
+.data-disclaimer p {
+  font-size: 0.7rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+}
