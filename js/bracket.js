@@ -260,8 +260,28 @@ function buildSpecialRegionEl(regionName, rounds) {
     label.textContent = ROUND_LABELS[round] || round;
     col.appendChild(label);
 
+    // Region source labels for Final Four matchups
+    const regionSources = {
+      FF1: { top: "East", bot: "West" },
+      FF2: { top: "South", bot: "Midwest" },
+      CH1: { top: "FF1 Winner", bot: "FF2 Winner" },
+    };
+
     roundSlots.forEach((slot) => {
-      col.appendChild(buildMatchupCard(slot));
+      const wrapper = document.createElement("div");
+      wrapper.className = "ff-matchup-wrapper";
+
+      // Add region source label
+      const src = regionSources[slot.id];
+      if (src) {
+        const sourceLabel = document.createElement("div");
+        sourceLabel.className = "ff-source-label";
+        sourceLabel.innerHTML = `<span class="ff-src-top">${src.top}</span> vs <span class="ff-src-bot">${src.bot}</span>`;
+        wrapper.appendChild(sourceLabel);
+      }
+
+      wrapper.appendChild(buildMatchupCard(slot));
+      col.appendChild(wrapper);
     });
 
     regionEl.appendChild(col);
