@@ -876,7 +876,8 @@
       "blk_pct": 12.1,
       "ft_fga": 0.324,
       "srs": -12.74,
-      "sos": -9.93
+      "sos": -9.93,
+      "last_10": "\ud83e\udd76 Cold"
     },
     "LEHIGH": {
       "name": "Lehigh",
@@ -1208,7 +1209,8 @@
       "blk_pct": 8.6,
       "ft_fga": 0.296,
       "srs": 5.37,
-      "sos": -5.49
+      "sos": -5.49,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "SMU": {
       "name": "Southern Methodist",
@@ -1388,7 +1390,8 @@
       "blk_pct": 10.1,
       "ft_fga": 0.329,
       "srs": -4.64,
-      "sos": -11.85
+      "sos": -11.85,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "ARIZONA": {
       "name": "Arizona",
@@ -1706,7 +1709,8 @@
       "blk_pct": 10.6,
       "ft_fga": 0.27,
       "srs": 18.02,
-      "sos": 10.83
+      "sos": 10.83,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "HIGH_POINT": {
       "name": "High Point",
