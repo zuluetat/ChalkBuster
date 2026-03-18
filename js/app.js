@@ -341,7 +341,6 @@ function updateHeaderName() {
       }
     });
   }
-  nameEl.style.display = state.bracketName ? "block" : "none";
 }
 
 function showToast(msg) {
