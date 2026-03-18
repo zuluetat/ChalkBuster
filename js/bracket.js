@@ -374,6 +374,20 @@ function buildFinalFourRegion() {
 }
 
 /**
+ * Re-renders the Final Four region in place to update champion display and predicted score.
+ */
+function refreshFinalFour() {
+  const container = document.getElementById("bracket-container");
+  if (!container) return;
+  const old = container.querySelector('[data-region="FinalFour"]');
+  if (!old) return;
+  const wasActive = old.classList.contains("active");
+  const newEl = buildFinalFourRegion();
+  if (wasActive) newEl.classList.add("active");
+  old.replaceWith(newEl);
+}
+
+/**
  * Builds a region element for Final Four or Championship.
  * @param {string} regionName - "FinalFour" | "Championship"
  * @param {string[]} rounds - round codes to render
@@ -512,6 +526,13 @@ function updateSlotDOM(gameId) {
  */
 export function updateSlotAndDownstream(gameId) {
   updateSlotDOM(gameId);
+
+  // If this is a Final Four or Championship slot, refresh the whole FF region
+  // to update champion display and predicted score
+  const slot = state.slots[gameId];
+  if (slot && (slot.region === "FinalFour" || slot.region === "Championship")) {
+    refreshFinalFour();
+  }
 
   // Find all downstream slots that source their team from this game's winner
   const downstream = Object.values(state.slots).filter(
