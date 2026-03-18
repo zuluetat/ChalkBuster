@@ -55,17 +55,17 @@ Plans:
 ### Phase 3: Persistence and Sharing
 **Goal**: Tim's picks persist across browser sessions and he can send a read-only link to friends
 **Depends on**: Phase 1
-**Requirements**: PERS-01, PERS-02, PERS-03, SHAR-01, SHAR-02
+**Requirements**: PERS-01, PERS-02, PERS-03, SHAR-01, SHAR-02, DINT-03
 **Success Criteria** (what must be TRUE):
   1. Tim's picks auto-save to Supabase and reload correctly on return visit without any manual action
   2. Tim can reset a single region or reset the entire bracket from a clearly labeled control
   3. Tim can copy a shareable URL and open it in a private/incognito window to see his picks in read-only mode
   4. The shared view shows a clear indicator that the viewer cannot make edits
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Set up Supabase project with schema (including share_token), RLS policies, and GitHub Pages origin configured from day one
-- [ ] 03-02: Implement debounced auto-save, load on return, reset functions, and read-only share mode
+- [ ] 03-01-PLAN.md — Verify Supabase config (share_token default, CORS for GitHub Pages)
+- [ ] 03-02-PLAN.md — Add per-region reset button and DINT-03 data disclaimer
 
 ### Phase 4: Polish and Export
 **Goal**: The app looks like an ESPN broadcast tool and Tim can export his bracket if time permits
@@ -75,7 +75,7 @@ Plans:
   1. The app uses a dark sports broadcast aesthetic with bold accent colors, seed badges, and confident typography
   2. The layout is usable on desktop at 1280px and on iPad/tablet without horizontal scrolling
   3. Tim can export his completed bracket as a PDF or image (or use browser print as fallback)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
 - [ ] 04-01: Apply ESPN-style dark theme and responsive desktop/tablet layout
