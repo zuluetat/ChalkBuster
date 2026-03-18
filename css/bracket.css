@@ -171,7 +171,7 @@
   opacity: 0.5;
 }
 
-/* Round label */
+/* Round label — flex-shrink: 0 so it stays at top, doesn't participate in space-around */
 .round-label {
   font-size: 12px;
   font-weight: 800;
@@ -182,9 +182,10 @@
   text-align: center;
   padding-bottom: 6px;
   border-bottom: 2px solid rgba(233, 69, 96, 0.25);
+  flex-shrink: 0;
 }
 
-/* Matchup card */
+/* Matchup card — no margin-bottom; flex space-around on .round-column handles spacing */
 .matchup-card {
   position: relative;
   min-width: 180px;
@@ -192,7 +193,6 @@
   border-radius: 6px;
   cursor: pointer;
   user-select: none;
-  margin-bottom: 6px;
   background: var(--color-surface);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
