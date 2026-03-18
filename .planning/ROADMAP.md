@@ -78,8 +78,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: Apply ESPN-style dark theme and responsive desktop/tablet layout
-- [ ] 04-02: Implement PDF/image export via html-to-image + jsPDF (time-boxed; fall back to window.print() if needed)
+- [ ] 04-01-PLAN.md — Visual polish: bolder typography, seed badge depth, bracket connector lines
+- [ ] 04-02-PLAN.md — Print polish and tipoff gate for shared brackets
 
 ## Progress
 
