@@ -18,6 +18,7 @@
   --color-picked-bg: #e94560;
   --color-picked-text: #ffffff;
   --color-glow: rgba(233, 69, 96, 0.35);
+  --color-connector: rgba(233, 69, 96, 0.25);
 }
 
 /* Base */
@@ -122,7 +123,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   transition: all 0.25s ease;
@@ -148,7 +149,7 @@ body {
 .toolbar-label {
   font-size: 0.85rem;
   color: #f59e0b;
-  font-weight: 600;
+  font-weight: 700;
   margin-right: auto;
   justify-self: flex-start;
 }

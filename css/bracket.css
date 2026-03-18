@@ -222,7 +222,7 @@
 .team-slot {
   padding: 7px 10px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -248,12 +248,14 @@
   min-width: 22px;
   height: 22px;
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 
 .team-slot.picked {
@@ -266,6 +268,7 @@
 .team-slot.picked .seed-badge {
   color: #fff;
   background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
 /* TBD slots: visually distinct, not clickable */
