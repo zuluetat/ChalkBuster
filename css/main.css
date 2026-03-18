@@ -469,6 +469,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin: 0;
+    margin-bottom: 2px;
   }
 
   .pb-header h1 span {
@@ -490,6 +491,7 @@ body {
     gap: 8px;
     align-items: stretch;
     min-height: calc(100vh - 40px);
+    overflow: hidden;
   }
 
   .pb-left, .pb-right {
@@ -582,6 +584,7 @@ body {
     border-radius: 2px;
     position: relative;
     background: #fff;
+    page-break-inside: avoid;
   }
 
   /* Pair wrapper — flex:1 makes each pair grow equally within its round column.
@@ -606,7 +609,7 @@ body {
     top: 50%;
     right: -10px;
     width: 10px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #999;
   }
 
   /* Vertical bar connecting the pair + horizontal stub into next round */
@@ -616,7 +619,7 @@ body {
     right: -10px;
     top: 25%;
     height: 50%;
-    border-right: 1px solid #aaa;
+    border-right: 1px solid #999;
   }
 
   /* Horizontal line from the vertical bar midpoint into next round */
@@ -626,7 +629,7 @@ body {
     right: -20px;
     top: 50%;
     width: 10px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #999;
   }
 
   /* === RIGHT SIDE connectors (lines go right → toward R64 outermost) === */
@@ -639,7 +642,7 @@ body {
     top: 50%;
     right: -10px;
     width: 10px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #999;
   }
 
   [data-side="right"] .pb-pair:not(.pb-pair--last)::after {
@@ -648,7 +651,7 @@ body {
     right: -10px;
     top: 25%;
     height: 50%;
-    border-right: 1px solid #aaa;
+    border-right: 1px solid #999;
   }
 
   [data-side="right"] .pb-pair:not(.pb-pair--last)::before {
@@ -657,7 +660,7 @@ body {
     right: -20px;
     top: 50%;
     width: 10px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #999;
   }
 
   .pb-team {
@@ -677,8 +680,9 @@ body {
   }
 
   .pb-team.pb-picked {
-    background: #e8e8e8;
+    background: #d4d4d4;
     font-weight: 700;
+    border-left: 2px solid #333;
   }
 
   .pb-team.pb-tbd {
