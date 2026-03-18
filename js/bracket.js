@@ -2,7 +2,7 @@
 // Bracket renderer and click-to-pick handlers.
 // Imports from state.js and analysis.js. NEVER imports from app.js (prevents circular deps).
 
-import { state, setPick } from "./state.js";
+import { state, setPick, resetRegionPicks } from "./state.js";
 import { openAnalysisCard } from "./analysis.js";
 
 // Round display order and labels per region
@@ -208,6 +208,23 @@ function buildRegionEl(region, rounds) {
 
     regionEl.appendChild(col);
   });
+
+  // Add reset region button
+  const resetBtn = document.createElement("button");
+  resetBtn.className = "reset-region-btn";
+  resetBtn.textContent = `Reset ${region}`;
+  resetBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (!confirm(`Reset all picks in ${region}?`)) return;
+    resetRegionPicks(region);
+    // Re-render to reflect cleared picks
+    const container = document.getElementById("bracket-container");
+    const oldEl = container.querySelector(`[data-region="${region}"]`);
+    const newEl = buildRegionEl(region, REGION_ROUNDS);
+    newEl.classList.add("active");
+    oldEl.replaceWith(newEl);
+  });
+  regionEl.appendChild(resetBtn);
 
   // Add "→ Final Four" callout after the E8 column
   const ff4Link = document.createElement("div");
