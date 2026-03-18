@@ -25,7 +25,8 @@
       "ppg": 82.3,
       "scoring_margin": 19,
       "srs": 31.55,
-      "sos": 12.41
+      "sos": 12.41,
+      "last_10": "\ud83d\udd25\ud83d\udd25 On Fire"
     },
     "UCONN": {
       "name": "Connecticut",
@@ -49,7 +50,8 @@
       "ppg": null,
       "scoring_margin": 12,
       "srs": 22.92,
-      "sos": 10.53
+      "sos": 10.53,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "MICHIGAN_STATE": {
       "name": "Michigan State",
@@ -79,7 +81,8 @@
       "ast_pct": 67.0,
       "stl_pct": 7.6,
       "blk_pct": 13.3,
-      "ft_fga": 0.276
+      "ft_fga": 0.276,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "KANSAS": {
       "name": "Kansas",
@@ -108,7 +111,8 @@
       "ast_pct": 53.3,
       "stl_pct": 8.0,
       "blk_pct": 15.6,
-      "ft_fga": 0.25
+      "ft_fga": 0.25,
+      "last_10": "5-5 \ud83e\udd76 Cold"
     },
     "ST_JOHNS": {
       "name": "St. John's (NY)",
@@ -138,7 +142,8 @@
       "ast_pct": 58.2,
       "stl_pct": 11.1,
       "blk_pct": 12.4,
-      "ft_fga": 0.305
+      "ft_fga": 0.305,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "LOUISVILLE": {
       "name": "Louisville",
@@ -168,7 +173,8 @@
       "ast_pct": 59.5,
       "stl_pct": 9.7,
       "blk_pct": 9.2,
-      "ft_fga": 0.257
+      "ft_fga": 0.257,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "UCLA": {
       "name": "UCLA",
@@ -197,7 +203,8 @@
       "ast_pct": 59.4,
       "stl_pct": 9.9,
       "blk_pct": 9.4,
-      "ft_fga": 0.254
+      "ft_fga": 0.254,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "OHIO_STATE": {
       "name": "Ohio State",
@@ -219,7 +226,8 @@
       "ast_pct": 52.0,
       "stl_pct": 7.2,
       "blk_pct": 7.0,
-      "ft_fga": 0.293
+      "ft_fga": 0.293,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "TCU": {
       "name": "Texas Christian",
@@ -248,7 +256,8 @@
       "ast_pct": 57.6,
       "stl_pct": 10.9,
       "blk_pct": 12.6,
-      "ft_fga": 0.274
+      "ft_fga": 0.274,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "UCF": {
       "name": "UCF",
@@ -276,7 +285,8 @@
       "ast_pct": 53.6,
       "stl_pct": 7.9,
       "blk_pct": 8.3,
-      "ft_fga": 0.228
+      "ft_fga": 0.228,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "SOUTH_FLORIDA": {
       "name": "South Florida",
@@ -300,7 +310,8 @@
       "ast_pct": 59.3,
       "stl_pct": 12.3,
       "blk_pct": 11.1,
-      "ft_fga": 0.305
+      "ft_fga": 0.305,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "NORTHERN_IOWA": {
       "name": "Northern Iowa",
@@ -322,7 +333,8 @@
       "ast_pct": 57.4,
       "stl_pct": 10.1,
       "blk_pct": 9.9,
-      "ft_fga": 0.179
+      "ft_fga": 0.179,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "CAL_BAPTIST": {
       "name": "California Baptist",
@@ -346,7 +358,8 @@
       "ft_pct": null,
       "ppg": null,
       "srs": 2.52,
-      "sos": -2.93
+      "sos": -2.93,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "NORTH_DAKOTA_STATE": {
       "name": "North Dakota State",
@@ -367,7 +380,8 @@
       "ast_pct": 53.9,
       "stl_pct": 12.0,
       "blk_pct": 9.0,
-      "ft_fga": 0.223
+      "ft_fga": 0.223,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "FURMAN": {
       "name": "Furman",
@@ -391,7 +405,8 @@
       "ast_pct": 57.0,
       "stl_pct": 7.1,
       "blk_pct": 9.6,
-      "ft_fga": 0.219
+      "ft_fga": 0.219,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "SIENA": {
       "name": "Siena",
@@ -418,7 +433,8 @@
       "ast_pct": 53.0,
       "stl_pct": 9.0,
       "blk_pct": 9.1,
-      "ft_fga": 0.263
+      "ft_fga": 0.263,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "FLORIDA": {
       "name": "Florida",
@@ -448,7 +464,8 @@
       "three_par": 0.371,
       "ast_pct": 54.0,
       "stl_pct": 9.2,
-      "blk_pct": 12.4
+      "blk_pct": 12.4,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "HOUSTON": {
       "name": "Houston",
@@ -475,7 +492,8 @@
       "ast_pct": 52.9,
       "stl_pct": 11.9,
       "blk_pct": 12.5,
-      "ft_fga": 0.208
+      "ft_fga": 0.208,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "ILLINOIS": {
       "name": "Illinois",
@@ -505,7 +523,8 @@
       "ast_pct": 51.2,
       "stl_pct": 5.6,
       "blk_pct": 12.6,
-      "ft_fga": 0.26
+      "ft_fga": 0.26,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "NEBRASKA": {
       "name": "Nebraska",
@@ -534,7 +553,8 @@
       "ast_pct": 65.6,
       "stl_pct": 10.7,
       "blk_pct": 8.7,
-      "ft_fga": 0.204
+      "ft_fga": 0.204,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "VANDERBILT": {
       "name": "Vanderbilt",
@@ -559,7 +579,8 @@
       "ast_pct": 56.2,
       "stl_pct": 11.4,
       "blk_pct": 12.6,
-      "ft_fga": 0.303
+      "ft_fga": 0.303,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "NORTH_CAROLINA": {
       "name": "North Carolina",
@@ -589,7 +610,8 @@
       "ast_pct": 57.0,
       "stl_pct": 7.8,
       "blk_pct": 8.6,
-      "ft_fga": 0.256
+      "ft_fga": 0.256,
+      "last_10": "\ud83e\udd76 Cold"
     },
     "SAINT_MARYS": {
       "name": "Saint Mary's",
@@ -612,7 +634,8 @@
       "ast_pct": 58.1,
       "stl_pct": 8.5,
       "blk_pct": 9.8,
-      "ft_fga": 0.291
+      "ft_fga": 0.291,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "CLEMSON": {
       "name": "Clemson",
@@ -636,7 +659,8 @@
       "ft_pct": null,
       "ppg": null,
       "srs": 16.99,
-      "sos": 9.57
+      "sos": 9.57,
+      "last_10": "4-6 \ud83e\uddca Ice Cold"
     },
     "IOWA": {
       "name": "Iowa",
@@ -659,7 +683,8 @@
       "ast_pct": 58.0,
       "stl_pct": 11.2,
       "blk_pct": 6.7,
-      "ft_fga": 0.266
+      "ft_fga": 0.266,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "TEXAS_AM": {
       "name": "Texas A&M",
@@ -688,7 +713,8 @@
       "ast_pct": 61.3,
       "stl_pct": 10.9,
       "blk_pct": 8.9,
-      "ft_fga": 0.276
+      "ft_fga": 0.276,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "VCU": {
       "name": "Virginia Commonwealth",
@@ -717,7 +743,8 @@
       "ast_pct": 52.7,
       "stl_pct": 10.6,
       "blk_pct": 11.3,
-      "ft_fga": 0.323
+      "ft_fga": 0.323,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "MCNEESE": {
       "name": "McNeese",
@@ -745,7 +772,8 @@
       "ast_pct": 50.3,
       "stl_pct": 15.5,
       "blk_pct": 15.7,
-      "ft_fga": 0.285
+      "ft_fga": 0.285,
+      "last_10": "10-0 \ud83d\udd25\ud83d\udd25 On Fire"
     },
     "TROY": {
       "name": "Troy",
@@ -772,7 +800,8 @@
       "ast_pct": 58.2,
       "stl_pct": 11.3,
       "blk_pct": 9.1,
-      "ft_fga": 0.264
+      "ft_fga": 0.264,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "PENN": {
       "name": "Pennsylvania",
@@ -799,7 +828,8 @@
       "ast_pct": 52.9,
       "stl_pct": 9.7,
       "blk_pct": 8.6,
-      "ft_fga": 0.253
+      "ft_fga": 0.253,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "IDAHO": {
       "name": "Idaho",
@@ -826,7 +856,8 @@
       "ast_pct": 46.7,
       "stl_pct": 8.4,
       "blk_pct": 6.4,
-      "ft_fga": 0.25
+      "ft_fga": 0.25,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "PVAMU": {
       "name": "Prairie View A&M",
@@ -872,7 +903,8 @@
       "ast_pct": 55.0,
       "stl_pct": 9.7,
       "blk_pct": 8.2,
-      "ft_fga": 0.236
+      "ft_fga": 0.236,
+      "last_10": "\ud83e\udd76 Cold"
     },
     "MICHIGAN": {
       "name": "Michigan",
@@ -902,7 +934,8 @@
       "ast_pct": 60.7,
       "stl_pct": 8.0,
       "blk_pct": 15.9,
-      "ft_fga": 0.282
+      "ft_fga": 0.282,
+      "last_10": "\ud83d\udd25\ud83d\udd25 On Fire"
     },
     "IOWA_STATE": {
       "name": "Iowa State",
@@ -932,7 +965,8 @@
       "ast_pct": 58.4,
       "stl_pct": 13.2,
       "blk_pct": 8.6,
-      "ft_fga": 0.229
+      "ft_fga": 0.229,
+      "last_10": "6-4 \ud83e\udd76 Cold"
     },
     "VIRGINIA": {
       "name": "Virginia",
@@ -960,7 +994,8 @@
       "ast_pct": 59.1,
       "stl_pct": 9.5,
       "blk_pct": 17.5,
-      "ft_fga": 0.24
+      "ft_fga": 0.24,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "ALABAMA": {
       "name": "Alabama",
@@ -984,7 +1019,8 @@
       "ft_pct": 0.7653,
       "ppg": 91.7,
       "srs": 22.7,
-      "sos": 14.45
+      "sos": 14.45,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "TEXAS_TECH": {
       "name": "Texas Tech",
@@ -1013,7 +1049,8 @@
       "ast_pct": 55.5,
       "stl_pct": 8.5,
       "blk_pct": 9.5,
-      "ft_fga": 0.194
+      "ft_fga": 0.194,
+      "last_10": "7-3 \ud83e\udd76 Cold"
     },
     "TENNESSEE": {
       "name": "Tennessee",
@@ -1042,7 +1079,8 @@
       "ast_pct": 59.8,
       "stl_pct": 11.0,
       "blk_pct": 11.3,
-      "ft_fga": 0.269
+      "ft_fga": 0.269,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "KENTUCKY": {
       "name": "Kentucky",
@@ -1071,7 +1109,8 @@
       "ast_pct": 57.0,
       "stl_pct": 10.2,
       "blk_pct": 12.3,
-      "ft_fga": 0.273
+      "ft_fga": 0.273,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "GEORGIA": {
       "name": "Georgia",
@@ -1096,7 +1135,8 @@
       "ast_pct": 48.4,
       "stl_pct": 11.2,
       "blk_pct": 15.1,
-      "ft_fga": 0.278
+      "ft_fga": 0.278,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "SAINT_LOUIS": {
       "name": "Saint Louis",
@@ -1119,7 +1159,8 @@
       "ast_pct": 60.0,
       "stl_pct": 9.9,
       "blk_pct": 9.8,
-      "ft_fga": 0.254
+      "ft_fga": 0.254,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "SANTA_CLARA": {
       "name": "Santa Clara",
@@ -1147,7 +1188,8 @@
       "ast_pct": 55.2,
       "stl_pct": 12.8,
       "blk_pct": 10.8,
-      "ft_fga": 0.185
+      "ft_fga": 0.185,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "MIAMIOH": {
       "name": "Miami (OH)",
@@ -1191,7 +1233,8 @@
       "ast_pct": 55.1,
       "stl_pct": 10.0,
       "blk_pct": 11.2,
-      "ft_fga": 0.227
+      "ft_fga": 0.227,
+      "last_10": "\ud83e\udd76 Cold"
     },
     "AKRON": {
       "name": "Akron",
@@ -1215,7 +1258,8 @@
       "ft_pct": null,
       "ppg": 88.4,
       "srs": 9.04,
-      "sos": -3.33
+      "sos": -3.33,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "HOFSTRA": {
       "name": "Hofstra",
@@ -1245,7 +1289,8 @@
       "ast_pct": 49.0,
       "stl_pct": 7.5,
       "blk_pct": 10.6,
-      "ft_fga": 0.238
+      "ft_fga": 0.238,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "WRIGHT_STATE": {
       "name": "Wright State",
@@ -1266,7 +1311,8 @@
       "ast_pct": 48.1,
       "stl_pct": 10.7,
       "blk_pct": 11.5,
-      "ft_fga": 0.278
+      "ft_fga": 0.278,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "TENNESSEE_STATE": {
       "name": "Tennessee State",
@@ -1293,7 +1339,8 @@
       "ast_pct": 45.6,
       "stl_pct": 13.0,
       "blk_pct": 10.1,
-      "ft_fga": 0.259
+      "ft_fga": 0.259,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "UMBC": {
       "name": "Maryland-Baltimore County",
@@ -1321,7 +1368,8 @@
       "ast_pct": 45.2,
       "stl_pct": 7.5,
       "blk_pct": 6.8,
-      "ft_fga": 0.251
+      "ft_fga": 0.251,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "HOWARD": {
       "name": "Howard",
@@ -1364,7 +1412,8 @@
       "ft_pct": null,
       "ppg": 86.1,
       "srs": 29.92,
-      "sos": 12.57
+      "sos": 12.57,
+      "last_10": "9-1 \ud83d\udd25 Red Hot"
     },
     "PURDUE": {
       "name": "Purdue",
@@ -1394,7 +1443,8 @@
       "ast_pct": 66.8,
       "stl_pct": 8.5,
       "blk_pct": 8.9,
-      "ft_fga": 0.213
+      "ft_fga": 0.213,
+      "last_10": "5-5 \ud83e\udd76 Cold"
     },
     "GONZAGA": {
       "name": "Gonzaga",
@@ -1424,7 +1474,8 @@
       "ast_pct": 56.7,
       "stl_pct": 12.1,
       "blk_pct": 11.4,
-      "ft_fga": 0.217
+      "ft_fga": 0.217,
+      "last_10": "\ud83d\udd25\ud83d\udd25 On Fire"
     },
     "ARKANSAS": {
       "name": "Arkansas",
@@ -1448,7 +1499,8 @@
       "ft_pct": null,
       "ppg": 89.9,
       "srs": 22.43,
-      "sos": 12.57
+      "sos": 12.57,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "WISCONSIN": {
       "name": "Wisconsin",
@@ -1477,7 +1529,8 @@
       "ast_pct": 57.3,
       "stl_pct": 8.1,
       "blk_pct": 8.5,
-      "ft_fga": 0.251
+      "ft_fga": 0.251,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "BYU": {
       "name": "Brigham Young",
@@ -1501,7 +1554,8 @@
       "ft_pct": null,
       "ppg": 83.9,
       "srs": 21.04,
-      "sos": 12.45
+      "sos": 12.45,
+      "last_10": "\ud83e\udd76 Cold"
     },
     "MIAMI_FL": {
       "name": "Miami (FL)",
@@ -1523,7 +1577,8 @@
       "ast_pct": 53.7,
       "stl_pct": 11.4,
       "blk_pct": 10.0,
-      "ft_fga": 0.257
+      "ft_fga": 0.257,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "VILLANOVA": {
       "name": "Villanova",
@@ -1550,7 +1605,8 @@
       "ast_pct": 56.8,
       "stl_pct": 11.1,
       "blk_pct": 6.0,
-      "ft_fga": 0.217
+      "ft_fga": 0.217,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "UTAH_STATE": {
       "name": "Utah State",
@@ -1573,7 +1629,8 @@
       "ast_pct": 60.5,
       "stl_pct": 12.8,
       "blk_pct": 8.8,
-      "ft_fga": 0.267
+      "ft_fga": 0.267,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "MISSOURI": {
       "name": "Missouri",
@@ -1601,7 +1658,8 @@
       "ast_pct": 50.6,
       "stl_pct": 9.7,
       "blk_pct": 10.4,
-      "ft_fga": 0.291
+      "ft_fga": 0.291,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "TEXAS": {
       "name": "Texas",
@@ -1628,7 +1686,8 @@
       "ast_pct": 43.5,
       "stl_pct": 8.2,
       "blk_pct": 7.6,
-      "ft_fga": 0.34
+      "ft_fga": 0.34,
+      "last_10": "4-6 \ud83e\uddca Ice Cold"
     },
     "NCSTATE": {
       "name": "NC State",
@@ -1675,7 +1734,8 @@
       "ast_pct": 53.6,
       "stl_pct": 15.1,
       "blk_pct": 11.4,
-      "ft_fga": 0.322
+      "ft_fga": 0.322,
+      "last_10": "\u2668\ufe0f Hot"
     },
     "HAWAII": {
       "name": "Hawaii",
@@ -1705,7 +1765,8 @@
       "ast_pct": 51.1,
       "stl_pct": 9.1,
       "blk_pct": 10.1,
-      "ft_fga": 0.318
+      "ft_fga": 0.318,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "KENNESAW_STATE": {
       "name": "Kennesaw State",
@@ -1732,7 +1793,8 @@
       "ast_pct": 51.6,
       "stl_pct": 9.7,
       "blk_pct": 14.3,
-      "ft_fga": 0.301
+      "ft_fga": 0.301,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "QUEENS": {
       "name": "Queens (NC)",
@@ -1754,7 +1816,8 @@
       "ast_pct": 54.8,
       "stl_pct": 8.3,
       "blk_pct": 7.9,
-      "ft_fga": 0.277
+      "ft_fga": 0.277,
+      "last_10": "\u27a1\ufe0f Neutral"
     },
     "LIU": {
       "name": "Long Island University",
@@ -1775,7 +1838,8 @@
       "ast_pct": 49.7,
       "stl_pct": 11.4,
       "blk_pct": 13.9,
-      "ft_fga": 0.232
+      "ft_fga": 0.232,
+      "last_10": "\u27a1\ufe0f Neutral"
     }
   }
 }

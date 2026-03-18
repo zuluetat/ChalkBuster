@@ -111,7 +111,7 @@ function buildMetricsFromStats(teamId) {
     srs: sr.srs,
     ortg: sr.ortg,
     pace: sr.pace,
-    last_10: null,
+    last_10: sr.last_10 || null,
     sos_sr: sr.sos,
     efg_pct: sr.efg_pct,
     tov_pct: sr.tov_pct,
