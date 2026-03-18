@@ -43,7 +43,7 @@
     - Last-10 records (`last_10`) — marked "UNVERIFIED", no game-by-game data used
     - Matchup reasoning prose — written against pre-correction metrics, not regenerated after data fix
 - [x] **DINT-02**: The UI must use verified SR-sourced fields (`srs`, `pace`, `ortg`, `efg_pct`, `tov_pct`, `orb_pct`, `ftr`, `sos`) as the primary display metrics in matchup cards and team comparisons
-- [ ] **DINT-03**: Unverified fields (`kenpom_adjEM`, `kenpom_adjO`, `kenpom_adjD`, `win_prob`, `spreads`, `public_pick_pct`, `last_10`) must either be clearly labeled as "Estimate" or "Unverified" in the UI, or replaced with verified alternatives where possible
+- [x] **DINT-03**: Unverified fields (`kenpom_adjEM`, `kenpom_adjO`, `kenpom_adjD`, `win_prob`, `spreads`, `public_pick_pct`, `last_10`) must either be clearly labeled as "Estimate" or "Unverified" in the UI, or replaced with verified alternatives where possible
 - [x] **DINT-04**: The trapezoid/radar visualization must use SRS (verified) rather than `kenpom_adjEM` (unverified) as its efficiency metric — already implemented in code
 - [ ] **DINT-05**: Any future data pipeline must trace every numeric claim to a source URL and fetch date, ensuring full reproducibility
 
@@ -51,7 +51,7 @@
 
 - [ ] **PERS-01**: Save bracket picks to Supabase
 - [ ] **PERS-02**: Load picks on return visit
-- [ ] **PERS-03**: Reset region and reset all functions
+- [x] **PERS-03**: Reset region and reset all functions
 
 ### Sharing
 
@@ -112,12 +112,12 @@
 | ANAL-06 | Phase 2 | Complete |
 | DINT-01 | Phase 2 | Complete |
 | DINT-02 | Phase 2 | Complete |
-| DINT-03 | Phase 3 | Pending |
+| DINT-03 | Phase 3 | Complete |
 | DINT-04 | Phase 2 | Complete |
 | DINT-05 | Future | Pending |
 | PERS-01 | Phase 3 | Pending |
 | PERS-02 | Phase 3 | Pending |
-| PERS-03 | Phase 3 | Pending |
+| PERS-03 | Phase 3 | Complete |
 | SHAR-01 | Phase 3 | Pending |
 | SHAR-02 | Phase 3 | Pending |
 | PLSH-01 | Phase 4 | Pending |

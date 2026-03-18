@@ -3,13 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 current_phase: 03-persistence-and-sharing
-status: In Progress
-last_updated: "2026-03-18T14:43:00Z"
+current_plan: 03-01 (Task 1 complete, awaiting Task 2 human action)
+status: executing
+last_updated: "2026-03-18T14:45:41.306Z"
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 7
+  completed_plans: 6
 ---
 
 # Session State
@@ -28,6 +29,8 @@ See: .planning/PROJECT.md
 ## Decisions
 
 - 2026-03-18: Supabase share_token DB default verified working — POST to /rest/v1/brackets auto-generates 8-char hex token (e.g. e366bd3b). No code changes needed.
+- [Phase 03-persistence-and-sharing]: Per-region reset button uses amber (#fbbf24) color matching existing toolbar-label, hidden on FinalFour and read-only tabs
+- [Phase 03-persistence-and-sharing]: DINT-03 disclaimer placed before .card-nav in analysis card template (between action buttons and navigation)
 
 ## Session Log
 
