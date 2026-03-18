@@ -5,6 +5,8 @@
 import { state, setPick } from "./state.js";
 
 let matchups = {};
+let scenarios = {};
+let realStats = {};
 let currentSlotId = null;
 let roundSlotIds = [];
 
@@ -78,8 +80,206 @@ function fmtMetric(key, value) {
 }
 
 export async function loadMatchups() {
-  const data = await fetch("./data/matchups.json").then((r) => r.json());
-  matchups = data.matchups;
+  const [matchupData, scenarioData, statsData] = await Promise.all([
+    fetch("./data/matchups.json").then((r) => r.json()),
+    fetch("./data/scenario_matchups.json")
+      .then((r) => r.json())
+      .catch(() => ({})),
+    fetch("./data/real_stats_2026.json")
+      .then((r) => r.json())
+      .catch(() => ({ teams: {} })),
+  ]);
+  matchups = matchupData.matchups;
+  // Index scenarios by key for O(1) lookup
+  if (Array.isArray(scenarioData)) {
+    scenarioData.forEach((s) => {
+      scenarios[s.key] = s;
+    });
+  } else if (scenarioData.scenarios) {
+    scenarioData.scenarios.forEach((s) => {
+      scenarios[s.key] = s;
+    });
+  }
+  realStats = statsData.teams || {};
+}
+
+/** Build metrics object for a team from real_stats_2026 data */
+function buildMetricsFromStats(teamId) {
+  const sr = realStats[teamId];
+  if (!sr) return null;
+  return {
+    srs: sr.srs,
+    ortg: sr.ortg,
+    pace: sr.pace,
+    last_10: null,
+    sos_sr: sr.sos,
+    efg_pct: sr.efg_pct,
+    tov_pct: sr.tov_pct,
+    orb_pct: sr.orb_pct,
+    ftr: sr.ftr,
+  };
+}
+
+/** Generate template-based pros from verified stats */
+function generatePros(teamId) {
+  const sr = realStats[teamId];
+  if (!sr)
+    return ["No stats available", "No stats available", "No stats available"];
+  const pros = [];
+  if (sr.srs >= 25)
+    pros.push(
+      `Elite SRS of +${sr.srs.toFixed(1)} — championship-tier efficiency`,
+    );
+  else if (sr.srs >= 18)
+    pros.push(`Strong SRS of +${sr.srs.toFixed(1)} — competitive at any level`);
+  else pros.push(`SRS of +${sr.srs.toFixed(1)} — solid but not elite`);
+  if (sr.efg_pct >= 0.55)
+    pros.push(
+      `Excellent shooting efficiency (${(sr.efg_pct * 100).toFixed(1)}% eFG)`,
+    );
+  else if (sr.ortg >= 115)
+    pros.push(
+      `Strong offense at ${sr.ortg.toFixed(1)} points per 100 possessions`,
+    );
+  else pros.push(`${sr.record} record shows consistency`);
+  if (sr.orb_pct >= 35)
+    pros.push(
+      `Elite offensive rebounding at ${sr.orb_pct.toFixed(1)}% — second chances`,
+    );
+  else if (sr.ftr >= 0.35)
+    pros.push(`Gets to the free throw line (${sr.ftr.toFixed(3)} FTR)`);
+  else if (sr.tov_pct <= 13)
+    pros.push(
+      `Protects the ball well (${sr.tov_pct.toFixed(1)}% turnover rate)`,
+    );
+  else pros.push(`Balanced pace at ${sr.pace.toFixed(1)} possessions per game`);
+  return pros;
+}
+
+/** Generate template-based cons from verified stats */
+function generateCons(teamId) {
+  const sr = realStats[teamId];
+  if (!sr)
+    return ["No stats available", "No stats available", "No stats available"];
+  const cons = [];
+  if (sr.sos < 5)
+    cons.push(
+      `Weak schedule (SOS ${sr.sos.toFixed(1)}) — untested against top competition`,
+    );
+  else if (sr.srs < 20)
+    cons.push(`SRS of +${sr.srs.toFixed(1)} leaves a gap against elite teams`);
+  else cons.push(`${sr.record} includes losses to quality opponents`);
+  if (sr.tov_pct >= 16)
+    cons.push(
+      `High turnover rate (${sr.tov_pct.toFixed(1)}%) — vulnerable to pressure`,
+    );
+  else if (sr.efg_pct < 0.52)
+    cons.push(`Below-average shooting (${(sr.efg_pct * 100).toFixed(1)}% eFG)`);
+  else cons.push(`Pace of ${sr.pace.toFixed(1)} may create tempo mismatches`);
+  if (sr.ftr < 0.28)
+    cons.push(
+      `Low free throw rate (${sr.ftr.toFixed(3)}) — doesn't draw fouls`,
+    );
+  else if (sr.orb_pct < 30)
+    cons.push(
+      `Weak offensive rebounding (${sr.orb_pct.toFixed(1)}%) — one-shot offense`,
+    );
+  else
+    cons.push(`Schedule strength (SOS ${sr.sos.toFixed(1)}) may inflate stats`);
+  return cons;
+}
+
+/** Build a synthetic matchup from scenario data or template engine */
+function buildSyntheticMatchup(slotId, topTeamId, botTeamId, round, region) {
+  const key = [topTeamId, botTeamId].sort().join(":");
+  const scenario = scenarios[key];
+
+  const topMetrics = buildMetricsFromStats(topTeamId);
+  const botMetrics = buildMetricsFromStats(botTeamId);
+  const topSrs = topMetrics?.srs || 0;
+  const botSrs = botMetrics?.srs || 0;
+  const srsDiff = topSrs - botSrs;
+  const topWinProb = Math.min(
+    0.99,
+    Math.max(0.01, 1 / (1 + Math.pow(10, -srsDiff / 10))),
+  );
+
+  if (scenario) {
+    // Use AI-generated prose from scenario file
+    const isFlipped = scenario.team_a !== topTeamId;
+    return {
+      slot_id: slotId,
+      round,
+      region,
+      team_top: topTeamId,
+      team_bot: botTeamId,
+      metrics: { top: topMetrics, bot: botMetrics },
+      pros: {
+        top: isFlipped ? scenario.pros_b : scenario.pros_a,
+        bot: isFlipped ? scenario.pros_a : scenario.pros_b,
+      },
+      cons: {
+        top: isFlipped ? scenario.cons_b : scenario.cons_a,
+        bot: isFlipped ? scenario.cons_a : scenario.cons_b,
+      },
+      recommendation: {
+        team: scenario.recommendation,
+        confidence: scenario.confidence,
+      },
+      reasoning: scenario.reasoning,
+      win_prob: {
+        top: isFlipped ? 1 - scenario.win_prob_a : scenario.win_prob_a,
+        bot: isFlipped ? scenario.win_prob_a : 1 - scenario.win_prob_a,
+      },
+      upset_alert: scenario.upset_alert || false,
+      contrarian: false,
+      public_consensus_team: null,
+    };
+  }
+
+  // Template fallback — no AI prose, computed from stats
+  const topTeam = state.teams[topTeamId];
+  const botTeam = state.teams[botTeamId];
+  const topName = topTeam?.name || topTeamId;
+  const botName = botTeam?.name || botTeamId;
+  const gap = Math.abs(srsDiff).toFixed(1);
+  const favName = srsDiff >= 0 ? topName : botName;
+  const dogName = srsDiff >= 0 ? botName : topName;
+  const confidence =
+    Math.abs(topWinProb - 0.5) > 0.15
+      ? Math.abs(topWinProb - 0.5) > 0.3
+        ? "High"
+        : "Medium"
+      : "Low";
+
+  return {
+    slot_id: slotId,
+    round,
+    region,
+    team_top: topTeamId,
+    team_bot: botTeamId,
+    metrics: { top: topMetrics, bot: botMetrics },
+    pros: {
+      top: generatePros(topTeamId),
+      bot: generatePros(botTeamId),
+    },
+    cons: {
+      top: generateCons(topTeamId),
+      bot: generateCons(botTeamId),
+    },
+    recommendation: {
+      team: srsDiff >= 0 ? topTeamId : botTeamId,
+      confidence,
+    },
+    reasoning: `${favName} holds a +${gap} SRS edge over ${dogName}. ${Math.abs(topMetrics?.pace - botMetrics?.pace) > 4 ? "A significant pace differential (" + topMetrics?.pace?.toFixed(1) + " vs " + botMetrics?.pace?.toFixed(1) + ") could create tempo pressure." : "Similar pace profiles suggest a straight efficiency battle."}`,
+    win_prob: {
+      top: +topWinProb.toFixed(2),
+      bot: +(1 - topWinProb).toFixed(2),
+    },
+    upset_alert: (topWinProb < 0.5 ? topWinProb : 1 - topWinProb) > 0.3,
+    contrarian: false,
+    public_consensus_team: null,
+  };
 }
 
 function getRoundSlotIds(slotId) {
@@ -409,7 +609,7 @@ function buildPlaceholderHTML(slotId) {
 }
 
 export function openAnalysisCard(slotId) {
-  const matchup = matchups[slotId];
+  let matchup = matchups[slotId];
   if (!matchup) return;
 
   currentSlotId = slotId;
@@ -418,11 +618,43 @@ export function openAnalysisCard(slotId) {
   const panel = document.getElementById("analysis-panel");
   if (!panel) return;
 
-  const topTeam = matchup.team_top ? state.teams[matchup.team_top] : null;
-  const botTeam = matchup.team_bot ? state.teams[matchup.team_bot] : null;
+  let topTeam = matchup.team_top ? state.teams[matchup.team_top] : null;
+  let botTeam = matchup.team_bot ? state.teams[matchup.team_bot] : null;
+
+  // For non-R64 matchups, teams come from picks, not matchup data
+  if (!topTeam || !botTeam) {
+    // Check if both teams are determined via picks in feeder games
+    const slot = state.slots[slotId];
+    if (slot) {
+      const resolveWinner = (source) => {
+        if (!source || source.type !== "winner") return null;
+        const winnerId = state.picks[source.game];
+        return winnerId ? state.teams[winnerId] : null;
+      };
+      if (!topTeam) topTeam = resolveWinner(slot.top);
+      if (!botTeam) botTeam = resolveWinner(slot.bot);
+    }
+  }
 
   if (!topTeam || !botTeam) {
     panel.innerHTML = buildPlaceholderHTML(slotId);
+  } else if (!matchup.metrics?.top || !matchup.metrics?.bot) {
+    // Non-R64 matchup with both teams picked — use scenario or template
+    const synthetic = buildSyntheticMatchup(
+      slotId,
+      topTeam.id,
+      botTeam.id,
+      matchup.round,
+      matchup.region,
+    );
+    panel.innerHTML = buildCardHTML(synthetic, topTeam, botTeam, slotId);
+    drawTrapezoid(
+      `trapezoid-${slotId}`,
+      synthetic.metrics.top,
+      synthetic.metrics.bot,
+      topTeam.name,
+      botTeam.name,
+    );
   } else {
     panel.innerHTML = buildCardHTML(matchup, topTeam, botTeam, slotId);
     drawTrapezoid(
