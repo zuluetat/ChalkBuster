@@ -271,16 +271,35 @@ function buildSpecialRegionEl(regionName, rounds) {
       const wrapper = document.createElement("div");
       wrapper.className = "ff-matchup-wrapper";
 
-      // Add region source label
       const src = regionSources[slot.id];
       if (src) {
-        const sourceLabel = document.createElement("div");
-        sourceLabel.className = "ff-source-label";
-        sourceLabel.innerHTML = `<span class="ff-src-top">${src.top}</span> vs <span class="ff-src-bot">${src.bot}</span>`;
-        wrapper.appendChild(sourceLabel);
+        // Top team region link
+        const topLabel = document.createElement("div");
+        topLabel.className = "ff-region-tag ff-region-tag--top";
+        topLabel.innerHTML = `<span class="ff-region-link" data-region="${src.top}">&larr; ${src.top}</span>`;
+        wrapper.appendChild(topLabel);
       }
 
       wrapper.appendChild(buildMatchupCard(slot));
+
+      if (src) {
+        // Bottom team region link
+        const botLabel = document.createElement("div");
+        botLabel.className = "ff-region-tag ff-region-tag--bot";
+        botLabel.innerHTML = `<span class="ff-region-link" data-region="${src.bot}">&larr; ${src.bot}</span>`;
+        wrapper.appendChild(botLabel);
+      }
+
+      // Click handler for region links
+      wrapper.querySelectorAll(".ff-region-link").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const region = link.dataset.region;
+          const tabBtn = document.querySelector(`[data-region="${region}"]`);
+          if (tabBtn) tabBtn.click();
+        });
+      });
+
       col.appendChild(wrapper);
     });
 

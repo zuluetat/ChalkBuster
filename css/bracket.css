@@ -192,18 +192,33 @@
   margin-bottom: 16px;
 }
 
-.ff-source-label {
-  font-size: 0.7rem;
+.ff-region-tag {
+  font-size: 0.65rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-muted);
-  text-align: center;
-  margin-bottom: 4px;
 }
 
-.ff-src-top, .ff-src-bot {
+.ff-region-tag--top {
+  margin-bottom: 2px;
+}
+
+.ff-region-tag--bot {
+  margin-top: 2px;
+}
+
+.ff-region-link {
   color: var(--color-accent);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ff-region-link:hover {
+  background: var(--color-accent);
+  color: #fff;
 }
 
 /* ============================================
