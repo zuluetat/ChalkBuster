@@ -226,23 +226,51 @@ function buildRegionEl(region, rounds) {
  * Predicts a final score based on team stats.
  * Uses ORtg, DRtg, and Pace to estimate points.
  */
-function predictScore(teamA, teamB) {
+/**
+ * Predicts a final score based on team stats.
+ * Ensures the picked winner has the higher score.
+ * If the underdog wins, it's a tight game (2-4 point margin).
+ * If the favorite wins, margin reflects the efficiency gap.
+ * @param {object} teamA - teams.json entry for team A (top)
+ * @param {object} teamB - teams.json entry for team B (bot)
+ * @param {string|null} winnerId - the picked champion's team id
+ */
+function predictScore(teamA, teamB, winnerId) {
   if (!teamA || !teamB) return null;
-  // Look up metrics from matchups data (stored in state after loadMatchups)
-  // Fall back to teams.json data
+
   const aORtg = teamA.kenpom_adjO || 110;
   const aDRtg = teamA.kenpom_adjD || 100;
   const bORtg = teamB.kenpom_adjO || 110;
   const bDRtg = teamB.kenpom_adjD || 100;
   const avgPace = ((teamA.kenpom_tempo || 68) + (teamB.kenpom_tempo || 68)) / 2;
-  const avgORtg = 107; // D1 average
+  const avgORtg = 107;
 
-  // Log5-style: adjust each team's offense by opponent defense
   const aAdj = (aORtg * bDRtg) / avgORtg;
   const bAdj = (bORtg * aDRtg) / avgORtg;
 
-  const aScore = Math.round((avgPace * aAdj) / 100);
-  const bScore = Math.round((avgPace * bAdj) / 100);
+  let aScore = Math.round((avgPace * aAdj) / 100);
+  let bScore = Math.round((avgPace * bAdj) / 100);
+
+  // Ensure the picked winner has the higher score
+  if (winnerId) {
+    const winnerIsA = winnerId === teamA.id;
+    const winScore = winnerIsA ? aScore : bScore;
+    const loseScore = winnerIsA ? bScore : aScore;
+
+    if (winScore <= loseScore) {
+      // Underdog upset: tight game, winner by 2-4 points
+      const loserAdj = loseScore;
+      const stableMargin = 2 + ((teamA.id.length + teamB.id.length) % 3);
+      if (winnerIsA) {
+        aScore = loserAdj + stableMargin;
+        bScore = loserAdj;
+      } else {
+        bScore = loserAdj + stableMargin;
+        aScore = loserAdj;
+      }
+    }
+    // If winner already has higher score, keep the natural prediction
+  }
 
   return { a: aScore, b: bScore };
 }
@@ -325,9 +353,11 @@ function buildFinalFourRegion() {
     const topTeam = resolveTeam(chSlot.top);
     const botTeam = resolveTeam(chSlot.bot);
     if (topTeam && botTeam) {
+      const champPick = state.picks["CH1"] || null;
       const score = predictScore(
         state.teams[topTeam.id],
         state.teams[botTeam.id],
+        champPick,
       );
       if (score) {
         const scoreEl = document.createElement("div");
