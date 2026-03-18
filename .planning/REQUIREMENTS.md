@@ -49,14 +49,14 @@
 
 ### Persistence
 
-- [ ] **PERS-01**: Save bracket picks to Supabase
-- [ ] **PERS-02**: Load picks on return visit
+- [x] **PERS-01**: Save bracket picks to Supabase
+- [x] **PERS-02**: Load picks on return visit
 - [x] **PERS-03**: Reset region and reset all functions
 
 ### Sharing
 
-- [ ] **SHAR-01**: Shareable public URL for friends to view picks (read-only)
-- [ ] **SHAR-02**: Clear indicator that viewer cannot edit
+- [x] **SHAR-01**: Shareable public URL for friends to view picks (read-only)
+- [x] **SHAR-02**: Clear indicator that viewer cannot edit
 
 ### Polish
 
@@ -115,11 +115,11 @@
 | DINT-03 | Phase 3 | Complete |
 | DINT-04 | Phase 2 | Complete |
 | DINT-05 | Future | Pending |
-| PERS-01 | Phase 3 | Pending |
-| PERS-02 | Phase 3 | Pending |
+| PERS-01 | Phase 3 | Complete |
+| PERS-02 | Phase 3 | Complete |
 | PERS-03 | Phase 3 | Complete |
-| SHAR-01 | Phase 3 | Pending |
-| SHAR-02 | Phase 3 | Pending |
+| SHAR-01 | Phase 3 | Complete |
+| SHAR-02 | Phase 3 | Complete |
 | PLSH-01 | Phase 4 | Pending |
 | PLSH-02 | Phase 4 | Pending |
 | PLSH-03 | Phase 4 | Pending |
