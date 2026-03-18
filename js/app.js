@@ -418,6 +418,9 @@ async function init() {
     // Render UI — tabs first, then toolbar appends into the tab bar
     renderRegionTabs();
     renderToolbar();
+    document.addEventListener("chalkbuster:regionchange", () =>
+      renderToolbar(),
+    );
     renderBracket();
     renderFirstFour();
     initBracketHandlers();

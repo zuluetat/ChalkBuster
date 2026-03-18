@@ -42,6 +42,8 @@ export function renderRegionTabs() {
       if (state.activeRegion === region) return;
       state.activeRegion = region;
 
+      document.dispatchEvent(new CustomEvent("chalkbuster:regionchange"));
+
       nav.querySelectorAll(".tab-btn").forEach((b) => {
         b.classList.toggle("active", b.dataset.region === region);
       });
