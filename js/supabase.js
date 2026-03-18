@@ -3,7 +3,8 @@
 // Uses the REST API directly — no SDK needed.
 
 const SUPABASE_URL = "https://osayanpbjyndsnyxdwzh.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zYXlhbnBianluZHNueXhkd3poIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3OTA0MDcsImV4cCI6MjA4OTM2NjQwN30.e62mjOD4RrAemqbgMKwKJG__6SVDTBmJ4Y7x5D2-SBA";
+const SUPABASE_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zYXlhbnBianluZHNueXhkd3poIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3OTA0MDcsImV4cCI6MjA4OTM2NjQwN30.e62mjOD4RrAemqbgMKwKJG__6SVDTBmJ4Y7x5D2-SBA";
 const API = `${SUPABASE_URL}/rest/v1/brackets`;
 
 const headers = {
@@ -48,7 +49,7 @@ export async function loadSharedBracket(shareToken) {
   try {
     const res = await fetch(
       `${API}?share_token=eq.${encodeURIComponent(shareToken)}&select=picks`,
-      { headers }
+      { headers },
     );
     if (!res.ok) return null;
     const rows = await res.json();
@@ -70,7 +71,7 @@ export async function loadBracket() {
   try {
     const res = await fetch(
       `${API}?id=eq.${encodeURIComponent(id)}&select=picks,share_token`,
-      { headers }
+      { headers },
     );
     if (!res.ok) return null;
     const rows = await res.json();
@@ -148,6 +149,30 @@ export async function resetBracket() {
 }
 
 /**
+ * Load a bracket by its Supabase ID and claim it on this device.
+ * Sets localStorage so future saves go to this bracket.
+ * Returns { picks, shareToken } or null if not found.
+ */
+export async function loadBracketById(bracketId) {
+  try {
+    const res = await fetch(
+      `${API}?id=eq.${encodeURIComponent(bracketId)}&select=picks,share_token`,
+      { headers },
+    );
+    if (!res.ok) return null;
+    const rows = await res.json();
+    if (rows.length === 0) return null;
+    // Claim this bracket on this device
+    setLocalBracketId(bracketId);
+    setLocalShareToken(rows[0].share_token);
+    return { picks: rows[0].picks, shareToken: rows[0].share_token };
+  } catch (e) {
+    console.warn("[ChalkBuster] Failed to load bracket by ID:", e);
+    return null;
+  }
+}
+
+/**
  * Get the shareable URL for the current bracket.
  */
 export function getShareURL() {
@@ -155,4 +180,14 @@ export function getShareURL() {
   if (!token) return null;
   const base = window.location.origin + window.location.pathname;
   return `${base}?share=${token}`;
+}
+
+/**
+ * Get the edit URL for the current bracket (full edit access from any device).
+ */
+export function getEditURL() {
+  const id = getLocalBracketId();
+  if (!id) return null;
+  const base = window.location.origin + window.location.pathname;
+  return `${base}?edit=${id}`;
 }

@@ -16,9 +16,11 @@ import {
   getSharedToken,
   loadSharedBracket,
   loadBracket,
+  loadBracketById,
   savePicks,
   resetBracket,
   getShareURL,
+  getEditURL,
   getLocalShareToken,
 } from "./supabase.js";
 
@@ -214,6 +216,7 @@ function renderToolbar() {
     <button id="btn-export" class="toolbar-btn">Export</button>
     ${showRegionReset ? `<button id="btn-reset-region" class="toolbar-btn toolbar-btn--secondary">Reset ${state.activeRegion}</button>` : ""}
     <button id="btn-share" class="toolbar-btn toolbar-btn--primary">Share</button>
+    <button id="btn-edit-link" class="toolbar-btn">Edit Link</button>
     <button id="btn-reset" class="toolbar-btn toolbar-btn--danger">Reset All</button>
   `;
   if (nav) nav.appendChild(toolbar);
@@ -243,6 +246,22 @@ function renderToolbar() {
       prompt("Copy this link to share your bracket:", url);
     }
   });
+
+  document
+    .getElementById("btn-edit-link")
+    .addEventListener("click", async () => {
+      if (!getLocalShareToken()) {
+        await savePicks(state.picks);
+      }
+      const url = getEditURL();
+      if (!url) return;
+      try {
+        await navigator.clipboard.writeText(url);
+        showToast("Edit link copied! Open on any device to edit.");
+      } catch {
+        prompt("Copy this link to edit from any device:", url);
+      }
+    });
 
   document.getElementById("btn-reset").addEventListener("click", async () => {
     if (!confirm("Reset all picks? This cannot be undone.")) return;
@@ -400,16 +419,29 @@ async function init() {
     state.slots = bracketData.slots;
     state.firstFour = ffData.first_four;
 
-    // Check if this is a shared bracket view
+    // Check URL params: ?edit=ID (edit mode), ?share=TOKEN (read-only)
+    const params = new URLSearchParams(window.location.search);
+    const editId = params.get("edit");
     const sharedToken = getSharedToken();
-    if (sharedToken) {
+
+    if (editId) {
+      // Edit mode — load bracket from Supabase and claim it on this device
+      const editData = await loadBracketById(editId);
+      if (editData) {
+        state.picks = editData.picks;
+        setOnPicksChanged((picks) => savePicks(picks));
+        showToast("Bracket loaded — edits save to Supabase");
+      } else {
+        showToast("Bracket not found");
+        loadPicksFromStorage();
+        setOnPicksChanged((picks) => savePicks(picks));
+      }
+    } else if (sharedToken) {
       const sharedPicks = await loadSharedBracket(sharedToken);
       if (sharedPicks) {
         if (!isTipoffReached()) {
-          // Hide picks until tipoff -- show gate message
           state.readOnly = true;
           state.tipoffGated = true;
-          // picks are NOT loaded into state -- bracket renders empty
         } else {
           state.picks = sharedPicks;
           state.readOnly = true;
@@ -423,7 +455,6 @@ async function init() {
       const saved = await loadBracket();
       if (saved) {
         state.picks = saved.picks;
-        // Sync to localStorage as backup
         localStorage.setItem(
           "chalkbuster-picks-v1",
           JSON.stringify(saved.picks),
@@ -432,7 +463,6 @@ async function init() {
         loadPicksFromStorage();
       }
 
-      // Wire up auto-save to Supabase on every pick change
       setOnPicksChanged((picks) => savePicks(picks));
     }
 
