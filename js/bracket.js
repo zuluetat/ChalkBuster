@@ -331,16 +331,39 @@ function buildFinalFourRegion() {
       );
       if (score) {
         const scoreEl = document.createElement("div");
+        // Load saved scores or use predictions
+        const savedA = localStorage.getItem("chalkbuster-score-a");
+        const savedB = localStorage.getItem("chalkbuster-score-b");
+        const valA = savedA !== null ? savedA : score.a;
+        const valB = savedB !== null ? savedB : score.b;
+
         scoreEl.className = "predicted-score";
         scoreEl.innerHTML = `
-          <div class="predicted-label">Predicted Score</div>
+          <div class="predicted-hint">Model predicts: ${score.a} - ${score.b}</div>
+          <div class="predicted-label">Tiebreaker Score</div>
           <div class="predicted-teams">
-            <span class="predicted-team">${topTeam.name} <strong>${score.a}</strong></span>
+            <span class="predicted-team-name">${topTeam.name}</span>
+            <input type="number" class="score-input" id="score-a" value="${valA}" min="0" max="200">
             <span class="predicted-vs">-</span>
-            <span class="predicted-team"><strong>${score.b}</strong> ${botTeam.name}</span>
+            <input type="number" class="score-input" id="score-b" value="${valB}" min="0" max="200">
+            <span class="predicted-team-name">${botTeam.name}</span>
           </div>
         `;
         chmCol.appendChild(scoreEl);
+
+        // Save scores on change
+        scoreEl.querySelectorAll(".score-input").forEach((input) => {
+          input.addEventListener("change", () => {
+            localStorage.setItem(
+              "chalkbuster-score-a",
+              document.getElementById("score-a").value,
+            );
+            localStorage.setItem(
+              "chalkbuster-score-b",
+              document.getElementById("score-b").value,
+            );
+          });
+        });
       }
     }
   }
