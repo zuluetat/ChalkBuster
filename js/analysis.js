@@ -443,7 +443,7 @@ export function closeAnalysisCard() {
   currentSlotId = null;
 }
 
-function showMetricTooltip(metricKey) {
+function showMetricTooltip(metricKey, btnEl) {
   hideMetricTooltip();
   const def = METRIC_DEFS[metricKey];
   if (!def) return;
@@ -456,8 +456,13 @@ function showMetricTooltip(metricKey) {
     <p class="metric-tooltip-why"><strong>Why it matters:</strong> ${def.why}</p>
   `;
 
-  const panel = document.getElementById("analysis-panel");
-  panel.appendChild(tip);
+  const metricDiv = btnEl ? btnEl.closest(".metric") : null;
+  if (metricDiv) {
+    metricDiv.insertAdjacentElement("afterend", tip);
+  } else {
+    const panel = document.getElementById("analysis-panel");
+    panel.appendChild(tip);
+  }
 }
 
 function hideMetricTooltip() {
@@ -507,7 +512,7 @@ export function initAnalysisHandlers() {
           hideMetricTooltip();
           if (existing.dataset.metric === key) return;
         }
-        showMetricTooltip(key);
+        showMetricTooltip(key, infoBtn);
         const tip = document.querySelector(".metric-tooltip");
         if (tip) tip.dataset.metric = key;
         return;

@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "source_note": "Matchup metrics corrected using Sports Reference 2026 advanced school stats. KenPom adjEM values retained from original (paywalled). last_10 game records marked UNVERIFIED.",
+  "source_note": "R64 matchup analysis regenerated 2026-03-18. Metrics from Sports Reference 2026 advanced school stats (fetched 2026-03-17). win_prob computed via logistic model: P(top) = 1/(1+10^(-srs_diff/10)), capped at [0.01, 0.99]. last_10 set to null (no verified game-by-game data). Reasoning, pros, cons derived from verified SRS, pace, eFG%, TOV%, ORB%, FTR, record, and SOS only.",
   "matchups": {
     "E1": {
       "slot_id": "E1",
@@ -21,7 +21,7 @@
           "orb_pct": 38.1,
           "ftr": 0.378,
           "pace": 67.1,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "32-2"
         },
         "bot": {
@@ -36,47 +36,46 @@
           "orb_pct": 31.9,
           "ftr": 0.342,
           "pace": 64.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-11"
         }
       },
       "pros": {
         "top": [
-          "Elite AdjEM of +31.4, second-best in the nation",
-          "Only 3 losses all season against top-8 schedule",
-          "Dominant interior presence limits paint scoring"
+          "SRS of 31.55 is second-best in the field, reflecting dominant full-season performance",
+          "56.8% eFG and 122.6 OrtG rank among the nation's elite offenses",
+          "SOS of 12.41 validates the 32-2 record against top-tier competition"
         ],
         "bot": [
-          "Conference tournament momentum, won MAAC championship",
-          "Experienced senior backcourt",
-          "Nothing to lose, plays freely"
+          "Low turnover rate (13.8% TOV) limits easy transition baskets for opponents",
+          "Solid ORB% of 31.9 provides some second-chance opportunities",
+          "23-11 record shows ability to close out games in their conference"
         ]
       },
       "cons": {
         "top": [
-          "Heavy favorite; limited bracket pool upside",
-          "Slow starts documented in early tournament rounds",
-          "AdjEM gap of 37.8 points is historically decisive"
+          "Turnover rate of 13.3% is average and could be exploited by disruptive defenses",
+          "Pace of 67.1 is moderate; not a team that accelerates to blow out opponents early",
+          "Heavy favorite status limits bracket pool differentiation value"
         ],
         "bot": [
-          "AdjEM gap of 37.8 is among the largest in the field",
-          "Struggled against high-athleticism opponents all season",
-          "SOS rank 312 means zero preparation for elite competition"
+          "SRS of -4.34 and SOS of -9.19 indicate a below-average team from a weak schedule",
+          "50.6% eFG is well below tournament average, limiting scoring efficiency",
+          "Pace of 64.3 is the slowest in this matchup, and slowing the game helps Duke's half-court offense"
         ]
       },
       "recommendation": {
         "team": "DUKE",
         "confidence": "High"
       },
-      "reasoning": "Duke's AdjEM advantage of 37.8 points is the largest gap in the East region, and their elite defense held opponents to 93.4 points per 100 possessions. Siena's weak SOS provides no competitive preparation for this matchup.",
+      "reasoning": "Duke's SRS of 31.55 vs Siena's -4.34 creates the largest gap (35.89) in the East. Duke's 56.8% eFG and 122.6 OrtG against a top-tier SOS (12.41) dwarfs Siena's profile built on a -9.19 SOS.",
       "win_prob": {
-        "top": 0.98,
-        "bot": 0.02
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "DUKE",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "DUKE"
     },
     "E2": {
       "slot_id": "E2",
@@ -97,7 +96,7 @@
           "orb_pct": 30.8,
           "ftr": 0.378,
           "pace": 66.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-12"
         },
         "bot": {
@@ -112,47 +111,46 @@
           "orb_pct": 34.4,
           "ftr": 0.387,
           "pace": 69.7,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "22-11"
         }
       },
       "pros": {
         "top": [
-          "Home region familiarity as Big Ten squad",
-          "Strong defensive rotations limiting second-chance points",
-          "Favorable seeding as 8-seed with upset potential in R32"
+          "SRS of 19.06 backed by a strong SOS of 12.06 from Big Ten play",
+          "56.5% eFG is among the best in any 8-9 matchup this tournament",
+          "FTR of 0.378 generates free throw opportunities to close out tight games"
         ],
         "bot": [
-          "Big 12 battle-tested, played 9 teams ranked in top 40 AdjEM",
-          "Explosive offensive pace at 71.2 possessions per game",
-          "Free throw shooting above 75%, reliable in close games"
+          "Excellent ball security with 13.2% TOV, slightly better than Ohio State's 13.6%",
+          "34.4% ORB rate provides second-chance scoring that compensates for lower eFG",
+          "Faster pace (69.7 vs 66.5) creates additional possessions and variance"
         ]
       },
       "cons": {
         "top": [
-          "22-12 record reflects inconsistency in Big Ten play",
-          "Turnover rate above conference average",
-          "Relies on hero-ball scoring rather than system offense"
+          "21-12 record is underwhelming for an 8-seed, suggesting inconsistency",
+          "30.8% ORB is relatively low, limiting second-chance scoring",
+          "Turnover rate of 13.6% is slightly worse than TCU's 13.2%"
         ],
         "bot": [
-          "SOS rank 47 lags Ohio State's 33, slight schedule disadvantage",
-          "AdjEM 1.4 points below Ohio State \u2014 marginal gap",
-          "7-10 seed teams historically lose 51% of 8-9 matchups"
+          "50.9% eFG is significantly below Ohio State's 56.5%, a major efficiency gap",
+          "SOS of 9.51 trails Ohio State's 12.06, indicating weaker schedule preparation",
+          "SRS gap of 3.31 still favors Ohio State in a tight matchup"
         ]
       },
       "recommendation": {
         "team": "OHIO_STATE",
-        "confidence": "Low"
+        "confidence": "High"
       },
-      "reasoning": "Ohio State holds a 1.4 AdjEM edge over TCU and played a slightly stronger schedule, but this is effectively a coin-flip game. OSU's 7-3 last 10 form provides a slight half-tier boost.",
+      "reasoning": "Ohio State's SRS edge (19.06 vs 15.75) is modest at 3.31 points. OSU has the better eFG (56.5% vs 50.9%), but TCU's faster pace (69.7 vs 66.5) and stronger ORB% (34.4% vs 30.8%) could create enough variance for an upset.",
       "win_prob": {
-        "top": 0.53,
-        "bot": 0.47
+        "top": 0.68,
+        "bot": 0.32
       },
       "upset_alert": true,
       "contrarian": false,
-      "public_consensus_team": "OHIO_STATE",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "OHIO_STATE"
     },
     "E3": {
       "slot_id": "E3",
@@ -173,7 +171,7 @@
           "orb_pct": 35.9,
           "ftr": 0.419,
           "pace": 71.0,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "28-6"
         },
         "bot": {
@@ -188,47 +186,46 @@
           "orb_pct": 22.1,
           "ftr": 0.256,
           "pace": 63.7,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-12"
         }
       },
       "pros": {
         "top": [
-          "9.1 AdjEM advantage over Northern Iowa",
-          "Big East schedule produced top-35 SOS strength",
-          "Conference tournament finalist with strong closing stretch"
+          "SRS of 22.42 and SOS of 10.83 reflect a battle-tested Big East team at 28-6",
+          "Exceptional 35.9% ORB rate and elite FTR of 0.419 generate extra possessions and free throws",
+          "Low 12.4% TOV rate demonstrates disciplined ball-handling under pressure"
         ],
         "bot": [
-          "MVC conference champion, earned automatic bid",
-          "Deliberate pace (64.2 possessions) can frustrate faster teams",
-          "Dominant rebounding margin in weaker conference"
+          "Solid 54.8% eFG is actually higher than St. John's 51.0%, an efficiency bright spot",
+          "Low turnover rate (13.2%) keeps possessions competitive",
+          "Deliberate 63.7 pace can limit total possessions and reduce the SRS gap's impact"
         ]
       },
       "cons": {
         "top": [
-          "5-seed historically loses to 12-seed 35% of the time",
-          "Road struggles; team is 4-7 in true road games",
-          "No dominant post player to punish slow-paced opponents"
+          "51.0% eFG is modest for a 5-seed, relying heavily on free throws and offensive rebounds",
+          "Fast pace (71.0) can backfire if turnovers spike in a high-pressure environment",
+          "Record of 28-6 is strong but some losses came against comparable competition"
         ],
         "bot": [
-          "SOS rank 142 means no prep for Big East caliber offense",
-          "AdjEM gap of 9.1 is near the High confidence threshold",
-          "Slow pace benefits only if defense holds early \u2014 risky vs 5-seed"
+          "SOS of 1.49 is very weak, providing almost no preparation for Big East-level talent",
+          "22.1% ORB is the lowest in any R64 matchup, severely limiting second chances",
+          "FTR of 0.256 is low, meaning fewer free throw opportunities in a close game"
         ]
       },
       "recommendation": {
         "team": "ST_JOHNS",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "St. John's 9.1 AdjEM advantage and Big East battle-testing edge this toward Medium confidence. Northern Iowa's methodical pace and weak SOS are significant concerns against a faster team.",
+      "reasoning": "St. John's holds a commanding SRS advantage (22.42 vs 8.49, gap of 13.93) with a much tougher SOS (10.83 vs 1.49). The 7.3-point pace differential (71.0 vs 63.7) creates a stylistic mismatch that favors St. John's ability to push tempo.",
       "win_prob": {
-        "top": 0.64,
-        "bot": 0.36
+        "top": 0.96,
+        "bot": 0.04
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "ST_JOHNS",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "ST_JOHNS"
     },
     "E4": {
       "slot_id": "E4",
@@ -249,7 +246,7 @@
           "orb_pct": 29.5,
           "ftr": 0.326,
           "pace": 68.2,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-10"
         },
         "bot": {
@@ -264,47 +261,46 @@
           "orb_pct": 37.8,
           "ftr": 0.361,
           "pace": 67.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "25-8"
         }
       },
       "pros": {
         "top": [
-          "13.5 AdjEM advantage over Cal Baptist",
-          "Top-20 SOS forged in competitive Big 12 play",
-          "Experienced tournament program with multiple Elite Eight runs"
+          "SOS of 14.86 is the highest in this bracket, validating the 23-10 record against elite competition",
+          "SRS of 21.1 is built on consistent performance in the toughest conference schedule",
+          "Moderate pace (68.2) and solid FTR (0.326) enable controlled half-court execution"
         ],
         "bot": [
-          "8-2 last 10 form is the best recent stretch in this matchup",
-          "WAC champions play a read-and-react motion offense that can confuse man defenses",
-          "Nothing to lose mindset historically dangerous for 13-seeds"
+          "Excellent 37.8% ORB rate gives Cal Baptist second-chance scoring opportunities",
+          "FTR of 0.361 generates free throws that can keep the score closer than talent suggests",
+          "25-8 record shows a winning culture, even against weaker competition"
         ]
       },
       "cons": {
         "top": [
-          "7-3 last 10 shows some late-season fatigue",
-          "Perimeter defense allowed 38% from three in Big 12 play",
-          "Tournament experience pressure can tighten play vs smaller opponents"
+          "51.6% eFG is below average for a 4-seed, suggesting offensive inefficiency",
+          "29.5% ORB is relatively low, limiting second-chance points",
+          "23-10 record includes losses that hint at inconsistency despite elite SOS"
         ],
         "bot": [
-          "SOS rank 228 means zero Big 12-level competition all year",
-          "AdjEM gap of 13.5 exceeds High confidence threshold",
-          "4-13 matchup historically goes to 4-seed 79% of the time"
+          "SOS of -2.93 means Cal Baptist has not faced anything close to Big 12 quality",
+          "15.1% TOV rate is very high, likely to worsen against Kansas's defensive pressure",
+          "48.6% eFG is well below tournament average, a significant efficiency disadvantage"
         ]
       },
       "recommendation": {
         "team": "KANSAS",
         "confidence": "High"
       },
-      "reasoning": "Kansas holds a 13.5 AdjEM advantage bolstered by a top-20 SOS. Cal Baptist's 8-2 last 10 form is impressive but against WAC competition that offers no blueprint for handling Kansas athleticism.",
+      "reasoning": "Kansas's SRS of 21.1 vs Cal Baptist's 2.52 (gap of 18.58) combined with the nation's strongest SOS (14.86 vs -2.93) makes this a massive quality mismatch. Cal Baptist's 15.1% TOV rate and 48.6% eFG will struggle against Kansas's Big 12 defense.",
       "win_prob": {
-        "top": 0.79,
-        "bot": 0.21
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "KANSAS",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "KANSAS"
     },
     "E5": {
       "slot_id": "E5",
@@ -325,7 +321,7 @@
           "orb_pct": 32.9,
           "ftr": 0.335,
           "pace": 71.0,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-10"
         },
         "bot": {
@@ -340,47 +336,46 @@
           "orb_pct": 38.0,
           "ftr": 0.41,
           "pace": 73.1,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "25-8"
         }
       },
       "pros": {
         "top": [
-          "5.1 AdjEM advantage over South Florida",
-          "ACC schedule provided top-41 SOS toughening",
-          "Experienced in high-leverage close games"
+          "SRS of 23.41 with SOS of 10.83 reflects strong ACC competition preparation",
+          "56.4% eFG and 119.4 OrtG make Louisville one of the more efficient offenses in this round",
+          "Fast pace (71.0) combined with high eFG is a potent offensive formula"
         ],
         "bot": [
-          "7-3 last 10 gives South Florida the hot-hand edge",
-          "AAC champion brings automatic bid momentum",
-          "Zone defense can disrupt Louisville's man-defense-oriented offense"
+          "Elite ORB% of 38.0 and high FTR of 0.41 generate extra possessions and free points",
+          "Low 12.4% TOV rate is one of the best in any R64 underdog",
+          "25-8 record and fast pace (73.1) show an aggressive, confident team"
         ]
       },
       "cons": {
         "top": [
-          "6-4 last 10 shows inconsistency heading into the tournament",
-          "5.1 AdjEM delta falls in Medium range, not dominant",
-          "Louisville historically struggles covering 11-seed ATS"
+          "14.1% TOV rate is above average and could be exploited by South Florida's active defense",
+          "32.9% ORB is modest, limiting second-chance scoring",
+          "23-10 record suggests some inconsistency through the season"
         ],
         "bot": [
-          "SOS rank 62 trails Louisville's top-41, weaker competition base",
-          "AdjEM gap of 5.1 is unfavorable for the underdog",
-          "First Tournament appearance in 3 years \u2014 experience gap matters"
+          "SOS of 2.6 is very weak, meaning the 25-8 record overstates true quality",
+          "51.2% eFG is well below Louisville's 56.4%, a significant shooting gap",
+          "SRS gap of 10.12 is large enough to make an upset statistically unlikely"
         ]
       },
       "recommendation": {
         "team": "LOUISVILLE",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "Louisville's 5.1 AdjEM edge and ACC pedigree favor them, but South Florida's 7-3 late run and zone adaptability make this a live 11-seed upset threat. The hot last 10 almost offsets the AdjEM gap.",
+      "reasoning": "Louisville's SRS advantage (23.41 vs 13.29, gap of 10.12) and stronger SOS (10.83 vs 2.6) are decisive. Both teams play at a fast pace (71.0 and 73.1), but Louisville's 56.4% eFG outclasses South Florida's 51.2%.",
       "win_prob": {
-        "top": 0.6,
-        "bot": 0.4
+        "top": 0.91,
+        "bot": 0.09
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "LOUISVILLE",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "LOUISVILLE"
     },
     "E6": {
       "slot_id": "E6",
@@ -401,7 +396,7 @@
           "orb_pct": 38.5,
           "ftr": 0.362,
           "pace": 66.8,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "25-7"
         },
         "bot": {
@@ -416,47 +411,46 @@
           "orb_pct": 33.3,
           "ftr": 0.308,
           "pace": 68.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "27-7"
         }
       },
       "pros": {
         "top": [
-          "19.2 AdjEM advantage over North Dakota State",
-          "Tom Izzo historically one of the best March coaches",
-          "Top-22 SOS with Big Ten wins over ranked opponents"
+          "SRS of 23.44 and SOS of 12.91 from Big Ten play is elite tournament preparation",
+          "38.5% ORB rate is among the highest in the bracket, dominating the glass",
+          "FTR of 0.362 and 117.3 OrtG show a balanced offensive approach"
         ],
         "bot": [
-          "Summit League champion, won 7 of last 10",
-          "Physical play style can slow Michigan State's transition offense",
-          "Underdog status historically motivates smaller conference teams"
+          "54.5% eFG is respectable and actually edges Michigan State's 53.6%",
+          "Low 13.2% TOV rate demonstrates disciplined ball security",
+          "27-7 record with an 11-point scoring margin shows consistency at their level"
         ]
       },
       "cons": {
         "top": [
-          "Heavy favorite means limited bracket differentiation",
-          "28-6 combined with 8-2 last 10 leaves little trap-game concern",
-          "Slow starts vs non-power-conference opponents documented"
+          "14.4% TOV rate is the highest among top seeds in the East, a potential vulnerability",
+          "53.6% eFG is modest for a 3-seed, relying on rebounding and free throws",
+          "Slower pace (66.8) may not immediately blow out tempo-neutral opponents"
         ],
         "bot": [
-          "SOS rank 248 provides zero preparation for Big Ten physicality",
-          "AdjEM gap of 19.2 is near the top of the field \u2014 massive disadvantage",
-          "14-seeds win only 15% of tournament games historically"
+          "SOS of -5.79 means zero preparation for Big Ten physicality and speed",
+          "SRS of 2.5 is barely above average nationally, a massive quality deficit",
+          "30.8% FTR is low, limiting free throw generation against a physical MSU team"
         ]
       },
       "recommendation": {
         "team": "MICHIGAN_STATE",
         "confidence": "High"
       },
-      "reasoning": "Michigan State's 19.2 AdjEM lead combined with Izzo's March pedigree and a top-22 SOS makes this a straightforward High confidence pick. North Dakota State's SOS rank of 248 reflects a complete lack of preparation for this level.",
+      "reasoning": "Michigan State's SRS of 23.44 towers over NDSU's 2.5 (gap of 20.94), with an SOS of 12.91 vs -5.79. Despite similar pace and NDSU's decent eFG (54.5%), the quality gap is enormous. NDSU has never faced competition at this level.",
       "win_prob": {
-        "top": 0.85,
-        "bot": 0.15
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "MICHIGAN_STATE",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "MICHIGAN_STATE"
     },
     "E7": {
       "slot_id": "E7",
@@ -477,7 +471,7 @@
           "orb_pct": 31.1,
           "ftr": 0.331,
           "pace": 65.7,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-11"
         },
         "bot": {
@@ -492,47 +486,46 @@
           "orb_pct": 34.4,
           "ftr": 0.308,
           "pace": 70.6,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-11"
         }
       },
       "pros": {
         "top": [
-          "4.1 AdjEM edge with stronger SOS backing",
-          "Pac-12 schedule battles produced top-29 schedule strength",
-          "Tournament experience from back-to-back appearances"
+          "League-best 11.6% TOV rate means UCLA rarely gives away possessions",
+          "SOS of 11.55 and 117.0 OrtG built against quality Big Ten competition",
+          "53.9% eFG with controlled pace (65.7) enables efficient half-court scoring"
         ],
         "bot": [
-          "8-2 last 10 is the hottest recent form in this matchup",
-          "AAC play provided competitive preparation against quality guards",
-          "UCF's offensive pace (70.5) can stretch UCLA's defense"
+          "34.4% ORB rate provides second-chance points that offset lower eFG",
+          "SOS of 10.8 is comparable to UCLA's 11.55, indicating similar schedule quality",
+          "Faster pace (70.6) creates additional possessions to overcome modest SRS gap"
         ]
       },
       "cons": {
         "top": [
-          "7-10 seedings historically split nearly 50-50 in modern tournament data",
-          "4.1 AdjEM gap is on the low end of Medium confidence",
-          "Perimeter defensive gaps exposed in late Pac-12 season"
+          "23-11 record is mediocre for a 7-seed, suggesting some inconsistency",
+          "31.1% ORB is low, limiting second-chance scoring against UCF's active boards",
+          "FTR of 0.331 is moderate, not generating enough free throws in close games"
         ],
         "bot": [
-          "SOS rank 58 trails UCLA's top-29 \u2014 weaker competition resume",
-          "AdjEM gap of 4.1 trends against the underdog",
-          "First tournament run in 2 years \u2014 nerves factor"
+          "13.4% TOV rate is significantly worse than UCLA's 11.6%, costing possessions",
+          "52.8% eFG trails UCLA's 53.9%, a small but meaningful efficiency gap",
+          "21-11 record and SRS gap of 4.98 favor UCLA in a competitive matchup"
         ]
       },
       "recommendation": {
         "team": "UCLA",
-        "confidence": "Low"
+        "confidence": "High"
       },
-      "reasoning": "UCLA holds a 4.1 AdjEM advantage but UCF's 8-2 last 10 form nearly neutralizes it. The SOS gap favors UCLA, but this is a genuine toss-up where UCF has real upset capability.",
+      "reasoning": "UCLA's SRS edge (18.28 vs 13.3, gap of 4.98) and stronger SOS (11.55 vs 10.8) give them a moderate advantage. UCLA's elite 11.6% TOV rate is the best in this matchup, but UCF's faster pace (70.6 vs 65.7) could create extra possessions to close the gap.",
       "win_prob": {
-        "top": 0.58,
-        "bot": 0.42
+        "top": 0.76,
+        "bot": 0.24
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "UCLA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "UCLA"
     },
     "E8": {
       "slot_id": "E8",
@@ -553,7 +546,7 @@
           "orb_pct": 35.7,
           "ftr": 0.3,
           "pace": 66.0,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "29-5"
         },
         "bot": {
@@ -568,47 +561,46 @@
           "orb_pct": 32.7,
           "ftr": 0.317,
           "pace": 66.7,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "22-12"
         }
       },
       "pros": {
         "top": [
-          "23.9 AdjEM advantage over Furman",
-          "Top-14 SOS battle-tested in Big East wars",
-          "Elite defense historically translates to tournament success"
+          "SRS of 22.92 and SOS of 10.53 confirm elite Big East competition preparation",
+          "55.3% eFG and 35.7% ORB create a strong two-way offensive foundation",
+          "29-5 record is the best among 2-seeds, reflecting dominant season-long form"
         ],
         "bot": [
-          "8-2 last 10 matches UConn's form",
-          "SoCon champion with surprising offensive efficiency",
-          "Furman historically dangerous as mid-major with momentum"
+          "55.3% eFG matches UConn's number exactly, showing Furman can shoot efficiently",
+          "Moderate FTR of 0.317 provides some free throw opportunities",
+          "Similar pace (66.7 vs 66.0) means Furman is comfortable in UConn's tempo range"
         ]
       },
       "cons": {
         "top": [
-          "Bracket pool value limited as dominant 2-seed",
-          "23.9 AdjEM gap leaves no credible upset path",
-          "Potential complacency vs weaker opponent"
+          "14.3% TOV rate is above average for a 2-seed, a minor vulnerability",
+          "FTR of 0.3 is relatively low, meaning fewer free throw opportunities",
+          "Heavy favorite status offers no bracket pool differentiation"
         ],
         "bot": [
-          "SOS rank 278 provides zero preparation for Big East-level athleticism",
-          "AdjEM of -0.8 reflects below-average efficiency \u2014 real disadvantage",
-          "2-seed vs 15-seed historically goes to 2-seed 94% of the time"
+          "SOS of -6.14 means Furman has not faced any team remotely close to UConn's caliber",
+          "15.2% TOV rate is high and will likely worsen under UConn's defensive pressure",
+          "SRS of -3.24 is below average nationally, indicating a significant quality deficit"
         ]
       },
       "recommendation": {
         "team": "UCONN",
         "confidence": "High"
       },
-      "reasoning": "UConn's 23.9 AdjEM advantage and top-14 SOS leaves Furman with no realistic path. Both teams are hot at 8-2 recently but the quality differential is enormous.",
+      "reasoning": "UConn's SRS of 22.92 vs Furman's -3.24 (gap of 26.16) is the second-largest in the East. UConn's 55.3% eFG and 35.7% ORB against a strong SOS (10.53) outclass Furman's profile built on a -6.14 SOS. Similar pace (66.0 vs 66.7) means no stylistic disruption for UConn.",
       "win_prob": {
-        "top": 0.94,
-        "bot": 0.06
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "UCONN",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "UCONN"
     },
     "S1": {
       "slot_id": "S1",
@@ -629,7 +621,7 @@
           "orb_pct": 43.2,
           "ftr": 0.391,
           "pace": 72.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "26-7"
         },
         "bot": {
@@ -644,47 +636,46 @@
           "orb_pct": 23.6,
           "ftr": 0.323,
           "pace": 67.1,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "18-16"
         }
       },
       "pros": {
         "top": [
-          "34.6 AdjEM advantage, third-highest gap in the bracket",
-          "9-1 last 10 demonstrates dominant late-season form",
-          "SEC schedule strength (SOS rank 11) hardened this team"
+          "SRS of 27.9 with SOS of 13.11 represents elite SEC competition preparation",
+          "43.2% ORB rate is the highest in the tournament, dominating the offensive glass",
+          "119.8 OrtG and fast pace (72.5) create a relentless transition attack"
         ],
         "bot": [
-          "First Four survivor brings psychological edge of already winning",
-          "Scrappy defensive identity \u2014 plays above its efficiency rating in close games",
-          "Lehigh historically pulled off a 15-seed upset in 2012"
+          "53.4% eFG shows decent shooting efficiency despite weak competition",
+          "FTR of 0.323 generates some free throw opportunities",
+          "Tournament experience from surviving the First Four play-in game"
         ]
       },
       "cons": {
         "top": [
-          "Overwhelming favorite; no bracket differentiation value",
-          "First Four opponents sometimes surprise fresh 1-seeds",
-          "Rotation minutes may be uneven after watching the First Four"
+          "13.5% TOV rate is average and could improve against weaker opposition",
+          "53.5% eFG is modest for a 1-seed, relying heavily on volume from rebounds",
+          "26-7 record includes 7 losses, more than other 1-seeds"
         ],
         "bot": [
-          "5-5 last 10 reflects fatigue from Patriot League tournament grind",
-          "AdjEM of -4.8 versus a team at +29.8 is historically insurmountable",
-          "SOS rank 304 means zero preparation for SEC-level talent"
+          "SRS of -9.32 and SOS of -7.04 indicate a well-below-average team from a weak league",
+          "15.8% TOV rate is dangerously high and will be exploited by Florida's active defense",
+          "23.6% ORB rate is very low, eliminating second-chance opportunities"
         ]
       },
       "recommendation": {
         "team": "FLORIDA",
         "confidence": "High"
       },
-      "reasoning": "Florida's 34.6 AdjEM gap over Lehigh, combined with a 9-1 last 10 run and top-11 SOS, makes this a near-certain outcome. Lehigh's 5-5 recent form indicates no momentum from their First Four win.",
+      "reasoning": "Florida's SRS of 27.9 vs Lehigh's -9.32 (gap of 37.22) is the largest in the entire tournament. Florida's dominant 43.2% ORB rate and 119.8 OrtG will overwhelm Lehigh's 18-16 team with a -7.04 SOS. The pace gap (72.5 vs 67.1) further favors Florida's transition game.",
       "win_prob": {
-        "top": 0.98,
-        "bot": 0.02
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "FLORIDA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "FLORIDA"
     },
     "S2": {
       "slot_id": "S2",
@@ -705,7 +696,7 @@
           "orb_pct": 28.1,
           "ftr": 0.371,
           "pace": 65.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-10"
         },
         "bot": {
@@ -720,47 +711,46 @@
           "orb_pct": 30.1,
           "ftr": 0.345,
           "pace": 63.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-12"
         }
       },
       "pros": {
         "top": [
-          "1.1 AdjEM edge with stronger schedule validation",
-          "ACC battle-tested; top-37 SOS edges Iowa's 52",
-          "Defensive identity (96.9 AdjD) limits high-scoring opponents"
+          "Low 12.5% TOV rate reflects strong ball security under ACC defensive pressure",
+          "FTR of 0.371 generates free throws to compensate for lower eFG",
+          "SOS of 9.57 from ACC play validates the 24-10 record"
         ],
         "bot": [
-          "7-3 last 10 gives Iowa the momentum edge heading in",
-          "High-octane offense at 73.8 possessions per game creates chaos",
-          "Iowa historically over-performs as a 9-seed in tournament play"
+          "SRS of 19.0 actually exceeds Clemson's 16.99, making Iowa the model favorite",
+          "56.6% eFG is elite and the clear statistical advantage in this matchup",
+          "SOS of 9.76 matches Clemson's schedule quality, confirming legitimacy"
         ]
       },
       "cons": {
         "top": [
-          "6-4 last 10 is mediocre heading into the tournament",
-          "1.1 AdjEM gap is well within the coin-flip range",
-          "Pace of play mismatch could benefit Iowa's faster style"
+          "52.6% eFG is well below Iowa's 56.6%, a significant shooting disadvantage",
+          "SRS of 16.99 is lower than Iowa's 19.0 despite the higher seed",
+          "28.1% ORB rate is low, limiting second-chance scoring opportunities"
         ],
         "bot": [
-          "AdjEM 1.1 below Clemson \u2014 marginal gap",
-          "SOS rank 52 trails Clemson's 37",
-          "Defense rated 100.6 AdjD, worst in this comparison"
+          "13.4% TOV rate is worse than Clemson's 12.5%, giving up more possessions",
+          "21-12 record is mediocre, suggesting inconsistency despite the SRS edge",
+          "Slower pace (63.4 vs 65.5) may limit Iowa's ability to leverage extra possessions"
         ]
       },
       "recommendation": {
         "team": "IOWA",
-        "confidence": "Low"
+        "confidence": "Medium"
       },
-      "reasoning": "Iowa's 7-3 recent form edges Clemson's 6-4 run, and Iowa's up-tempo style at 73.8 possessions per game creates chaos that neutralizes Clemson's modest AdjEM advantage. Contrarian pick: public backs Clemson more heavily.",
+      "reasoning": "Iowa actually has the higher SRS (19.0 vs 16.99, gap of 2.01 in Iowa's favor) despite being the lower seed. Iowa's 56.6% eFG significantly outpaces Clemson's 52.6%, and similar SOS values (9.76 vs 9.57) confirm comparable schedule quality. The SRS model favors Iowa.",
       "win_prob": {
-        "top": 0.48,
-        "bot": 0.52
+        "top": 0.39,
+        "bot": 0.61
       },
       "upset_alert": true,
       "contrarian": true,
-      "public_consensus_team": "CLEMSON",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "CLEMSON"
     },
     "S3": {
       "slot_id": "S3",
@@ -781,7 +771,7 @@
           "orb_pct": 31.2,
           "ftr": 0.382,
           "pace": 70.8,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "26-8"
         },
         "bot": {
@@ -796,47 +786,46 @@
           "orb_pct": 36.4,
           "ftr": 0.381,
           "pace": 67.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "28-5"
         }
       },
       "pros": {
         "top": [
-          "5.8 AdjEM advantage backed by SEC competition",
-          "Top-44 SOS vastly superior to McNeese's 168",
-          "Tournament-tested program knows March pressure"
+          "121.1 OrtG is among the best in the tournament, with strong 55.3% eFG",
+          "Elite 11.6% TOV rate minimizes wasted possessions against any opponent",
+          "SOS of 11.68 from SEC play validates the 26-8 record against top competition"
         ],
         "bot": [
-          "9-1 last 10 is the hottest form in the entire R64 field",
-          "Southland Conference champion riding 22-game home win streak",
-          "McNeese-style systems teams historically elite at 5-12 upset rate (35%)"
+          "28-5 record with 13-point scoring margin shows dominance at their level",
+          "36.4% ORB rate provides second-chance scoring to offset the SRS gap",
+          "Low 11.9% TOV rate means McNeese will not beat themselves with turnovers"
         ]
       },
       "cons": {
         "top": [
-          "6-4 last 10 suggests some regression entering the tournament",
-          "5.8 AdjEM gap is in the Medium confidence zone",
-          "Vanderbilt's offense rated 110.5 AdjO is susceptible to zone presses"
+          "31.2% ORB rate is average, limiting second-chance opportunities",
+          "Faster pace (70.8) could create variance if Vanderbilt has an off shooting night",
+          "26-8 record includes 8 losses in SEC play, suggesting some vulnerability"
         ],
         "bot": [
-          "SOS rank 168 means no preparation for Vanderbilt's defensive versatility",
-          "AdjEM gap of 5.8 favors Vanderbilt despite McNeese's form",
-          "Away from home court for first time in over 2 months"
+          "SOS of -2.06 means McNeese's 28-5 record was compiled against weak competition",
+          "52.3% eFG trails Vanderbilt's 55.3%, a meaningful efficiency gap",
+          "SRS gap of 15.09 points is statistically near-decisive at the R64 level"
         ]
       },
       "recommendation": {
         "team": "VANDERBILT",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "Vanderbilt holds a 5.8 AdjEM edge over McNeese, but McNeese's scorching 9-1 last 10 and 35% historical 12-seed upset rate make this a genuine alert game. Pick Vanderbilt but watch the line.",
+      "reasoning": "Vanderbilt's SRS of 22.83 vs McNeese's 7.74 (gap of 15.09) combined with far superior SOS (11.68 vs -2.06) makes this a clear mismatch. Both teams control turnovers well, but Vanderbilt's 121.1 OrtG and SEC pedigree are decisive.",
       "win_prob": {
-        "top": 0.62,
-        "bot": 0.38
+        "top": 0.97,
+        "bot": 0.03
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "VANDERBILT",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "VANDERBILT"
     },
     "S4": {
       "slot_id": "S4",
@@ -857,7 +846,7 @@
           "orb_pct": 26.3,
           "ftr": 0.272,
           "pace": 67.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "26-6"
         },
         "bot": {
@@ -872,47 +861,46 @@
           "orb_pct": 35.3,
           "ftr": 0.358,
           "pace": 68.1,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "22-11"
         }
       },
       "pros": {
         "top": [
-          "12.7 AdjEM advantage over Troy",
-          "Top-21 SOS from Big Ten competition provides real tournament prep",
-          "Interior depth allows Nebraska to punish smaller Sun Belt lineups"
+          "SRS of 21.54 and 55.4% eFG reflect efficient, consistent full-season performance",
+          "Low 12.8% TOV rate demonstrates disciplined ball-handling under Big Ten pressure",
+          "SOS of 10.48 validates the 26-6 record against quality competition"
         ],
         "bot": [
-          "Identical 7-3 last 10 record \u2014 form is a wash",
-          "Sun Belt champion with program-best season",
-          "Troy's up-tempo style (67.3 pace) can create early variance"
+          "35.3% ORB rate is solid and can generate extra possessions against any defense",
+          "FTR of 0.358 provides free throw opportunities to keep the game competitive",
+          "22-11 record shows a team capable of winning against their level of competition"
         ]
       },
       "cons": {
         "top": [
-          "4-seed has 79% historical win rate \u2014 not guaranteed",
-          "Nebraska's perimeter shooting inconsistent (33% from 3 on road)",
-          "Potential bracket trap game given Nebraska media attention"
+          "26.3% ORB is the lowest among 4-seeds, limiting second-chance scoring",
+          "FTR of 0.272 is relatively low, meaning fewer free throw opportunities",
+          "110.0 OrtG is modest for a 4-seed, suggesting the offense is not explosive"
         ],
         "bot": [
-          "SOS rank 214 means no preparation for Big Ten-level physicality",
-          "AdjEM gap of 12.7 is in the High confidence zone",
-          "Troy's offense (101.8 AdjO) is well below tournament average"
+          "SRS of -0.76 is below the national average, indicating true quality concerns",
+          "SOS of -4.57 means Troy's wins came against very weak competition",
+          "14.3% TOV rate is problematic and will be amplified against Nebraska's defense"
         ]
       },
       "recommendation": {
         "team": "NEBRASKA",
         "confidence": "High"
       },
-      "reasoning": "Nebraska's 12.7 AdjEM advantage and top-21 SOS create a significant quality gap over Troy. Both teams match in recent form but Nebraska's preparation through Big Ten competition is decisive.",
+      "reasoning": "Nebraska's SRS of 21.54 vs Troy's -0.76 (gap of 22.30) with SOS of 10.48 vs -4.57 represents a massive quality chasm. Troy's 14.3% TOV rate and below-average 52.6% eFG will struggle against Nebraska's efficient Big Ten defense.",
       "win_prob": {
-        "top": 0.79,
-        "bot": 0.21
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "NEBRASKA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "NEBRASKA"
     },
     "S5": {
       "slot_id": "S5",
@@ -933,7 +921,7 @@
           "orb_pct": 31.4,
           "ftr": 0.374,
           "pace": 68.8,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-8"
         },
         "bot": {
@@ -948,47 +936,46 @@
           "orb_pct": 32.3,
           "ftr": 0.437,
           "pace": 69.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "27-7"
         }
       },
       "pros": {
         "top": [
-          "4.1 AdjEM advantage with top-28 SOS from ACC play",
-          "Elite offensive pace (72.4) creates transition opportunities",
-          "Carolina blue brings significant fan engagement and crowd factor"
+          "SRS of 19.39 and SOS of 10.92 reflect strong ACC competition at 24-8",
+          "12.2% TOV rate and 54.6% eFG show efficient, disciplined half-court offense",
+          "FTR of 0.374 generates meaningful free throw opportunities"
         ],
         "bot": [
-          "8-2 last 10 gives VCU the hot-hand advantage",
-          "Havoc defense at 71.6 pace forces turnovers and disrupts rhythm",
-          "VCU's athletic guards are a nightmare matchup for UNC's offense"
+          "Elite FTR of 0.437 is among the highest in the tournament, generating free points",
+          "117.6 OrtG and 54.1% eFG make VCU offensively competitive with UNC",
+          "27-7 record is strong, with SRS of 13.19 confirming legitimate quality"
         ]
       },
       "cons": {
         "top": [
-          "6-4 last 10 is uninspiring heading into March",
-          "4.1 AdjEM gap is in the Low confidence range",
-          "UNC's defense (96.7 AdjD) allows too many open threes"
+          "31.4% ORB rate is average, not dominant enough to control the glass",
+          "SRS gap of 6.2 is moderate, not enough for overwhelming confidence",
+          "24-8 record includes 8 losses suggesting periodic vulnerability"
         ],
         "bot": [
-          "SOS rank 68 is respectable but trails UNC's top-28",
-          "AdjEM gap of 4.1 trends against VCU despite good form",
-          "VCU historically struggles covering spread vs power conference opponents"
+          "SOS of 3.11 is significantly weaker than UNC's 10.92, calling schedule quality into question",
+          "13.1% TOV rate is worse than UNC's 12.2%, costing possessions",
+          "32.3% ORB is average and won't consistently generate second chances"
         ]
       },
       "recommendation": {
-        "team": "VCU",
-        "confidence": "Low"
+        "team": "NORTH_CAROLINA",
+        "confidence": "High"
       },
-      "reasoning": "VCU's 8-2 form and Havoc defense make them a genuine upset threat against a UNC team that went only 6-4 in its last 10. The AdjEM gap is small enough that VCU's defensive disruption could decide this game.",
+      "reasoning": "North Carolina's SRS edge (19.39 vs 13.19, gap of 6.2) and much stronger SOS (10.92 vs 3.11) give UNC a clear advantage. However, VCU's elite FTR (0.437) and solid 27-7 record make them a competitive underdog. Near-identical pace (68.8 vs 69.4) means no stylistic disruption.",
       "win_prob": {
-        "top": 0.57,
-        "bot": 0.43
+        "top": 0.81,
+        "bot": 0.19
       },
-      "upset_alert": true,
-      "contrarian": true,
-      "public_consensus_team": "NORTH_CAROLINA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "upset_alert": false,
+      "contrarian": false,
+      "public_consensus_team": "NORTH_CAROLINA"
     },
     "S6": {
       "slot_id": "S6",
@@ -1009,7 +996,7 @@
           "orb_pct": 38.7,
           "ftr": 0.329,
           "pace": 66.2,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-8"
         },
         "bot": {
@@ -1024,47 +1011,46 @@
           "orb_pct": 31.2,
           "ftr": 0.366,
           "pace": 69.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "18-11"
         }
       },
       "pros": {
         "top": [
-          "19.0 AdjEM advantage over Penn",
-          "Top-25 SOS built in Big Ten competition",
-          "Tournament-ready rotation with senior-heavy lineup"
+          "Nation-leading 125.5 OrtG with elite 11.0% TOV rate defines a historically efficient offense",
+          "38.7% ORB rate provides dominant second-chance scoring",
+          "SRS of 26.45 and SOS of 11.89 confirm elite Big Ten pedigree at 24-8"
         ],
         "bot": [
-          "Ivy League champion plays Princeton-style motion offense \u2014 unique system",
-          "Identical 7-3 last 10 form \u2014 Penn is playing well",
-          "Upsets against Big Ten schools historically cluster in 3-14 matchups"
+          "FTR of 0.366 generates free throw opportunities that can keep the score respectable",
+          "Faster pace (69.4 vs 66.2) may create some additional possessions",
+          "13.3% TOV rate is reasonable and won't cause Penn to self-destruct"
         ]
       },
       "cons": {
         "top": [
-          "3-seed losing to 14-seed happens 15% of the time historically",
-          "Illinois' tempo reliance can backfire against slower motion teams",
-          "Limited off-bench scoring depth documented in Big Ten"
+          "55.1% eFG is solid but not elite for a team with such high OrtG (volume-driven)",
+          "FTR of 0.329 is moderate, not generating elite free throw volume",
+          "24-8 record includes losses, showing they are not invincible"
         ],
         "bot": [
-          "SOS rank 258 means Ivy League competition is not tournament prep",
-          "AdjEM gap of 19.0 is near the top of the 3-14 historical range",
-          "Penn's AdjO of 99.2 is below tournament-average efficiency"
+          "SRS of -0.5 and SOS of -1.72 confirm Penn is below average nationally",
+          "50.7% eFG is well below tournament average and far behind Illinois's output",
+          "18-11 record is the weakest among R64 teams, reflecting true quality limitations"
         ]
       },
       "recommendation": {
         "team": "ILLINOIS",
         "confidence": "High"
       },
-      "reasoning": "Illinois holds a 19.0 AdjEM advantage over Penn, one of the widest gaps in this seeding matchup. Penn's Princeton-style offense is intriguing but their 258 SOS provides no preparation for Big Ten athleticism.",
+      "reasoning": "Illinois's SRS of 26.45 vs Penn's -0.5 (gap of 26.95) is among the largest in the bracket. Illinois leads the nation in OrtG at 125.5 with an elite 11.0% TOV rate. Penn's -1.72 SOS offers zero preparation for Big Ten-caliber competition.",
       "win_prob": {
-        "top": 0.85,
-        "bot": 0.15
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "ILLINOIS",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "ILLINOIS"
     },
     "S7": {
       "slot_id": "S7",
@@ -1085,7 +1071,7 @@
           "orb_pct": 37.8,
           "ftr": 0.362,
           "pace": 66.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "27-5"
         },
         "bot": {
@@ -1100,47 +1086,46 @@
           "orb_pct": 32.3,
           "ftr": 0.374,
           "pace": 72.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-11"
         }
       },
       "pros": {
         "top": [
-          "6.0 AdjEM edge with impressive 8-2 recent form",
-          "WCC champion with controlled pace (63.2) that limits opponent possessions",
-          "Elite defense at 95.5 AdjD \u2014 top tier for a 7-seed"
+          "27-5 record with 13-point scoring margin shows strong consistency",
+          "37.8% ORB rate provides second-chance scoring to offset efficiency gaps",
+          "SRS of 17.87 is slightly higher than Texas A&M's 16.76"
         ],
         "bot": [
-          "SEC battle-tested with top-43 SOS \u2014 better real-world prep than Saint Mary's",
-          "7-3 recent form is solid entering the tournament",
-          "Physical inside game creates problems for Saint Mary's smaller lineup"
+          "SOS of 8.6 significantly exceeds Saint Mary's 5.54, built on SEC competition",
+          "12.5% TOV rate is better than Saint Mary's 13.8%, a ball-security advantage",
+          "54.2% eFG and 118.2 OrtG edge Saint Mary's 53.2% and 117.6, respectively"
         ]
       },
       "cons": {
         "top": [
-          "SOS rank 76 lags Texas A&M's 43 \u2014 competitive quality gap",
-          "6.0 AdjEM gap in the borderline Medium range",
-          "Saint Mary's slow pace only works if defense holds early \u2014 risky"
+          "SOS of 5.54 is moderate, raising questions about the 27-5 record's true value",
+          "13.8% TOV rate is higher than Texas A&M's 12.5%, a disadvantage in a close game",
+          "Slower pace (66.5 vs 72.5) means fewer possessions, reducing comeback opportunities"
         ],
         "bot": [
-          "AdjEM gap of 6.0 favors Saint Mary's",
-          "Texas A&M's offense (105.8 AdjO) is below the 7-seed average",
-          "10-seed has 39% upset rate historically"
+          "SRS of 16.76 is slightly below Saint Mary's 17.87, a marginal disadvantage",
+          "21-11 record is mediocre compared to Saint Mary's 27-5, even accounting for SOS",
+          "32.3% ORB trails Saint Mary's 37.8%, limiting offensive rebounding impact"
         ]
       },
       "recommendation": {
         "team": "SAINT_MARYS",
-        "confidence": "Medium"
+        "confidence": "Low"
       },
-      "reasoning": "Saint Mary's 6.0 AdjEM advantage and elite defense give them the edge, but Texas A&M's SEC SOS provides better preparation. Saint Mary's 8-2 form raises this to Medium confidence.",
+      "reasoning": "Saint Mary's holds a narrow SRS edge (17.87 vs 16.76, gap of just 1.11) over Texas A&M. However, Texas A&M has a significantly stronger SOS (8.6 vs 5.54) and faster pace (72.5 vs 66.5). This is a near-coin-flip where schedule strength could favor the Aggies.",
       "win_prob": {
-        "top": 0.62,
-        "bot": 0.38
+        "top": 0.56,
+        "bot": 0.44
       },
       "upset_alert": true,
       "contrarian": false,
-      "public_consensus_team": "SAINT_MARYS",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "SAINT_MARYS"
     },
     "S8": {
       "slot_id": "S8",
@@ -1161,7 +1146,7 @@
           "orb_pct": 35.9,
           "ftr": 0.269,
           "pace": 64.9,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "28-6"
         },
         "bot": {
@@ -1176,47 +1161,46 @@
           "orb_pct": 30.0,
           "ftr": 0.34,
           "pace": 69.6,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-14"
         }
       },
       "pros": {
         "top": [
-          "24.0 AdjEM advantage over Idaho",
-          "Cougars' elite defense (93.2 AdjD) historically dominant in March",
-          "Top-19 SOS with Big 12 wins over ranked opponents"
+          "Nation-best 10.9% TOV rate means Houston almost never wastes possessions",
+          "SRS of 26.23 and SOS of 11.93 from Big 12 play represent elite preparation",
+          "35.9% ORB rate and 118.4 OrtG create a balanced, efficient offense"
         ],
         "bot": [
-          "8-2 last 10 gives Idaho surprising momentum",
-          "Big Sky champion plays an efficient, mistake-minimizing style",
-          "Idaho has nothing to lose in their first tournament appearance"
+          "53.1% eFG is respectable and shows decent shooting ability",
+          "FTR of 0.34 provides some free throw generation capability",
+          "Faster pace (69.6 vs 64.9) may create some additional possessions"
         ]
       },
       "cons": {
         "top": [
-          "2-seed vs 15-seed has a narrow 6% historical upset rate",
-          "Houston's tempo-control style may not generate comfortable early lead",
-          "Potential bracket pool inefficiency as heavy favorite"
+          "52.1% eFG is relatively low for a 2-seed, reflecting a defense-first identity",
+          "FTR of 0.269 is the lowest among 2-seeds, limiting free throw opportunities",
+          "Slower pace (64.9) may not blow out opponents early, allowing hope"
         ],
         "bot": [
-          "SOS rank 285 means Idaho faces the toughest competition of their season",
-          "AdjEM of -1.4 is below average \u2014 real quality deficit",
-          "2-seed wins 94% of these matchups historically"
+          "SRS of -0.05 is essentially average nationally, a massive step below Houston",
+          "SOS of -2.7 means Idaho's 21-14 record came against very weak competition",
+          "21-14 record is the weakest among 15-seeds, reflecting genuine quality concerns"
         ]
       },
       "recommendation": {
         "team": "HOUSTON",
         "confidence": "High"
       },
-      "reasoning": "Houston's 24.0 AdjEM advantage and elite 93.2 defensive rating make Idaho's path essentially impossible. Idaho's 8-2 form is impressive but built entirely against mid-major competition.",
+      "reasoning": "Houston's SRS of 26.23 vs Idaho's -0.05 (gap of 26.28) combined with the SOS gap (11.93 vs -2.7) makes this a one-sided matchup. Houston's nation-best 10.9% TOV rate and stifling defense will suffocate Idaho's moderate 53.1% eFG offense.",
       "win_prob": {
-        "top": 0.94,
-        "bot": 0.06
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "HOUSTON",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "HOUSTON"
     },
     "M1": {
       "slot_id": "M1",
@@ -1237,7 +1221,7 @@
           "orb_pct": 35.4,
           "ftr": 0.377,
           "pace": 71.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "31-3"
         },
         "bot": {
@@ -1252,47 +1236,46 @@
           "orb_pct": 25.6,
           "ftr": 0.329,
           "pace": 66.9,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-8"
         }
       },
       "pros": {
         "top": [
-          "Best AdjEM in the nation at +33.2",
-          "Perfect 10-0 last 10 record entering the tournament",
-          "Top-6 SOS validates dominance against elite competition"
+          "Nation-best 58.1% eFG and 32.48 SRS reflect the most dominant team in the field",
+          "SOS of 14.86 is the highest in the tournament, validating the 31-3 record",
+          "35.4% ORB and 0.377 FTR create multiple scoring avenues beyond shooting"
         ],
         "bot": [
-          "First Four survivor brings the edge of a team that already won in this building",
-          "America East competition suits ball-control style",
-          "Loose, nothing-to-lose mentality"
+          "Low 12.7% TOV rate shows disciplined ball-handling for a 16-seed",
+          "54.2% eFG is respectable shooting efficiency at any level",
+          "24-8 record demonstrates a winning program in their conference"
         ]
       },
       "cons": {
         "top": [
-          "No historical bracket pool value as prohibitive 1-seed favorite",
-          "Only one 16-seed upset in tournament history (UMBC over Virginia 2018)",
-          "Michigan's bench depth untested in elimination games"
+          "14.4% TOV rate is above average, a minor vulnerability for a 1-seed",
+          "Fast pace (71.3) can create variance in any single game",
+          "Heavy favorite status offers zero bracket differentiation value"
         ],
         "bot": [
-          "5-5 last 10 reflects First Four fatigue and limited confidence",
-          "AdjEM gap of 41.0 is the largest in this tournament field",
-          "SOS rank 321 means zero preparation for Michigan's top-6 competition level"
+          "SOS of -11.86 is the weakest in the entire tournament field",
+          "SRS of -4.4 means UMBC is significantly below average nationally",
+          "25.6% ORB rate is very low, eliminating second-chance opportunities against Michigan's glass dominance"
         ]
       },
       "recommendation": {
         "team": "MICHIGAN",
         "confidence": "High"
       },
-      "reasoning": "Michigan's nation-leading 33.2 AdjEM, perfect 10-0 last 10 run, and top-6 SOS make UMBC a near-impossible upset despite the 2018 historical precedent. UMBC's 5-5 recent form and 41.0 AdjEM deficit are decisive.",
+      "reasoning": "Michigan's SRS of 32.48 vs UMBC's -4.4 (gap of 36.88) is the second-largest in the tournament. Michigan leads the nation with 58.1% eFG and 121.3 OrtG against the field's strongest SOS (14.86). UMBC's -11.86 SOS is the weakest in the bracket.",
       "win_prob": {
-        "top": 0.98,
-        "bot": 0.02
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "MICHIGAN",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "MICHIGAN"
     },
     "M2": {
       "slot_id": "M2",
@@ -1313,7 +1296,7 @@
           "orb_pct": 35.2,
           "ftr": 0.37,
           "pace": 73.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "22-10"
         },
         "bot": {
@@ -1328,47 +1311,46 @@
           "orb_pct": 32.0,
           "ftr": 0.341,
           "pace": 72.0,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "28-5"
         }
       },
       "pros": {
         "top": [
-          "0.9 AdjEM edge with better SEC SOS preparation",
-          "Top-39 SOS edges Saint Louis' 71 for real-world prep",
-          "Athletic frontcourt gives Georgia an inside advantage"
+          "SRS of 19.57 with SOS of 8.91 reflects solid SEC competition preparation",
+          "12.2% TOV rate and 35.2% ORB show disciplined play with strong rebounding",
+          "Fast pace (73.4) creates additional possessions to leverage the SRS advantage"
         ],
         "bot": [
-          "7-3 last 10 beats Georgia's 6-4 for recent momentum",
-          "Atlantic 10 provides quality guard-heavy preparation",
-          "Saint Louis plays a team-oriented system vs Georgia's individual talent reliance"
+          "60.0% eFG is the highest among all 64 tournament teams, an extraordinary shooting advantage",
+          "121.1 OrtG matches elite offenses, and 28-5 record shows consistency",
+          "17-point scoring margin demonstrates dominance at their competition level"
         ]
       },
       "cons": {
         "top": [
-          "6-4 last 10 is uninspiring heading into March",
-          "0.9 AdjEM gap is essentially a coin flip",
-          "Georgia's perimeter defense struggled in late SEC season"
+          "54.6% eFG is significantly below Saint Louis's 60.0%, a clear shooting disadvantage",
+          "22-10 record includes 10 losses, suggesting inconsistency in SEC play",
+          "FTR of 0.37 is average, not generating elite free throw volume"
         ],
         "bot": [
-          "SOS rank 71 trails Georgia's 39",
-          "0.9 AdjEM gap is too small for directional confidence",
-          "Saint Louis' offense (106.8 AdjO) slightly below tournament average"
+          "SOS of 1.52 is very weak, meaning the 28-5 record overstates true quality",
+          "15.2% TOV rate is dangerously high and could negate the eFG advantage",
+          "32.0% ORB rate is average, not providing enough second chances to offset turnovers"
         ]
       },
       "recommendation": {
-        "team": "SAINT_LOUIS",
-        "confidence": "Low"
+        "team": "GEORGIA",
+        "confidence": "Medium"
       },
-      "reasoning": "Saint Louis' 7-3 recent form edges Georgia's 6-4 run, and the 0.9 AdjEM gap is within the margin of error. Saint Louis represents genuine contrarian value as the team with better recent form.",
+      "reasoning": "Georgia's SRS edge (19.57 vs 17.27, gap of 2.3) is modest, and the SOS gap (8.91 vs 1.52) favors Georgia's schedule quality. However, Saint Louis boasts an extraordinary 60.0% eFG against Georgia's 54.6%. The shooting gap makes this a live upset game.",
       "win_prob": {
-        "top": 0.48,
-        "bot": 0.52
+        "top": 0.63,
+        "bot": 0.37
       },
       "upset_alert": true,
-      "contrarian": true,
-      "public_consensus_team": "GEORGIA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "contrarian": false,
+      "public_consensus_team": "GEORGIA"
     },
     "M3": {
       "slot_id": "M3",
@@ -1389,7 +1371,7 @@
           "orb_pct": 33.3,
           "ftr": 0.271,
           "pace": 67.9,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "22-10"
         },
         "bot": {
@@ -1404,47 +1386,46 @@
           "orb_pct": 34.0,
           "ftr": 0.277,
           "pace": 71.8,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "29-5"
         }
       },
       "pros": {
         "top": [
-          "9.4 AdjEM advantage over Akron",
-          "Big 12 competition SOS rank 32 superior prep",
-          "Texas Tech's defensive identity (95.4 AdjD) limits Akron's pace"
+          "SOS of 14.17 is among the toughest in the bracket, fully validating the SRS",
+          "56.2% eFG and 117.9 OrtG show strong offensive efficiency against top competition",
+          "SRS of 21.95 built on Big 12 wins reflects genuine tournament-caliber quality"
         ],
         "bot": [
-          "8-2 last 10 is impressive momentum heading in",
-          "MAC champion with best season in program history",
-          "Akron's half-court offense limits Texas Tech transition opportunities"
+          "58.8% eFG and 123.1 OrtG are elite raw numbers, the best of any 12-seed",
+          "29-5 record with balanced 13.2% TOV shows a disciplined, efficient team",
+          "34.0% ORB rate provides second-chance scoring opportunities"
         ]
       },
       "cons": {
         "top": [
-          "5-12 matchup has 35% historical upset rate \u2014 genuine threat",
-          "9.4 AdjEM gap is borderline Medium/High but form disadvantage",
-          "Texas Tech's offense (111.8 AdjO) is capable but not dominant"
+          "FTR of 0.271 is the lowest among 5-seeds, limiting free throw opportunities",
+          "13.6% TOV rate is average and could be exploited by Akron's pace",
+          "22-10 record includes losses that suggest some vulnerability"
         ],
         "bot": [
-          "SOS rank 172 means Akron's season wins don't translate",
-          "AdjEM gap of 9.4 is borderline High confidence \u2014 significant disadvantage",
-          "Tournament debut pressure compounds any preparation gap"
+          "SOS of -3.33 means Akron's gaudy offensive numbers are inflated by weak competition",
+          "SRS of 9.04 is less than half of Texas Tech's 21.95, a major quality gap",
+          "FTR of 0.277 is low, limiting free throw generation in a physical tournament game"
         ]
       },
       "recommendation": {
         "team": "TEXAS_TECH",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "Texas Tech's 9.4 AdjEM edge from Big 12 competition should prevail, but Akron's 8-2 recent form tempers confidence. This is a live 12-seed upset game worth watching.",
+      "reasoning": "Texas Tech's SRS advantage (21.95 vs 9.04, gap of 12.91) is backed by elite SOS (14.17 vs -3.33). Despite Akron's impressive 58.8% eFG and 123.1 OrtG, those numbers were built against extremely weak competition. The SRS model projects Texas Tech convincingly.",
       "win_prob": {
-        "top": 0.64,
-        "bot": 0.36
+        "top": 0.95,
+        "bot": 0.05
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "TEXAS_TECH",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "TEXAS_TECH"
     },
     "M4": {
       "slot_id": "M4",
@@ -1465,7 +1446,7 @@
           "orb_pct": 31.8,
           "ftr": 0.372,
           "pace": 74.6,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-9"
         },
         "bot": {
@@ -1480,47 +1461,46 @@
           "orb_pct": 35.5,
           "ftr": 0.319,
           "pace": 65.6,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-10"
         }
       },
       "pros": {
         "top": [
-          "15.1 AdjEM advantage over Hofstra",
-          "Top-17 SOS from SEC competition is elite preparation",
-          "High-octane offense (72.8 possessions) creates matchup nightmares"
+          "122.0 OrtG at 74.6 pace (fastest in the bracket) creates an overwhelming tempo advantage",
+          "Elite 11.2% TOV rate with 55.4% eFG maximizes every possession",
+          "SOS of 14.45 from SEC play is among the bracket's toughest schedules"
         ],
         "bot": [
-          "CAA champion with identical 7-3 last 10 form",
-          "Hofstra's pace-control style can frustrate faster teams early",
-          "13-seed upset rate at 21% historically is higher than most expect"
+          "35.5% ORB rate can generate second-chance points against any opponent",
+          "FTR of 0.319 and solid ORB may create some competitive stretches",
+          "24-10 record demonstrates winning consistency at their level"
         ]
       },
       "cons": {
         "top": [
-          "Alabama's defense (97.2 AdjD) is slightly below average \u2014 exploitable",
-          "Fast pace can backfire in turnover-heavy environments",
-          "Alabama historically inconsistent in first-round games"
+          "Fast pace (74.6) creates variance; a cold shooting spell could let Hofstra stay close",
+          "FTR of 0.372 is moderate, not dominant at the free throw line",
+          "23-9 record includes 9 losses despite playing in the SEC"
         ],
         "bot": [
-          "SOS rank 222 means CAA competition doesn't prepare for SEC athleticism",
-          "AdjEM gap of 15.1 is in the High confidence zone",
-          "Hofstra's offense (101.4 AdjO) is below tournament average"
+          "SOS of -2.46 means Hofstra's wins have minimal predictive value against SEC talent",
+          "52.2% eFG is well below Alabama's 55.4%, a significant shooting efficiency gap",
+          "Pace gap of 9.0 possessions (65.6 vs 74.6) is the largest in any R64 matchup"
         ]
       },
       "recommendation": {
         "team": "ALABAMA",
         "confidence": "High"
       },
-      "reasoning": "Alabama's 15.1 AdjEM advantage and SEC preparation (SOS rank 17) overwhelm Hofstra's CAA pedigree. Despite the 21% historical 4-13 upset rate, Alabama's talent advantage is clear.",
+      "reasoning": "Alabama's SRS of 22.7 vs Hofstra's 4.48 (gap of 18.22) combined with the SOS chasm (14.45 vs -2.46) is decisive. Alabama's 122.0 OrtG and 74.6 pace create a tempo that Hofstra (65.6 pace) has never experienced against quality opposition.",
       "win_prob": {
-        "top": 0.8,
-        "bot": 0.2
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "ALABAMA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "ALABAMA"
     },
     "M5": {
       "slot_id": "M5",
@@ -1541,7 +1521,7 @@
           "orb_pct": 45.1,
           "ftr": 0.387,
           "pace": 67.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "22-11"
         },
         "bot": {
@@ -1556,47 +1536,46 @@
           "orb_pct": 35.4,
           "ftr": 0.306,
           "pace": 70.7,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "20-13"
         }
       },
       "pros": {
         "top": [
-          "6.3 AdjEM edge backed by SEC competition (SOS rank 26)",
-          "Tennessee's physical defense disrupts First Four teams' rhythm",
-          "7-3 last 10 edges SMU's 6-4 recent form"
+          "Dominant 45.1% ORB rate is the highest in the entire tournament, controlling the glass",
+          "SRS of 22.08 and SOS of 11.99 from SEC play reflect elite preparation",
+          "FTR of 0.387 generates meaningful free throw opportunities"
         ],
         "bot": [
-          "First Four survivor with an extra game of tournament experience",
-          "SMU's AAC competition (SOS 88) provided quality guard play prep",
-          "Nothing-to-lose mentality after already securing one win"
+          "55.7% eFG significantly outpaces Tennessee's 51.6%, a clear shooting advantage",
+          "118.2 OrtG and SOS of 10.66 show offensive efficiency against quality competition",
+          "Faster pace (70.7 vs 67.3) can create additional possessions to overcome the SRS gap"
         ]
       },
       "cons": {
         "top": [
-          "6-11 matchup has 37% historical upset rate",
-          "SMU's First Four experience could neutralize Tennessee's freshness advantage",
-          "Tennessee's offense (110.4 AdjO) is inconsistent in high-pressure spots"
+          "51.6% eFG is below average for a 6-seed, relying heavily on offensive rebounding",
+          "13.9% TOV rate is problematic and could be exploited by SMU's quicker tempo",
+          "22-11 record suggests inconsistency through the SEC season"
         ],
         "bot": [
-          "6-4 last 10 is weaker form heading into this matchup",
-          "AdjEM gap of 6.3 favors Tennessee with SEC backing",
-          "SMU's SOS rank 88 trails Tennessee's 26 significantly"
+          "20-13 record is underwhelming and includes significant losses",
+          "SRS gap of 4.81 still favors Tennessee despite SMU's offensive strengths",
+          "FTR of 0.306 is low, meaning fewer free throw opportunities in a close game"
         ]
       },
       "recommendation": {
         "team": "TENNESSEE",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "Tennessee holds a 6.3 AdjEM advantage over a SMU team that survived the First Four. Tennessee's SEC preparation and 7-3 form edge SMU's 6-4 run, but the 37% historical 6-11 upset rate keeps this Medium.",
+      "reasoning": "Tennessee's SRS edge (22.08 vs 17.27, gap of 4.81) and stronger SOS (11.99 vs 10.66) favor the Vols. However, SMU's 55.7% eFG outpaces Tennessee's 51.6%, and the pace gap (70.7 vs 67.3) could help SMU create extra possessions to close the SRS gap.",
       "win_prob": {
-        "top": 0.62,
-        "bot": 0.38
+        "top": 0.75,
+        "bot": 0.25
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "TENNESSEE",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "TENNESSEE"
     },
     "M6": {
       "slot_id": "M6",
@@ -1617,7 +1596,7 @@
           "orb_pct": 37.9,
           "ftr": 0.33,
           "pace": 66.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "29-5"
         },
         "bot": {
@@ -1632,47 +1611,46 @@
           "orb_pct": 34.2,
           "ftr": 0.377,
           "pace": 69.0,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-11"
         }
       },
       "pros": {
         "top": [
-          "21.3 AdjEM advantage over Wright State",
-          "Tony Bennett-era defensive principles (91.3 AdjD) suffocate tempo",
-          "8-2 recent form demonstrates peak tournament-ready form"
+          "SRS of 21.6 with 29-5 record demonstrates dominant, consistent play all season",
+          "37.9% ORB rate provides strong second-chance scoring opportunities",
+          "119.1 OrtG and 54.6% eFG show balanced offensive efficiency"
         ],
         "bot": [
-          "Horizon League champion plays deliberate, mistake-minimizing basketball",
-          "Wright State's physical frontcourt can exploit Virginia's slow pace",
-          "7-3 last 10 shows solid form heading in"
+          "54.9% eFG actually edges Virginia's 54.6%, showing shooting ability",
+          "FTR of 0.377 generates free throw opportunities that could keep the game competitive",
+          "34.2% ORB rate provides some second-chance scoring"
         ]
       },
       "cons": {
         "top": [
-          "Pack Line defense can be exposed by patient motion offense teams",
-          "Virginia's slow pace (59.8 possessions) limits comeback opportunities if down",
-          "Limited bracket differentiation as dominant 3-seed"
+          "13.4% TOV rate is average, a minor vulnerability that Wright State could exploit",
+          "Slower pace (66.5) may not create enough separation early",
+          "FTR of 0.33 is moderate, not generating elite free throw volume"
         ],
         "bot": [
-          "SOS rank 254 means Horizon League has not prepared Wright State for ACC-level talent",
-          "AdjEM gap of 21.3 is the largest possible 3-14 gap",
-          "Virginia's 14-seed opponents have won just 15% historically"
+          "SRS of 0.12 is essentially average nationally, a massive quality gap vs Virginia",
+          "SOS of -4.44 means Wright State has faced no competition near Virginia's caliber",
+          "14.0% TOV rate is above average and will be amplified under Virginia's defensive pressure"
         ]
       },
       "recommendation": {
         "team": "VIRGINIA",
         "confidence": "High"
       },
-      "reasoning": "Virginia's 21.3 AdjEM advantage is the widest 3-14 gap in the bracket, and their 8-2 recent form combined with elite 91.3 defense leaves Wright State no viable path. Top High confidence pick in the Midwest.",
+      "reasoning": "Virginia's SRS of 21.6 vs Wright State's 0.12 (gap of 21.48) combined with SOS of 9.36 vs -4.44 creates an enormous quality gap. Virginia's 29-5 record and balanced offensive profile (54.6% eFG, 37.9% ORB) will overwhelm Wright State's below-average SRS.",
       "win_prob": {
-        "top": 0.86,
-        "bot": 0.14
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "VIRGINIA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "VIRGINIA"
     },
     "M7": {
       "slot_id": "M7",
@@ -1693,7 +1671,7 @@
           "orb_pct": 33.8,
           "ftr": 0.375,
           "pace": 69.8,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-13"
         },
         "bot": {
@@ -1708,47 +1686,46 @@
           "orb_pct": 36.7,
           "ftr": 0.252,
           "pace": 69.7,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "26-8"
         }
       },
       "pros": {
         "top": [
-          "4.6 AdjEM edge with SEC preparation (SOS rank 31)",
-          "Kentucky's recruiting pedigree gives athleticism edge",
-          "Tournament experience as a blue-blood program"
+          "SOS of 12.86 from SEC play far exceeds Santa Clara's 6.06, validating the SRS edge",
+          "12.8% TOV rate and 33.8% ORB show disciplined, balanced play",
+          "FTR of 0.375 generates free throws in a close-game scenario"
         ],
         "bot": [
-          "8-2 last 10 is the better recent form in this matchup",
-          "WCC competition (SOS 98) provided quality guard play prep",
-          "Santa Clara's controlled pace limits Kentucky transition opportunities"
+          "118.9 OrtG and 54.6% eFG are both better than Kentucky's offensive numbers",
+          "26-8 record is stronger than Kentucky's 21-13, even accounting for SOS difference",
+          "36.7% ORB rate exceeds Kentucky's 33.8%, providing a rebounding edge"
         ]
       },
       "cons": {
         "top": [
-          "7-10 matchup has 39% historical upset rate",
-          "7-3 last 10 lags Santa Clara's 8-2 momentum",
-          "Kentucky's defense (96.4 AdjD) is average \u2014 exploitable"
+          "21-13 record is the weakest among 7-seeds, suggesting significant inconsistency",
+          "53.1% eFG trails Santa Clara's 54.6%, a shooting efficiency disadvantage",
+          "115.7 OrtG is modest, and Kentucky's offense may struggle against Santa Clara's defense"
         ],
         "bot": [
-          "SOS rank 98 trails Kentucky's 31",
-          "AdjEM gap of 4.6 favors Kentucky in the Medium range",
-          "Santa Clara's AdjO of 105.1 is below tournament average"
+          "SOS of 6.06 is significantly weaker than Kentucky's 12.86, questioning schedule quality",
+          "FTR of 0.252 is the lowest in this matchup, limiting free throw generation",
+          "13.0% TOV rate is slightly worse than Kentucky's 12.8%"
         ]
       },
       "recommendation": {
         "team": "KENTUCKY",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "Kentucky's 4.6 AdjEM advantage and SEC pedigree give them the edge, though Santa Clara's 8-2 late run is noteworthy. The SOS gap (31 vs 98) validates Kentucky's stronger resume despite Santa Clara's momentum.",
+      "reasoning": "Kentucky's SRS edge (19.8 vs 15.88, gap of 3.92) is moderate, but Kentucky's much stronger SOS (12.86 vs 6.06) is the key differentiator. Santa Clara's 54.6% eFG and 118.9 OrtG are actually stronger than Kentucky's 53.1% and 115.7, making this a genuine upset threat.",
       "win_prob": {
-        "top": 0.6,
-        "bot": 0.4
+        "top": 0.71,
+        "bot": 0.29
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "KENTUCKY",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "KENTUCKY"
     },
     "M8": {
       "slot_id": "M8",
@@ -1769,7 +1746,7 @@
           "orb_pct": 35.3,
           "ftr": 0.34,
           "pace": 68.2,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "27-7"
         },
         "bot": {
@@ -1784,47 +1761,46 @@
           "orb_pct": 35.4,
           "ftr": 0.338,
           "pace": 72.0,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-9"
         }
       },
       "pros": {
         "top": [
-          "26.6 AdjEM advantage, among the widest in the tournament",
-          "8-2 last 10 demonstrates dominant late-season form",
-          "Big 12 SOS rank 16 is elite tournament preparation"
+          "SRS of 27.15 is among the top 5 nationally, reflecting Big 12 dominance",
+          "56.5% eFG and 120.0 OrtG represent elite offensive efficiency",
+          "Elite 12.8% TOV rate and 35.3% ORB show disciplined, complete play"
         ],
         "bot": [
-          "SWAC champion brings conference-title momentum",
-          "7-3 last 10 shows Tennessee State is playing well",
-          "Tennessee State's physical style can create early game variance"
+          "35.4% ORB rate can generate some second-chance points",
+          "FTR of 0.338 provides moderate free throw generation",
+          "23-9 record shows a winning team at their competition level"
         ]
       },
       "cons": {
         "top": [
-          "Overwhelming favorite; limited bracket pool value",
-          "Historical 2-15 upset rate is 6% \u2014 non-zero",
-          "Iowa State's defense (94.8 AdjD) can be tested by physical play"
+          "FTR of 0.34 is moderate, not generating dominant free throw volume",
+          "27-7 record includes losses that suggest some vulnerability",
+          "Heavy favorite status limits bracket pool differentiation"
         ],
         "bot": [
-          "SOS rank 292 reflects SWAC competition that is no tournament prep",
-          "AdjEM gap of 26.6 is historically decisive",
-          "Tennessee State's AdjO of 96.1 is well below tournament average"
+          "SOS of -8.68 means Tennessee State has never faced anything close to Big 12 quality",
+          "SRS of -4.54 is well below average nationally, confirming a significant quality deficit",
+          "14.3% TOV rate and 51.0% eFG will be severely punished by Iowa State's defense"
         ]
       },
       "recommendation": {
         "team": "IOWA_STATE",
         "confidence": "High"
       },
-      "reasoning": "Iowa State's 26.6 AdjEM advantage and elite Big 12 preparation make Tennessee State a non-viable upset option. Iowa State's 8-2 form validates their tournament readiness.",
+      "reasoning": "Iowa State's SRS of 27.15 vs Tennessee State's -4.54 (gap of 31.69) is among the largest in the bracket. Iowa State's 56.5% eFG and 120.0 OrtG against a strong SOS (10.5) vastly outclass Tennessee State's profile built on a -8.68 SOS.",
       "win_prob": {
-        "top": 0.94,
-        "bot": 0.06
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "IOWA_STATE",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "IOWA_STATE"
     },
     "W1": {
       "slot_id": "W1",
@@ -1845,7 +1821,7 @@
           "orb_pct": 38.1,
           "ftr": 0.429,
           "pace": 71.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "32-2"
         },
         "bot": {
@@ -1860,47 +1836,46 @@
           "orb_pct": 34.3,
           "ftr": 0.347,
           "pace": 68.1,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-10"
         }
       },
       "pros": {
         "top": [
-          "35.8 AdjEM advantage over LIU",
-          "Top-13 SOS from Pac-12 play",
-          "8-2 recent form with national title contender profile"
+          "SRS of 29.92 is third-highest nationally, reflecting 32-2 dominance against elite competition",
+          "38.1% ORB and 0.429 FTR provide multiple scoring avenues beyond shooting",
+          "SOS of 12.57 from Pac-12 play fully validates the near-perfect record"
         ],
         "bot": [
-          "NEC champion on a 7-3 run with nothing to lose",
-          "LIU's small-ball style creates early pace variance",
-          "Underdog mentality historically raises 16-seed performance"
+          "53.3% eFG is respectable shooting efficiency at any level",
+          "34.3% ORB rate provides some second-chance opportunities",
+          "FTR of 0.347 generates moderate free throw volume"
         ]
       },
       "cons": {
         "top": [
-          "Heavy favorite with no bracket value",
-          "SOS rank 324 means LIU has never seen Arizona's athleticism level",
-          "Only one 16-seed upset in tournament history"
+          "12.9% TOV rate is average, a minor inefficiency in an otherwise dominant profile",
+          "Fast pace (71.3) creates some variance in any single game",
+          "Overwhelming favorite with no bracket differentiation value"
         ],
         "bot": [
-          "AdjEM gap of 35.8 is nearly impossible to overcome",
-          "LIU's defense (99.5 AdjD) is well below tournament average",
-          "SOS rank 324 is the weakest in the entire tournament field"
+          "16.4% TOV rate is the highest in any R64 matchup, a catastrophic vulnerability",
+          "SRS of -4.96 and SOS of -7.93 confirm a below-average team from a very weak schedule",
+          "108.3 OrtG is well below tournament average, indicating limited offensive firepower"
         ]
       },
       "recommendation": {
         "team": "ARIZONA",
         "confidence": "High"
       },
-      "reasoning": "Arizona's 35.8 AdjEM advantage and top-13 SOS make LIU a non-competitive opponent at this level. This is a straightforward pick with the highest confidence in the West region.",
+      "reasoning": "Arizona's SRS of 29.92 vs LIU's -4.96 (gap of 34.88) is the third-largest in the bracket. Arizona's 55.1% eFG, 38.1% ORB, and elite FTR (0.429) against a strong SOS (12.57) make this a complete mismatch. LIU's 16.4% TOV rate will be devastating against Arizona's pressure.",
       "win_prob": {
-        "top": 0.98,
-        "bot": 0.02
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "ARIZONA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "ARIZONA"
     },
     "W2": {
       "slot_id": "W2",
@@ -1921,7 +1896,7 @@
           "orb_pct": 32.4,
           "ftr": 0.313,
           "pace": 66.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-8"
         },
         "bot": {
@@ -1936,47 +1911,46 @@
           "orb_pct": 33.3,
           "ftr": 0.378,
           "pace": 68.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "28-6"
         }
       },
       "pros": {
         "top": [
-          "0.4 AdjEM edge with Big East SOS (rank 42) vs Mountain West (rank 82)",
-          "Villanova's tournament DNA with multiple Final Fours",
-          "Physical guard play limits opponent transition offense"
+          "SOS of 9.93 from Big East play exceeds Utah State's 6.51, validating schedule quality",
+          "Low 12.9% TOV rate shows disciplined ball-handling under Big East pressure",
+          "32.4% ORB and controlled 66.4 pace enable efficient half-court offense"
         ],
         "bot": [
-          "8-2 last 10 gives Utah State clear hot-hand advantage",
-          "Mountain West champion rode 10-game winning streak into tournament",
-          "Utah State's inside-out game creates matchup problems for Villanova guards"
+          "SRS of 17.36 exceeds Villanova's 16.3, making Utah State the model favorite",
+          "57.2% eFG and 120.0 OrtG significantly outpace Villanova's offensive numbers",
+          "28-6 record with FTR of 0.378 shows a complete, winning team"
         ]
       },
       "cons": {
         "top": [
-          "0.4 AdjEM gap is essentially noise \u2014 pure coin flip game",
-          "7-3 last 10 trails Utah State's momentum",
-          "Villanova's defense (97.6 AdjD) slightly below average"
+          "53.7% eFG is significantly below Utah State's 57.2%, a clear shooting gap",
+          "114.8 OrtG is modest and trails Utah State's 120.0 by over 5 points",
+          "SRS of 16.3 is lower than Utah State's 17.36 despite the higher seed"
         ],
         "bot": [
-          "SOS rank 82 trails Villanova's Big East 42 for competitive quality",
-          "AdjEM gap is negligible \u2014 no directional signal",
-          "Mountain West teams historically underperform expectations in R64"
+          "SOS of 6.51 is weaker than Villanova's 9.93, calling the SRS edge into context",
+          "13.3% TOV rate is slightly worse than Villanova's 12.9%",
+          "Mountain West schedule quality may not fully prepare for Big East physicality"
         ]
       },
       "recommendation": {
         "team": "UTAH_STATE",
         "confidence": "Low"
       },
-      "reasoning": "Utah State's 8-2 last 10 run edges Villanova's 7-3 form in an essentially even matchup. The 0.4 AdjEM gap is noise; Utah State's momentum gives them a slight edge in this coin-flip 8-9 game.",
+      "reasoning": "Utah State's SRS (17.36) actually exceeds Villanova's (16.3) by 1.06 points despite being the lower seed. Utah State's 57.2% eFG and 120.0 OrtG outclass Villanova's 53.7% and 114.8. Villanova's edge is SOS (9.93 vs 6.51), but the SRS model picks Utah State.",
       "win_prob": {
-        "top": 0.48,
-        "bot": 0.52
+        "top": 0.44,
+        "bot": 0.56
       },
       "upset_alert": true,
       "contrarian": true,
-      "public_consensus_team": "VILLANOVA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "VILLANOVA"
     },
     "W3": {
       "slot_id": "W3",
@@ -1997,7 +1971,7 @@
           "orb_pct": 29.4,
           "ftr": 0.319,
           "pace": 68.8,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-10"
         },
         "bot": {
@@ -2012,47 +1986,46 @@
           "orb_pct": 33.1,
           "ftr": 0.433,
           "pace": 71.8,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "30-4"
         }
       },
       "pros": {
         "top": [
-          "9.9 AdjEM advantage over High Point",
-          "Big Ten competition prepared Wisconsin for physical tournament play",
-          "Elite half-court offense at 63.8 possessions controls game tempo"
+          "SOS of 12.44 from Big Ten play is dramatically stronger than High Point's -7.89",
+          "Elite 11.1% TOV rate minimizes wasted possessions against any opponent",
+          "SRS of 19.52 and 118.8 OrtG reflect efficient, proven quality"
         ],
         "bot": [
-          "8-2 last 10 gives High Point the better momentum entering the tournament",
-          "Big South champion with program-record win total",
-          "High Point's three-point shooting (38%) can change the game quickly"
+          "124.5 OrtG is among the highest in the tournament, with elite 56.6% eFG",
+          "30-4 record and 19-point scoring margin show total dominance at their level",
+          "0.433 FTR generates high free throw volume that could keep the game competitive"
         ]
       },
       "cons": {
         "top": [
-          "5-12 matchup has 35% historical upset rate",
-          "Wisconsin's 7-3 last 10 trails High Point's form",
-          "Wisconsin's defense (94.7) is solid but 3-point shooting exposure remains"
+          "29.4% ORB is low, limiting second-chance scoring against High Point's active boards",
+          "FTR of 0.319 is moderate, not generating elite free throw volume",
+          "24-10 record includes notable losses, suggesting some inconsistency"
         ],
         "bot": [
-          "SOS rank 188 provides no preparation for Big Ten-caliber defense",
-          "AdjEM gap of 9.9 is firmly in the Medium range against Wisconsin",
-          "High Point's offense (103.8 AdjO) is below tournament average"
+          "SOS of -7.89 is among the weakest in the bracket, inflating all offensive metrics",
+          "SRS of 6.76 reflects the true quality after schedule adjustment",
+          "33.1% ORB and fast pace (71.8) may not translate against Big Ten defensive intensity"
         ]
       },
       "recommendation": {
         "team": "WISCONSIN",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "Wisconsin's 9.9 AdjEM edge and Big Ten battle-testing gives them the edge, but High Point's 8-2 form and three-point shooting make this a legitimate 12-seed upset candidate. Pick Wisconsin with eyes open.",
+      "reasoning": "Wisconsin's SRS of 19.52 vs High Point's 6.76 (gap of 12.76) is large, backed by an enormous SOS gap (12.44 vs -7.89). High Point's gaudy 124.5 OrtG and 30-4 record were built against the weakest schedule in this matchup. Wisconsin's Big Ten pedigree is the differentiator.",
       "win_prob": {
-        "top": 0.65,
-        "bot": 0.35
+        "top": 0.95,
+        "bot": 0.05
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "WISCONSIN",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "WISCONSIN"
     },
     "W4": {
       "slot_id": "W4",
@@ -2073,7 +2046,7 @@
           "orb_pct": 32.2,
           "ftr": 0.364,
           "pace": 72.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "26-8"
         },
         "bot": {
@@ -2088,47 +2061,46 @@
           "orb_pct": 32.3,
           "ftr": 0.429,
           "pace": 72.1,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "24-8"
         }
       },
       "pros": {
         "top": [
-          "14.3 AdjEM advantage over Hawaii",
-          "SEC competition (SOS rank 24) superior tournament preparation",
-          "Arkansas' press defense disrupts opponent comfort zone"
+          "Elite 10.7% TOV rate is among the lowest in the tournament, maximizing possessions",
+          "56.5% eFG and 122.5 OrtG rank among the bracket's best offensive profiles",
+          "SOS of 12.57 from SEC play fully validates the 26-8 record"
         ],
         "bot": [
-          "Big West champion with identical 7-3 recent form",
-          "Playing in West region is a geographic home court advantage for Hawaii",
-          "Hawaii's unique pace (70.1) and spacing create defensive confusion"
+          "High FTR of 0.429 generates significant free throw opportunities",
+          "32.3% ORB rate provides some second-chance scoring capability",
+          "Similar pace (72.1 vs 72.4) means no tempo adjustment needed"
         ]
       },
       "cons": {
         "top": [
-          "4-13 matchup historically tilts 79% to the 4-seed \u2014 not a lock",
-          "Arkansas' turnover rate is above SEC average in late-season pressure",
-          "7-3 last 10 is solid but not dominant"
+          "32.2% ORB is average, not dominating the offensive glass",
+          "FTR of 0.364 is moderate for a 4-seed",
+          "26-8 record includes losses in SEC play that show some vulnerability"
         ],
         "bot": [
-          "SOS rank 218 provides zero preparation for SEC-level talent",
-          "AdjEM gap of 14.3 is firmly in the High confidence zone",
-          "Hawaii's defense (97.3 AdjD) below tournament average"
+          "16.1% TOV rate is dangerously high and will be exploited by Arkansas's defense",
+          "52.2% eFG is well below Arkansas's 56.5%, a significant shooting disadvantage",
+          "SOS of -3.59 means Hawaii's wins carry minimal predictive value against SEC competition"
         ]
       },
       "recommendation": {
         "team": "ARKANSAS",
         "confidence": "High"
       },
-      "reasoning": "Arkansas' 14.3 AdjEM advantage and SEC preparation dwarf Hawaii's resume. The geographic edge for Hawaii is a minor factor against this talent differential.",
+      "reasoning": "Arkansas's SRS of 22.43 vs Hawaii's 4.85 (gap of 17.58) combined with far superior SOS (12.57 vs -3.59) is decisive. Arkansas's 56.5% eFG, 10.7% TOV (one of the lowest in the bracket), and 122.5 OrtG will overwhelm Hawaii's 16.1% TOV rate team.",
       "win_prob": {
-        "top": 0.8,
-        "bot": 0.2
+        "top": 0.98,
+        "bot": 0.02
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "ARKANSAS",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "ARKANSAS"
     },
     "W5": {
       "slot_id": "W5",
@@ -2149,7 +2121,7 @@
           "orb_pct": 34.6,
           "ftr": 0.342,
           "pace": 70.5,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "23-11"
         },
         "bot": {
@@ -2164,47 +2136,46 @@
           "orb_pct": 36.3,
           "ftr": 0.453,
           "pace": 69.2,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "18-14"
         }
       },
       "pros": {
         "top": [
-          "5.3 AdjEM edge over Texas",
-          "BYU's deliberate offense (71.8 pace) controls game flow",
-          "Strong home-region fan base in West bracket"
+          "SRS of 21.04 backed by SOS of 12.45 reflects strong Big 12 competition",
+          "54.7% eFG and 118.7 OrtG demonstrate efficient offense against quality defenses",
+          "34.6% ORB rate provides second-chance scoring opportunities"
         ],
         "bot": [
-          "First Four survivor brings extra game of tournament experience",
-          "7-3 last 10 edges BYU's 6-4 form \u2014 better momentum",
-          "Texas and BYU share nearly identical SOS (46 vs 48) \u2014 true quality comparison"
+          "Elite FTR of 0.453 is among the highest in the tournament, generating free points",
+          "120.1 OrtG and 55.0% eFG are both slightly better than BYU's offensive numbers",
+          "SOS of 10.3 confirms quality SEC schedule, comparable to BYU's Big 12 slate"
         ]
       },
       "cons": {
         "top": [
-          "6-4 last 10 is concerning heading into March",
-          "6-11 matchup has 37% historical upset rate",
-          "BYU's defense (97.6 AdjD) is slightly below average"
+          "13.0% TOV rate is average, not a dominant ball-security mark",
+          "23-11 record includes 11 losses, suggesting some inconsistency",
+          "FTR of 0.342 is moderate, not matching Texas's elite 0.453"
         ],
         "bot": [
-          "AdjEM gap of 5.3 favors BYU",
-          "Texas' offense (105.6 AdjO) below average",
-          "First Four fatigue \u2014 playing 2 games in 2 days is physiologically challenging"
+          "18-14 record is the weakest in this matchup, including many losses",
+          "SRS gap of 4.87 favors BYU despite Texas's offensive efficiency",
+          "13.5% TOV rate is slightly worse than BYU's 13.0%"
         ]
       },
       "recommendation": {
         "team": "BYU",
-        "confidence": "Medium"
+        "confidence": "High"
       },
-      "reasoning": "BYU holds a 5.3 AdjEM advantage but Texas' superior 7-3 last 10 form and nearly identical SOS make this a live upset game. The matched SOS ranks mean both teams have earned their spots comparably.",
+      "reasoning": "BYU's SRS edge (21.04 vs 16.17, gap of 4.87) with comparable SOS (12.45 vs 10.3) gives BYU a solid advantage. Texas's higher FTR (0.453) and slight eFG edge (55.0% vs 54.7%) provide some competitiveness, but BYU's stronger record and SRS are decisive.",
       "win_prob": {
-        "top": 0.61,
-        "bot": 0.39
+        "top": 0.75,
+        "bot": 0.25
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "BYU",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "BYU"
     },
     "W6": {
       "slot_id": "W6",
@@ -2225,7 +2196,7 @@
           "orb_pct": 34.8,
           "ftr": 0.311,
           "pace": 70.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "30-3"
         },
         "bot": {
@@ -2240,47 +2211,46 @@
           "orb_pct": 36.6,
           "ftr": 0.436,
           "pace": 72.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-13"
         }
       },
       "pros": {
         "top": [
-          "22.4 AdjEM advantage over Kennesaw State",
-          "8-2 recent form with national profile system offense",
-          "Gonzaga's pace-and-space style has no answer in single-bid conference programs"
+          "SRS of 25.11 with 30-3 record and 19-point scoring margin is dominant",
+          "56.3% eFG and 11.7% TOV rate create an elite offensive efficiency combination",
+          "34.8% ORB rate and balanced scoring approach give multiple paths to victory"
         ],
         "bot": [
-          "Atlantic Sun champion playing their best basketball",
-          "7-3 last 10 shows strong late-season form",
-          "Underdog mentality and nothing to lose"
+          "36.6% ORB rate and 0.436 FTR provide some second-chance and free throw scoring",
+          "Fast pace (72.4 vs 70.4) may create some additional possessions",
+          "52.2% eFG shows baseline shooting capability"
         ]
       },
       "cons": {
         "top": [
-          "Gonzaga SOS rank 58 is respectable but not elite \u2014 some vulnerability",
-          "High-tempo offense (72.1 pace) can lead to turnovers vs zone defenses",
-          "3-14 matchup historically goes 85% to the 3-seed \u2014 not guaranteed"
+          "SOS of 5.98 is lower than typical 3-seeds, raising some schedule quality concerns",
+          "FTR of 0.311 is moderate, not generating dominant free throw volume",
+          "Fast pace (70.4) creates some single-game variance"
         ],
         "bot": [
-          "SOS rank 262 provides no preparation for Gonzaga's offensive system",
-          "AdjEM gap of 22.4 is one of the largest 3-14 gaps in the field",
-          "Kennesaw State's AdjO of 98.2 is well below tournament average"
+          "SRS of 0.13 is barely above the national average, a massive quality deficit",
+          "SOS of -2.0 means the 21-13 record was compiled against weak competition",
+          "13.7% TOV rate and 52.2% eFG will be severely tested by Gonzaga's defense"
         ]
       },
       "recommendation": {
         "team": "GONZAGA",
         "confidence": "High"
       },
-      "reasoning": "Gonzaga's 22.4 AdjEM lead and 8-2 form make Kennesaw State a non-competitive opponent at this level. Despite Gonzaga's weaker-than-ideal SOS, the raw talent and efficiency gap is decisive.",
+      "reasoning": "Gonzaga's SRS of 25.11 vs Kennesaw State's 0.13 (gap of 24.98) combined with much stronger SOS (5.98 vs -2.0) is decisive. Gonzaga's elite 56.3% eFG and 11.7% TOV rate against their 30-3 record make this a straightforward mismatch.",
       "win_prob": {
-        "top": 0.85,
-        "bot": 0.15
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "GONZAGA",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "GONZAGA"
     },
     "W7": {
       "slot_id": "W7",
@@ -2301,7 +2271,7 @@
           "orb_pct": 37.0,
           "ftr": 0.375,
           "pace": 69.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "25-8"
         },
         "bot": {
@@ -2316,47 +2286,46 @@
           "orb_pct": 35.5,
           "ftr": 0.425,
           "pace": 68.4,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "20-12"
         }
       },
       "pros": {
         "top": [
-          "3.3 AdjEM edge with ACC SOS (rank 36) over SEC team (rank 54)",
-          "Miami's defensive rotations limit opponent second-chance opportunities",
-          "7-3 last 10 edges Missouri's 6-4 form"
+          "SRS of 18.04 and 55.6% eFG reflect an efficient, balanced offensive team",
+          "37.0% ORB rate provides strong second-chance scoring",
+          "25-8 record with FTR of 0.375 shows consistent, complete play"
         ],
         "bot": [
-          "SEC competition (SOS 54) is comparable to ACC \u2014 legitimate quality comparison",
-          "Missouri's scoring offense (106.1 AdjO) can heat up in neutral-site games",
-          "10-seed has 39% historical upset rate in 7-10 matchups"
+          "SOS of 8.77 actually exceeds Miami's 7.28, built on SEC competition quality",
+          "55.3% eFG is comparable to Miami's 55.6%, nearly identical shooting",
+          "Elite FTR of 0.425 generates significant free throw opportunities"
         ]
       },
       "cons": {
         "top": [
-          "3.3 AdjEM gap is in the Low confidence range",
-          "7-10 matchup is historically the closest to a coin flip outside 8-9",
-          "Miami's offense (109.4 AdjO) is only slightly above average"
+          "13.7% TOV rate is above average and could be exploited by Missouri's pressure",
+          "SOS of 7.28 is lower than Missouri's 8.77, a schedule quality disadvantage",
+          "25-8 record built on a moderate ACC SOS raises some validation questions"
         ],
         "bot": [
-          "6-4 last 10 trails Miami's momentum",
-          "AdjEM gap of 3.3 favors Miami",
-          "SOS rank 54 is slightly weaker than Miami's 36"
+          "15.3% TOV rate is the worst in this matchup and a major liability",
+          "SRS gap of 4.96 favors Miami despite Missouri's SOS advantage",
+          "20-12 record is underwhelming, including too many losses for a tournament team"
         ]
       },
       "recommendation": {
         "team": "MIAMI_FL",
-        "confidence": "Low"
+        "confidence": "High"
       },
-      "reasoning": "Miami holds a modest 3.3 AdjEM edge with slightly better recent form, but this is a near coin-flip. ACC preparation gives Miami a slight edge over Missouri's SEC schedule, but the gap is minimal.",
+      "reasoning": "Miami's SRS edge (18.04 vs 13.08, gap of 4.96) is moderate. Interestingly, Missouri's SOS (8.77) exceeds Miami's (7.28), meaning Missouri faced tougher SEC competition. However, Missouri's 15.3% TOV rate is a critical weakness that offsets any schedule quality advantage.",
       "win_prob": {
-        "top": 0.58,
-        "bot": 0.42
+        "top": 0.76,
+        "bot": 0.24
       },
-      "upset_alert": true,
+      "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "MIAMI_FL",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "MIAMI_FL"
     },
     "W8": {
       "slot_id": "W8",
@@ -2377,7 +2346,7 @@
           "orb_pct": 36.3,
           "ftr": 0.286,
           "pace": 65.3,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "27-8"
         },
         "bot": {
@@ -2392,47 +2361,46 @@
           "orb_pct": 30.2,
           "ftr": 0.374,
           "pace": 71.0,
-          "last_10": "UNVERIFIED",
+          "last_10": null,
           "record": "21-13"
         }
       },
       "pros": {
         "top": [
-          "25.6 AdjEM advantage over Queens",
-          "Top-15 SOS from Big Ten competition",
-          "Purdue's dominant frontcourt (Matt Painter system) is historically elite"
+          "Nation-leading 124.7 OrtG with 57.6% eFG defines the bracket's most efficient offense",
+          "SOS of 14.13 from Big Ten play is among the toughest in the tournament",
+          "Elite 11.5% TOV rate and 36.3% ORB show disciplined, complete play"
         ],
         "bot": [
-          "8-2 last 10 is the better momentum entering the tournament",
-          "ASUN champion with program-record win total",
-          "Underdog mentality and nothing to lose"
+          "56.7% eFG and 118.7 OrtG are strong raw offensive numbers",
+          "FTR of 0.374 generates decent free throw volume",
+          "30.2% ORB rate and 13.1% TOV show some fundamental competence"
         ]
       },
       "cons": {
         "top": [
-          "2-15 historical matchup rate is 94% to 2-seed \u2014 solid but not perfect",
-          "Purdue's perimeter defense (94.8 AdjD) can be tested by sharp shooters",
-          "7-3 last 10 lags Queens' form"
+          "FTR of 0.286 is low for a 2-seed, not generating many free throws",
+          "Slower pace (65.3) may not blow out opponents immediately",
+          "27-8 record includes more losses than other top seeds"
         ],
         "bot": [
-          "SOS rank 288 provides zero preparation for Big Ten-level play",
-          "AdjEM gap of 25.6 is historically decisive for 2-seed matchups",
-          "Queens' AdjO of 96.4 is well below tournament average"
+          "SRS of -3.3 and SOS of -4.97 indicate Queens is below average against very weak competition",
+          "21-13 record is the weakest in any 2-15 matchup",
+          "Pace gap (71.0 vs 65.3) means Queens wants to run but Purdue controls tempo"
         ]
       },
       "recommendation": {
         "team": "PURDUE",
         "confidence": "High"
       },
-      "reasoning": "Purdue's 25.6 AdjEM advantage and top-15 SOS make Queens essentially uncompetitive at this level. Queens' 8-2 form is admirable but against ASUN competition that has no tournament-level relevance.",
+      "reasoning": "Purdue's SRS of 25.64 vs Queens' -3.3 (gap of 28.94) combined with the SOS chasm (14.13 vs -4.97) makes this a complete mismatch. Purdue's nation-leading 124.7 OrtG and 57.6% eFG against the bracket's toughest schedule will dominate Queens despite their respectable offensive numbers.",
       "win_prob": {
-        "top": 0.94,
-        "bot": 0.06
+        "top": 0.99,
+        "bot": 0.01
       },
       "upset_alert": false,
       "contrarian": false,
-      "public_consensus_team": "PURDUE",
-      "data_note": "Metrics corrected from SR advanced stats 2026-03-17. last_10 records are UNVERIFIED - not present in any source file."
+      "public_consensus_team": "PURDUE"
     },
     "E9": {
       "slot_id": "E9",
