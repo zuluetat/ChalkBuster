@@ -19,24 +19,31 @@ export function validateBracketSlotGraph(state) {
   // 2. Verify Final Four pairings: East vs West (FF1), South vs Midwest (FF2)
   const ff1 = state.slots["FF1"];
   const ff2 = state.slots["FF2"];
-  if (ff1?.top?.game !== "E15") errors.push("FF1 top should be E15 (East champ)");
-  if (ff1?.bot?.game !== "W15") errors.push("FF1 bot should be W15 (West champ)");
-  if (ff2?.top?.game !== "S15") errors.push("FF2 top should be S15 (South champ)");
-  if (ff2?.bot?.game !== "M15") errors.push("FF2 bot should be M15 (Midwest champ)");
+  if (ff1?.top?.game !== "E15")
+    errors.push("FF1 top should be E15 (East champ)");
+  if (ff1?.bot?.game !== "W15")
+    errors.push("FF1 bot should be W15 (West champ)");
+  if (ff2?.top?.game !== "S15")
+    errors.push("FF2 top should be S15 (South champ)");
+  if (ff2?.bot?.game !== "M15")
+    errors.push("FF2 bot should be M15 (Midwest champ)");
 
   // 3. Verify First Four destination slots use first_four source type (not seed)
   const ffSlots = ["M1", "M5", "S1", "W5"];
-  ffSlots.forEach(id => {
+  ffSlots.forEach((id) => {
     const slot = state.slots[id];
-    const hasFF = slot?.top?.type === "first_four" || slot?.bot?.type === "first_four";
+    const hasFF =
+      slot?.top?.type === "first_four" || slot?.bot?.type === "first_four";
     if (!hasFF) errors.push(`${id} should have a first_four source`);
   });
 
   // 4. Verify R32 slots use winner sources (not seed or first_four)
-  ["E9", "E10", "E11", "E12"].forEach(id => {
+  ["E9", "E10", "E11", "E12"].forEach((id) => {
     const slot = state.slots[id];
-    if (slot?.top?.type !== "winner") errors.push(`${id} top should be winner type`);
-    if (slot?.bot?.type !== "winner") errors.push(`${id} bot should be winner type`);
+    if (slot?.top?.type !== "winner")
+      errors.push(`${id} top should be winner type`);
+    if (slot?.bot?.type !== "winner")
+      errors.push(`${id} bot should be winner type`);
   });
 
   // 5. Verify team count
@@ -46,12 +53,24 @@ export function validateBracketSlotGraph(state) {
   }
 
   // 6. Verify required fields on every team
-  const requiredTeamFields = ["id", "name", "seed", "region", "record", "kenpom_adjEM", "sos_rank", "public_pick_pct", "spread"];
+  const requiredTeamFields = [
+    "id",
+    "name",
+    "seed",
+    "region",
+    "record",
+    "srs",
+    "sos_sr",
+    "public_pick_pct",
+    "spread",
+  ];
   const teamsWithMissingFields = Object.values(state.teams).filter(
-    t => !requiredTeamFields.every(f => f in t)
+    (t) => !requiredTeamFields.every((f) => f in t),
   );
   if (teamsWithMissingFields.length > 0) {
-    errors.push(`${teamsWithMissingFields.length} team(s) missing required fields: ${teamsWithMissingFields.map(t => t.id).join(", ")}`);
+    errors.push(
+      `${teamsWithMissingFields.length} team(s) missing required fields: ${teamsWithMissingFields.map((t) => t.id).join(", ")}`,
+    );
   }
 
   // 7. Verify First Four game count
@@ -65,7 +84,7 @@ export function validateBracketSlotGraph(state) {
     return true;
   } else {
     console.error("[ChalkBuster] Bracket slot graph validation: FAILED");
-    errors.forEach(e => console.error(" -", e));
+    errors.forEach((e) => console.error(" -", e));
     return false;
   }
 }
@@ -82,15 +101,17 @@ export function runDataIntegrityChecks(state) {
 
   // Cross-check: every First Four feeds_game must reference a real slot
   const crossErrors = [];
-  Object.values(state.firstFour).forEach(game => {
+  Object.values(state.firstFour).forEach((game) => {
     if (!state.slots[game.feeds_game]) {
-      crossErrors.push(`First Four game ${game.id} references feeds_game "${game.feeds_game}" which does not exist in slots`);
+      crossErrors.push(
+        `First Four game ${game.id} references feeds_game "${game.feeds_game}" which does not exist in slots`,
+      );
     }
   });
 
   if (crossErrors.length > 0) {
     console.error("[ChalkBuster] Data integrity cross-checks: FAILED");
-    crossErrors.forEach(e => console.error(" -", e));
+    crossErrors.forEach((e) => console.error(" -", e));
     return false;
   }
 
