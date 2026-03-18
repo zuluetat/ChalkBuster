@@ -185,7 +185,7 @@
   flex-shrink: 0;
 }
 
-/* Matchup card — no margin-bottom; flex space-around on .round-column handles spacing */
+/* Matchup card */
 .matchup-card {
   position: relative;
   min-width: 180px;
@@ -193,9 +193,15 @@
   border-radius: 6px;
   cursor: pointer;
   user-select: none;
+  margin-bottom: 4px;
   background: var(--color-surface);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Later rounds: no margin, let flex space-around handle alignment */
+.round-column:not(:first-child) .matchup-card {
+  margin-bottom: 0;
 }
 
 .matchup-card:hover {
