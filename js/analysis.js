@@ -497,9 +497,13 @@ function buildCardHTML(matchup, topTeam, botTeam, slotId) {
   const idx = roundSlotIds.indexOf(slotId);
   const total = roundSlotIds.length;
   const prevDisabled = idx <= 0 ? " disabled" : "";
-  const nextDisabled = idx >= total - 1 ? " disabled" : "";
+  const isLast = idx >= total - 1;
+  const nextDisabled = isLast ? "" : "";
+  const prevDisabled2 = idx <= 0 ? " disabled" : "";
   const prevId = idx > 0 ? roundSlotIds[idx - 1] : "";
   const nextId = idx < total - 1 ? roundSlotIds[idx + 1] : "";
+  const nextLabel = isLast ? "Done ✓" : "Next &rarr;";
+  const nextAction = isLast ? "done" : "next";
 
   const tm = matchup.metrics.top;
   const bm = matchup.metrics.bot;
@@ -578,9 +582,9 @@ function buildCardHTML(matchup, topTeam, botTeam, slotId) {
       <p>* Upset alerts and contrarian flags are based on model-estimated win probabilities, not official sportsbook lines. Last-10 records are unverified estimates.</p>
     </div>
     <div class="card-nav">
-      <button class="card-nav-btn" data-dir="prev" data-target="${prevId}"${prevDisabled}>&larr; Prev</button>
+      <button class="card-nav-btn" data-dir="prev" data-target="${prevId}"${prevDisabled2}>&larr; Prev</button>
       <span class="card-nav-label">${idx + 1} / ${total}</span>
-      <button class="card-nav-btn" data-dir="next" data-target="${nextId}"${nextDisabled}>Next &rarr;</button>
+      <button class="card-nav-btn" data-dir="${nextAction}" data-target="${nextId}">${nextLabel}</button>
     </div>
   `;
 }
@@ -665,6 +669,10 @@ export function openAnalysisCard(slotId) {
       botTeam.name,
     );
   }
+
+  // Scroll panel to top on every card open/navigate
+  const panelEl = document.getElementById("analysis-panel");
+  if (panelEl) panelEl.scrollTop = 0;
 
   document.getElementById("analysis-overlay").classList.add("visible");
 }
@@ -764,6 +772,10 @@ export function initAnalysisHandlers() {
 
       const navBtn = e.target.closest(".card-nav-btn");
       if (navBtn && !navBtn.disabled) {
+        if (navBtn.dataset.dir === "done") {
+          closeAnalysisCard();
+          return;
+        }
         const target = navBtn.dataset.target;
         if (target) openAnalysisCard(target);
         return;
