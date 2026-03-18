@@ -10,6 +10,7 @@ export const state = {
   picks: {}, // { [gameId]: teamId }
   activeRegion: "East",
   readOnly: false, // true when viewing a shared bracket
+  tipoffGated: false, // true when shared bracket is hidden until tipoff
   bracketName: "", // user's bracket name
 };
 

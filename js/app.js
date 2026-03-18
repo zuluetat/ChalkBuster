@@ -356,6 +356,26 @@ function updateHeaderName() {
   }
 }
 
+function isTipoffReached() {
+  // Tipoff: Thursday March 19, 2026 at 12:00 PM Eastern Time
+  const tipoff = new Date("2026-03-19T16:00:00Z"); // noon ET = 16:00 UTC
+  return Date.now() >= tipoff.getTime();
+}
+
+function showTipoffGate() {
+  const overlay = document.createElement("div");
+  overlay.id = "tipoff-gate";
+  overlay.innerHTML = `
+    <div class="tipoff-content">
+      <div class="tipoff-icon">&#127936;</div>
+      <h2>Picks Revealed at Tipoff</h2>
+      <p>This bracket will be visible on<br><strong>Thursday, March 19 at 12:00 PM ET</strong></p>
+      <p class="tipoff-sub">Check back when the games begin!</p>
+    </div>
+  `;
+  document.getElementById("app").appendChild(overlay);
+}
+
 function showToast(msg) {
   const toast = document.createElement("div");
   toast.className = "toast";
@@ -385,8 +405,15 @@ async function init() {
     if (sharedToken) {
       const sharedPicks = await loadSharedBracket(sharedToken);
       if (sharedPicks) {
-        state.picks = sharedPicks;
-        state.readOnly = true;
+        if (!isTipoffReached()) {
+          // Hide picks until tipoff -- show gate message
+          state.readOnly = true;
+          state.tipoffGated = true;
+          // picks are NOT loaded into state -- bracket renders empty
+        } else {
+          state.picks = sharedPicks;
+          state.readOnly = true;
+        }
       } else {
         showToast("Shared bracket not found");
         loadPicksFromStorage();
@@ -422,6 +449,9 @@ async function init() {
       renderToolbar(),
     );
     renderBracket();
+    if (state.tipoffGated) {
+      showTipoffGate();
+    }
     renderFirstFour();
     initBracketHandlers();
     await loadMatchups();
