@@ -95,8 +95,7 @@ function buildPrintBracket() {
         .sort((a, b) => a.position - b.position);
       const isLast = ri === rounds.length - 1;
       html += `<div class="pb-round">`;
-      if (ri === 0)
-        html += `<div class="pb-round-name">${ROUND_NAMES[round]}</div>`;
+      html += `<div class="pb-round-name">${ROUND_NAMES[round]}</div>`;
 
       // Group matchups in pairs for bracket connectors
       for (let i = 0; i < roundSlots.length; i += 2) {

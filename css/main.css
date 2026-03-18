@@ -492,8 +492,19 @@ body {
     flex: 1;
   }
 
-  /* Right side regions: rounds are reversed in JS (E8→S16→R32→R64)
-     so they converge toward the center Final Four */
+  /* Right side is a visual mirror — text right-aligned, teams reversed */
+  .pb-right .pb-team {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  .pb-right .pb-region-name {
+    text-align: right;
+  }
+
+  .pb-right .pb-round-name {
+    text-align: right;
+  }
 
   .pb-center {
     display: flex;
