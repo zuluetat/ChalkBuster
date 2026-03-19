@@ -304,11 +304,11 @@
     "FF1": {
       "id": "FF1", "region": "FinalFour", "round": "F4", "position": 1,
       "top": { "type": "winner", "game": "E15" },
-      "bot": { "type": "winner", "game": "W15" }
+      "bot": { "type": "winner", "game": "S15" }
     },
     "FF2": {
       "id": "FF2", "region": "FinalFour", "round": "F4", "position": 2,
-      "top": { "type": "winner", "game": "S15" },
+      "top": { "type": "winner", "game": "W15" },
       "bot": { "type": "winner", "game": "M15" }
     },
     "CH1": {
