@@ -7,8 +7,8 @@ import { state } from "./state.js";
 const REGIONS = [
   "East",
   "South",
-  "Midwest",
   "West",
+  "Midwest",
   "Final Four",
   "First Four",
   "How To",

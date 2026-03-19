@@ -179,8 +179,8 @@ function buildPrintBracket() {
         ${buildFinalHTML()}
       </div>
       <div class="pb-right">
-        ${buildRegionHTML("Midwest", [...ROUNDS].reverse(), "right")}
         ${buildRegionHTML("West", [...ROUNDS].reverse(), "right")}
+        ${buildRegionHTML("Midwest", [...ROUNDS].reverse(), "right")}
       </div>
     </div>
   `;
